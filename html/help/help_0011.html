@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>HUG 주택도시보증공사 - 보증가능여부 간편확인</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<script type="text/javascript" src="../../common/js/jquery1.11.1.js"></script>
+<script type="text/javascript" src="../../common/js/swiper.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div class="gnb-layer" data-role="page">
+			<div class="gnb-top">
+				<h1><a href="#"><img src="../../common/img/img/img_logo.png" alt="HUG 주택도시보증공사"></a></h1>
+				<span class="user">홍길동 고객님<span>오늘도 좋은 하루되세요</span></span>
+			</div>
+			<div class="state-area">
+				<dl>
+					<dt>현재 접속상태</dt>
+					<dd>일반계정으로 로그인하셨습니다. <button type="button" class="btn-logout">로그아웃</button></dd>
+				</dl>
+				<span>※ 보증 확인은 공인인증서로 로그인 하셔야 합니다.</span>
+				<a href="#none" class="btn-certificate">공인인증서<br>로그인</a>
+			</div>
+			<div class="my-link">
+				<dl class="my-complaint">
+					<dt><span>나의민원</span></dt>
+					<dd><a href="#none">처리중 <span class="cnt">5</span> 건</a></dd>
+				</dl>
+				<dl class="my-pim">
+					<dt><span>개인정보관리</span></dt>
+					<dd><a href="#none">수정후 <span class="cnt">3</span> 개월 경과</a></dd>
+				</dl>
+			</div>
+			<div class="nav">
+				<ul>
+					<li class="depth depth01"><span class="title">분양정보</span>
+						<ul class="two-depth">
+							<li><a href="#none">HUG 분양정보</a></li>
+							<li><a href="#none">분양정보 현황</a></li>
+							<li><a href="#none">보증실적 현황</a></li>
+							<li><a href="#none">아파트공정률</a></li>
+						</ul>
+					</li>
+					<li class="depth depth02"><span class="title">주택동향</span>
+						<ul class="two-depth">
+							<li><a href="#none">주택통계</a></li>
+							<li><a href="#none">월간동향</a></li>
+							<li><a href="#none">보도자료</a></li>
+						</ul>
+					</li>
+					<li class="depth depth03"><span class="title">공매&middot;입찰</span>
+						<ul class="two-depth">
+							<li><a href="#none">공매공고</a></li>
+							<li><a href="#none">공매물건</a></li>
+							<li><a href="#none">입찰안내</a></li>
+							<li><a href="#none">온비드입찰안내</a></li>
+							<li><a href="#none">입찰정보</a></li>
+						</ul>
+					</li>
+					<li class="depth depth04"><span class="title">맞춤형HUG</span>
+						<ul class="two-depth">
+							<li><a href="#none">맞춤보증상품 – 개인 10종</a></li>
+							<li><a href="#none">맞춤보증상품 – 기업 15종</a></li>
+							<li><a href="#none">전세금반환보증</a></li>
+							<li><a href="#none">내집마련가이드</a></li>
+							<li><a href="#none">맞춤형대출상품</a></li>
+							<li><a href="#none">주택청약도우미</a></li>
+						</ul>
+					</li>
+					<li class="depth depth05"><span class="title">마이페이지</span>
+						<ul class="two-depth">
+							<li><a href="#none">마이페이지 홈</a></li>
+							<li><a href="#none">보증상품가입현황</a></li>
+							<li><a href="#none">계약현황/납입정보</a></li>
+							<li><a href="#none">공인인증서관리</a></li>
+							<li><a href="#none">내집마련 계산기</a></li>
+						</ul>
+					</li>
+					<li class="depth depth06"><span class="title">고객센터</span>
+						<ul class="two-depth">
+							<li><a href="#none">HUG 새소식</a></li>
+							<li><a href="#none">HUG 콜센터</a></li>
+							<li><a href="#none">알림서비스</a></li>
+							<li><a href="#none">환경설정</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="hug-app">
+				<span class="title">HUG앱 추천하기</span>
+				<span class="sns">
+					<a href="#none" class="ico-splite kakao"><span class="hide">카카오톡</span></a>
+					<a href="#none" class="ico-splite facebook"><span class="hide">페이스북</span></a>
+					<a href="#none" class="ico-splite twitter"><span class="hide">twitter</span></a>
+					<a href="#none" class="ico-splite mail"><span class="hide">메일</span></a>
+				</span>
+			</div>
+			<div class="foot">
+				<address>부산광역시 남구 문현금융로 40 BIFC (우편번호:48400)</address>
+				<p class="call-area"><span><a href="tel:1566-9009">T. 1566-9009</a></span><span>F. 051-955-5405</span></p>
+				<p class="copyright">Copyright ⓒ Korea Housing & Urban Guarantee Corporation. All rights reserved.</p>
+			</div>
+		</div>
+		<h2 class="logo"><span class="hide">HUG</span></h2>
+		<div class="left-area">
+			<a href="#none" class="btn-gnb btn-prev btn-splite"><span class="hide">이전 페이지로 이동</span></a>
+			<a href="#none" class="btn-notice btn-splite"><span class="hide">알림보기</span></a>
+			<!-- 새로운 알림이 등록되었을 경우 -->
+			<!--a href="#none" class="btn-notice btn-splite new-notice"><span class="hide">알림보기</span></a-->
+			<!-- //새로운 알림이 등록되었을 경우 -->
+		</div>
+		<div class="right-area">
+			<a href="#none" class="btn-login btn-splite"><span class="hide">로그인</span></a>
+			<a href="#none" class="btn-certificate btn-splite"><span class="hide">공인인증서 로그인</span></a>
+		</div>
+	</div><!-- /.header -->
+
+	<div id="container">
+		<div class="contents">
+            <div class="title-wrap">
+                <h3 class="hide">보증종류 선택</h3>
+                <div class="info"><span><span class="cType02">*</span> 필수입력</span></div>
+            </div>
+            <form class="form-area help-form">
+                <fieldset>
+                    <legend class="hide">보증종류 선택 및 보증가능액 확인</legend>
+                    <div class="form-box">
+                        <div class="tbl-wrap">
+                            <table class="tbl-style01">
+                                <caption>보증종류 선택</caption>
+                                <colgroup>
+                                    <col style="width:106px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="required"><span class="cType02">*</span> 보증종류</th>
+                                        <td>
+                                            <div class="select-wrap">
+                                                <select id="warranty-type" class="sel-type">
+                                                    <option selected="selected">전세보증금반환보증</option>
+                                                    <option>보증종류02</option>
+                                                    <option>보증종류03</option>
+                                                    <option>보증종류04</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-wrap">
+                                                <select id="lessee-type" class="sel-type">
+                                                    <option selected="selected">임차인형01</option>
+                                                    <option>임차인형02</option>
+                                                    <option>임차인형03</option>
+                                                    <option>임차인형04</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="txt-box03">
+                                <h3 class="box-tit info-pop-wrap">보증한도계산 (보증가능액)<a href="#none" class="link-info-pop btn-amount"><span class="hide">설명 팝업</span></a></h3>
+                            <div class="bg-allow"></div>
+                            <div class="box-cont">
+                                <div class="input-row">
+                                    <label for="price-value" class="hide">보증한도금액</label>
+                                    <input type="text" id="price-value" placeholder="계산 후 자동으로 입력됩니다.">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="title-wrap">
+                <h4>전세금반환보증 신청가능 여부 확인</h4>
+            </div>
+            <form class="form-area help-form">
+                <fieldset>
+                    <legend class="hide">전세금반환보증 신청가능 여부 확인을 위한 정보입력</legend>
+                    <div class="form-box">
+                        <div class="tbl-wrap">
+                            <table class="tbl-style01">
+                                <caption>전세금반환보증 신청가능 여부 확인을 위한 정보입력</caption>
+                                <colgroup>
+                                    <col style="width:140px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="required">
+                                            <span class="info-icon-wrap">
+                                                <span class="cType02">*</span> 주택유형<a href="#none" class="link-info-pop btn-house"><span class="hide">설명 팝업</span></a>
+                                            </span>
+                                        </th>
+                                        <td>
+                                            <ul class="radio-list">
+                                                <li class="radio-box">
+                                                    <input type="radio" id="type-house01" class="inp-chk" name="type-house">
+                                                    <label for="type-house01">아파트</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="type-house02" class="inp-chk" name="type-house">
+                                                    <label for="type-house02">오피스텔</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="type-house03" class="inp-chk" name="type-house">
+                                                    <label for="type-house03">단독주택</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="type-house04" class="inp-chk" name="type-house">
+                                                    <label for="type-house04">연립주택</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="type-house05" class="inp-chk" name="type-house">
+                                                    <label for="type-house05">다세대주택</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="type-house06" class="inp-chk" name="type-house">
+                                                    <label for="type-house06">다가구주택</label>
+                                                </li>
+                                            </ul>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="required">
+                                            <span class="info-icon-wrap">
+                                                <span class="cType02">*</span> 지역구분<a href="#none" class="link-info-pop btn-region"><span class="hide">설명 팝업</span></a>
+                                            </span>
+                                        </th>
+                                        <td>
+                                            <ul class="radio-list">
+                                                <li class="radio-box">
+                                                    <input type="radio" id="type-region01" class="inp-chk" name="type-region">
+                                                    <label for="type-region01">수도권</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="type-region02" class="inp-chk" name="type-region">
+                                                    <label for="type-region02">그외지역</label>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="required">
+                                            <span class="info-icon-wrap">
+                                                <span class="cType02">*</span> <label for="wrt-price01">전세보증금</label>
+                                            </span>
+                                        </th>
+                                        <td class="won">
+                                            <input type="text" id="wrt-price01"> 원
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="required">
+                                            <span class="info-icon-wrap">
+                                                <span class="cType02">*</span> <label for="wrt-price02">보증신청금액(D)</label>
+                                            </span>
+                                        </th>
+                                        <td class="won">
+                                            <input type="text" id="wrt-price02"> 원
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="required">
+                                            <span class="info-icon-wrap">
+                                                <span class="cType02">*</span> <label for="wrt-price03">주택가액(A)</label><a href="#none" class="link-info-pop btn-house-price"><span class="hide">설명 팝업</span></a>
+                                            </span>
+                                        </th>
+                                        <td class="won">
+                                            <input type="text" id="wrt-price03"> 원
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="required">
+                                            <span class="info-icon-wrap">
+                                                <span class="cType02">*</span> <label for="wrt-ratio">담보인정비율(B)</label><a href="#none" class="link-info-pop btn-rate"><span class="hide">설명 팝업</span></a>
+                                            </span>
+                                        </th>
+                                        <td class="won">
+                                            <input type="text" id="wrt-ratio" disabled="disabled"> %
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="required">
+                                            <span class="info-icon-wrap">
+                                                <span class="cType02">*</span> <label for="issue-price">담보인정가액(C)<br>(C=A+B)</label>
+                                            </span>
+                                        </th>
+                                        <td class="won">
+                                            <input type="text" id="issue-price" disabled="disabled"> 원
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="required">
+                                            <span class="info-icon-wrap">
+                                                <span class="cType02">*</span> <label for="wrt-price04">선순위<br>채권금액(E)</label><a href="#none" class="link-info-pop btn-bond"><span class="hide">설명 팝업</span></a>
+                                            </span>
+                                        </th>
+                                        <td class="won">
+                                            <input type="text" id="wrt-price04"> 원
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="required">
+                                            <span class="info-icon-wrap">
+                                                <span class="cType02">*</span> <label for="wrt-price05">선순위임차<br>보증금액(F)</label><a href="#none" class="link-info-pop btn-leasehold"><span class="hide">설명 팝업</span></a>
+                                            </span>
+                                        </th>
+                                        <td class="won">
+                                            <input type="text" id="wrt-price05"> 원
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="btn-area btn2">
+                        <div><a href="#none" class="btn-round type03">초기화</a></div>
+                        <div><a href="#none" class="btn-round type01 btn-result">계산하기</a></div>
+                    </div>
+                </fieldset>
+            </form>
+		</div><!-- /.contents -->
+	</div><!-- /.container -->
+
+	<div class="bg-modal"></div>
+</div>
+
+<!-- layer pop : 신청 불가 -->
+<div class="layer-pop pop-alert pop-result-fli">
+    <div class="pop-wrap question-wrap">
+		<button type="button" class="pop-close"><span class="hide">닫기</span></button>
+        <div class="pop-content pd0">
+            <p class="question type01">전세보증금액이 0원입니다.<br>금액을 입력해주세요.</p>
+            <!-- 
+            <p class="question type01">보증신청금액이 0원입니다.<br>금액을 입력해주세요.</p>
+            <p class="question type01">전세보증금액이 보증한도를<br>초과할 경우 보증취급이<br>불가능합니다.</p>
+            -->
+        </div>
+        <button type="button" class="btn alert-confirm"><span>확인</span></button>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+<!-- layer pop : 신청 가능 -->
+<div class="layer-pop pop-alert pop-result-scs">
+    <div class="pop-wrap question-wrap">
+		<button type="button" class="pop-close"><span class="hide">닫기</span></button>
+        <div class="pop-content pd0">
+            <p class="question type01 tel">보증 신청이 가능한 계약입니다.<br>보증신청을 진행하시겠습니까?</p>
+        </div>
+        <div class="btn-area">
+            <button type="button" class="btn-cancle">취소</button>
+            <button type="button" class="btn btn-confirm"><span>확인</span></button>
+        </div>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+<!-- layer pop : 보증가능액 -->
+<div class="layer-pop pop-alert pop-amount">
+    <div class="pop-wrap">
+        <div class="pop-header">
+            <span class="tit">보증가능액</span>
+        </div>
+		<button type="button" class="pop-close"><span class="hide">닫기</span></button>
+        <div class="pop-content">
+            <div class="cont-box01">
+                <ul class="list-type01 pdt0">
+                    <li><span class="mark">※</span>‘전세보증금반환보증’의 보증금액은 전세보증금(또는 임대보증금) 전액을 원칙으로 하되, 주택별 보증한도를 초과하는 금액은 제외됩니다.</li>
+                    <li><span class="mark">※</span>최대보증한도 : 전세보증금 수도권(4억이하), 기타지역(3억이하)</li>
+                    <li><span class="mark">※</span>보증한도 : 선순위채권금액 + 전월세보증금 ≤ 주택가격의 100%(아파트),<br>80%(주거용오피스텔,연립,다세대),<br>75%(단독,다가구)</li>
+                    <li><span class="mark">※</span>주택별 보증한도 = 주택가격 ×<br>보인정비율 – 선순위 채권금액 합계액</li>
+                    <li><span class="mark">※</span>선순위 채권금액 합계액이 주택가격의 60%를 초과하는 경우에는 보증가입이 거절됩니다.</li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn alert-confirm"><span>확인</span></button>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+<!-- layer pop : 주택유형  -->
+<div class="layer-pop pop-alert pop-house">
+    <div class="pop-wrap scroll">
+        <div class="pop-header">
+            <span class="tit">주택유형 설명</span>
+        </div>
+		<button type="button" class="pop-close"><span class="hide">닫기</span></button>
+        <div class="pop-content">
+            <div class="cont-box01 pdt0">
+                <p class="txt-type01"><span class="mark">※</span> 주택의 종류는 전월세계약서 및<br>건축물대장에 표시된 ‘주택의 용도’를<br>기준으로 합니다.</p>
+                <div class="tbl-wrap pdt20">
+                    <table class="tbl-style02 type02">
+                        <caption>주택유형 아파트, 연립 다세대, 일반단독 다가구, 주거용 오피스텔 안내</caption>
+                        <colgroup>
+                            <col style="width:20%">
+                            <col style="width:auto">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">주택종류</th>
+                                <th scope="col">상세 설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>아파트</th>
+                                <td>
+                                    <ul class="txt-list">
+                                        <li>주택으로 쓰는 층수(지하층 및 1층 필로티 제외)가 5개층 이상이고,  각 세대별로 주택소유자가 별도로 있는(구분등기) 주택</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>연립<br>다세대</th>
+                                <td>
+                                    <ul class="txt-list">
+                                        <li>주택으로 쓰는 층수(지하층 및 1층 필로티 제외)가 4개층 이하이고, 각 세대별로 주택소유자가 별도로 있는(구분등기) 주택</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>일반단독<br>다가구</th>
+                                <td>
+                                    <ul class="txt-list">
+                                        <li>주택으로 쓰는 층수(지하층 및 1층 필로트 제외)가 3개층 이하이고, 각 세대별로 주택소유자가 별도로 있지 않은(전체 주택의 소유자가 1인) 주택</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>주거용<br>오피스텔</th>
+                                <td>
+                                    <ul class="txt-list">
+                                        <li>업무시설인 오피스텔을 주거용으로 사용하는 주택으로서, 전월세계약서(공인중개업자의 ‘중개대상물 확인&middot;설명서’)에 ‘주거용’임이 명확히 표시되고, 주민등록 전입신고를 마친 주택</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn alert-confirm"><span>확인</span></button>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+<!-- layer pop : 지역구분  -->
+<div class="layer-pop pop-alert pop-region">
+    <div class="pop-wrap">
+        <div class="pop-header">
+            <span class="tit">지역구분 안내</span>
+        </div>
+		<button type="button" class="pop-close"><span class="hide">닫기</span></button>
+        <div class="pop-content">
+            <div class="cont-box01">
+                <ul class="list-type01 pdt0">
+                    <li><span class="mark">※</span>수도권(전월세주택의 소재지가 서울특별시, 인천광역시, 경기도인 경우) 
+                        <ul class="mgt15">
+                            <li>- 최대보증한도 4억원이하, 그외지역 3억원   이하</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn alert-confirm"><span>확인</span></button>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+<!-- 주택가액(A) -->
+<div class="layer-pop pop-alert pop-house-price">
+    <div class="pop-wrap scroll">
+        <div class="pop-header">
+            <span class="tit">주택가액</span>
+        </div>
+		<button type="button" class="pop-close"><span class="hide">닫기</span></button>
+        <div class="pop-content">
+            <div class="cont-box01">
+                <ul class="list-type03">
+                    <li>1) 아파트 또는 주거용 오피스텔
+                        <ul class="list-type04">
+                            <li><span class="num">①</span> 보증신청인이 제출하는 감정평가서에 표시된 감정가격 한국감정원 또는 한국감정평가협회에 가입된 감정평가법인 및 감정평가사무소에서 평가한 ‘담보제공용’ 평가금액 (금융기관의 담보제공 등을 위하여 감정평가를 받은 경우에는 이를 활용할 수 있음)<br>감정평가일로부터 6개월 이상 경과된 것은 인정하지 않음</li>
+                            <li><span class="num">②</span> 국민은행 ‘KB부동산’ (<a href="http://nland.kbstar.com" class="cType01" target="_blank" title="새창">http://nland.kbstar.com</a>) 사이트에서 제공하는 시세정보 아파트 1층 또는 주거용 오피스텔은 ‘하위평균가’ 적용 그 외의 주택은 ‘일반평균가’ 적용</li>
+                            <li><span class="num">③</span> 한국감정원 부동산테크 (<a href="http://www.ret.co.kr" class="cType01" target="_blank" title="새창">http://www.ret.co.kr</a>) 사이트에서 제공하는 시세정보 아파트 1층 또는 주거용 오피스텔은 ‘하한가’ 적용 그 외의 주택은 ‘상한가’와 ‘하한가’의 평균값 적용</li>
+                            <li><span class="num">④</span> 해당 주택의 부동산등기부에서 확인되는 최근 매매거래가격 매매(소유권이전)<br>등기일로부터 1년 이상 경과된 것은 인정하지 않음</li>
+                            <li><span class="num">⑤</span> (아파트) 국토교통부에서 공시하는 공동주택가격(<a href="http://aao.kab.co.kr" class="cType01" target="_blank" title="새창">http://aao.kab.co.kr</a>)의 150%에 해당하는 금액(주거용 오피스텔)<br>국세청에서 공시하는 기준시가(<a href="http://www.nts.go.kr" class="cType01"  target="_blank" title="새창">http://www.nts.go.kr</a>→‘조회/계산’→‘기준시가’)의 150%에 해당하는 금액</li>
+                        </ul>
+                    </li>
+                    <li>2) 단독&middot;다가구 주택
+                        <ul class="list-type04">
+                            <li><span class="num">①</span> 보증신청인이 제출하는 감정평가서에 표시된 감정가격 한국감정원 또는 한국감정평가협회에 가입된 감정평가법인 및 감정평가사무소에서 평가한 ‘담보제공용’ 평가금액 (금융기관의 담보제공 등을 위하여 감정평가를 받은 경우에는 이를 활용할 수 있음)<br>감정평가일로부터 6개월 이상 경과된 것은 인정하지 않음</li>
+                            <li><span class="num">②</span> 국토교통부 장관이 공시하는 개별단독주택가격의 150%에 해당하는 금액(<a href="https://www.kais.kr/realtyprice" class="cType01" target="_blank" title="새창">https://www.kais.kr/realtyprice</a>→‘주택’→‘개별단독주택가격’)</li>
+                            <li><span class="num">③</span> 토지 공시지가와 건물에 대한 신축단가를 합산하여 산출한 금액</li>
+                            <li><span class="num">④</span> 전세목적물 소재지 주변 2곳 이상의 공인중개소로부터 확인받은 해당 평형의 시세</li>
+                        </ul>
+                    </li>
+                    <li>3) 연립&middot;다세대 주택
+                        <ul class="list-type04">
+                            <li><span class="num">①</span> 보증신청인이 제출하는 감정평가서에 표시된 감정가격 한국감정원 또는 한국감정평가협회에 가입된 감정평가법인 및 감정평가사무소에서 평가한 ‘담보제공용’ 평가금액(금융기관의 담보제공 등을 위하여 감정평가를 받은 경우에는 이를 활용할 수 있음)<br>감정평가일로부터 6개월 이상 경과된 것은 인정하지 않음</li>
+                            <li><span class="num">②</span> 국토교통부에서 공시하는 공동주택가격(<a href="http://aao.kab.co.kr" class="cType01" target="_blank" title="새창">http://aao.kab.co.kr</a>)의 150%에 해당하는 금액</li>
+                            <li><span class="num">③</span> 전세목적물 소재지 주변 2곳 이상의 공인중개소로부터 확인받은 해당 평형의 시세</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn alert-confirm"><span>확인</span></button>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+<!-- layer pop : 담보인정 비율  -->
+<div class="layer-pop pop-alert pop-rate">
+    <div class="pop-wrap">
+        <div class="pop-header">
+            <span class="tit">담보인정 비율</span>
+        </div>
+		<button type="button" class="pop-close"><span class="hide">닫기</span></button>
+        <div class="pop-content">
+            <div class="cont-box01">
+                <ul class="list-type01 pdt0">
+                    <li><span class="mark">※</span>담보인정비율
+                        <ul>
+                            <li>- 아파트 : 100%</li>
+                            <li>- 주거용 오피스텔,연립&middot;다세대주택: 80%</li>
+                            <li>- 단독&middot;다가구 주택 : 75%</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn alert-confirm"><span>확인</span></button>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+<!-- layer pop : 선순위 채권금액  -->
+<div class="layer-pop pop-alert pop-bond">
+    <div class="pop-wrap">
+        <div class="pop-header">
+            <span class="tit">선순위 채권금액</span>
+        </div>
+		<button type="button" class="pop-close"><span class="hide">닫기</span></button>
+        <div class="pop-content">
+            <div class="cont-box01">
+                <ul class="list-type01 pdt0">
+                    <li><span class="mark">※</span>전월세계약에 따른 '전입신고'와 '확정일자' 중 늦은 날짜를 기준으로, 이보다 먼저 설정된 선순위 채권금액
+                    <p class="mgt15 ft-13">전세권 또는 임차권 등기" 가 먼저 설정되거나,  "주민등록 전입신고"가 먼저 등록된  전월세계약의 전월세보증금액 합계액</p>
+                    </li>
+                     <li><span class="mark">※</span>선순위 채권금액 확인방법
+                        <ul class="list-type04 mgt15 ft-13">
+                            <li><span class="num">①</span> 부동산등기부(집합건물 또는 건물)의 ‘을구(소유권 이외의 권리에 관한 사항)’ 란을 확인</li>
+                            <li><span class="num">②</span> 저당권 설정’, ‘근저당 설정’, ‘전세권 설정’, ‘임차권 설정’ 내용이 있는지 확인 (단, 말소된 것은 제외)</li>
+                            <li><span class="num">③</span> 저당권’은 ‘채권액’, ‘근저당’은 ‘채권최고액’, ‘전세권’은 ‘전세금액’, ‘임차권’은 ‘보증금액’을 확인</li>
+                        </ul>
+                     </li>
+                     <li><span class="mark">※</span>선순위 채권금액의 합계액을 입력</li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn alert-confirm"><span>확인</span></button>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+<!-- layer pop : 선순위 임차보증금액  -->
+<div class="layer-pop pop-alert pop-leasehold">
+    <div class="pop-wrap">
+        <div class="pop-header">
+            <span class="tit">선순위 임차보증금액</span>
+        </div>
+		<button type="button" class="pop-close"><span class="hide">닫기</span></button>
+        <div class="pop-content">
+            <div class="cont-box01">
+                <ul class="list-type01 pdt0">
+                    <li><span class="mark">※</span>전월세계약에 따른 '전입신고;와 '확정일자' 증 늦은날짜를 기준으로 "전세권 또는 임차권 등기" 가 먼저 설정되거나, "주민등록 전입신고"가 먼저 등록된  전월세계약의 전월세보증금액 합계액</li>
+                     <li><span class="mark">※</span>선순위 전월세보증금액 확인방법
+                        <ul class="list-type04 mgt15 ft-13">
+                            <li><span class="num">①</span> 전세권 또는 임차권 등기 : 부동산등기부에 표시된 전세금, 보증금</li>
+                            <li><span class="num">②</span> ‘전입신고’와 ‘확정일자’를 마친<br>전월세계약 : <br>임대인(주택 소유자) 또는 전월세계약을 중개한 공인중개업자가 확인해 준 “확인서”</li>
+                        </ul>
+                     </li>
+                     <li><span class="mark">※</span>전월세보증금액 합계액을 입력</li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn alert-confirm"><span>확인</span></button>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+<script>
+	$(document).on("pagecreate",".gnb-layer",function(){
+		$(".gnb-layer").on("swipeleft",function(){
+			$(this).animate({left:-300});
+			$('.bg-modal').hide();
+			$('#wrapper').attr('style', '');
+		});
+	});
+
+    jQuery(document).ready(function($){
+        fnAcco(".acco-container", ".btn-acco", ".acco-view", 2);
+    });
+
+    /* 팝업 부분 */
+    var winH = $(window).height();
+    var popH = $('.layer-pop .pop-wrap').height();
+    
+    /* 팝업 닫기 버튼 클릭 시 */
+    $('.pop-close, .alert-confirm').on('click', function(){
+        $('#wrapper').attr('style', '');
+        $('.layer-pop').removeClass('active').slideUp();
+    });
+
+    /* 계산하기 버튼 클릭 시 */
+    $('.btn-result').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.pop-result-fli').css('height', winH-40+'px');
+        $('.pop-result-fli').slideDown();
+    });
+
+    /* 보증가능액 버튼 클릭 시 */
+    $('.btn-amount').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.pop-amount').css('height', winH-40+'px');
+        $('.pop-amount').slideDown();
+    });
+
+    /* 보증가능액 버튼 클릭 시 */
+    $('.btn-amount').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.pop-amount').css('height', winH-40+'px');
+        $('.pop-amount').slideDown();
+    });
+
+    /* 주택유형 설명 버튼 클릭 시 */
+    $('.btn-house').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.pop-house').css('height', winH-40+'px');
+        $('.pop-house').slideDown();
+    });
+
+    /* 지역구분 안내 버튼 클릭 시 */
+    $('.btn-region').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.pop-region').css('height', winH-40+'px');
+        $('.pop-region').slideDown();
+    });
+
+    /* 주택가액(A) 버튼 클릭 시 */
+    $('.btn-house-price').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.pop-house-price').css('height', winH-40+'px');
+        $('.pop-house-price').slideDown();
+    });
+
+    /* 담보인정 비율 버튼 클릭 시 */
+    $('.btn-rate').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.pop-rate').css('height', winH-40+'px');
+        $('.pop-rate').slideDown();
+    });
+
+    /* 선순위 채권금액 버튼 클릭 시 */
+    $('.btn-bond').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.pop-bond').css('height', winH-40+'px');
+        $('.pop-bond').slideDown();
+    });
+
+    /* 선순위 임차보증금액 */
+    $('.btn-leasehold').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.pop-leasehold').css('height', winH-40+'px');
+        $('.pop-leasehold').slideDown();
+    });
+
+
+</script>
+</body>
+</html>

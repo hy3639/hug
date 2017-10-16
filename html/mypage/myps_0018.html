@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>HUG 주택도시보증공사 - 내집마련 계산기</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<script type="text/javascript" src="../../common/js/jquery1.11.1.js"></script>
+<script type="text/javascript" src="../../common/js/swiper.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="gnb-layer" data-role="page">
+            <div class="gnb-top">
+                <h1><a href="#"><img src="../../common/img/img/img_logo.png" alt="HUG 주택도시보증공사"></a></h1>
+                <span class="user">홍길동 고객님<span>오늘도 좋은 하루되세요</span></span>
+            </div>
+            <div class="state-area">
+                <dl>
+                    <dt>현재 접속상태</dt>
+                    <dd>일반계정으로 로그인하셨습니다. <button type="button" class="btn-logout">로그아웃</button></dd>
+                </dl>
+                <span>※ 보증 확인은 공인인증서로 로그인 하셔야 합니다.</span>
+                <a href="#none" class="btn-certificate">공인인증서<br>로그인</a>
+            </div>
+            <div class="my-link">
+                <dl class="my-complaint">
+                    <dt><span>나의민원</span></dt>
+                    <dd><a href="#none">처리중 <span class="cnt">5</span> 건</a></dd>
+                </dl>
+                <dl class="my-pim">
+                    <dt><span>개인정보관리</span></dt>
+                    <dd><a href="#none">수정후 <span class="cnt">3</span> 개월 경과</a></dd>
+                </dl>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="depth depth01"><span class="title">분양정보</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">HUG 분양정보</a></li>
+                            <li><a href="#none">분양정보 현황</a></li>
+                            <li><a href="#none">보증실적 현황</a></li>
+                            <li><a href="#none">아파트공정률</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth02"><span class="title">주택동향</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">주택통계</a></li>
+                            <li><a href="#none">월간동향</a></li>
+                            <li><a href="#none">보도자료</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth03"><span class="title">공매·입찰</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">공매공고</a></li>
+                            <li><a href="#none">공매물건</a></li>
+                            <li><a href="#none">입찰안내</a></li>
+                            <li><a href="#none">온비드입찰안내</a></li>
+                            <li><a href="#none">입찰정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth04"><span class="title">맞춤형HUG</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">맞춤보증상품 – 개인 10종</a></li>
+                            <li><a href="#none">맞춤보증상품 – 기업 15종</a></li>
+                            <li><a href="#none">전세금반환보증</a></li>
+                            <li><a href="#none">내집마련가이드</a></li>
+                            <li><a href="#none">맞춤형대출상품</a></li>
+                            <li><a href="#none">주택청약도우미</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth05"><span class="title">마이페이지</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">마이페이지 홈</a></li>
+                            <li><a href="#none">보증상품가입현황</a></li>
+                            <li><a href="#none">계약현황/납입정보</a></li>
+                            <li><a href="#none">공인인증서관리</a></li>
+                            <li><a href="#none">내집마련 계산기</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth06"><span class="title">고객센터</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">HUG 새소식</a></li>
+                            <li><a href="#none">HUG 콜센터</a></li>
+                            <li><a href="#none">알림서비스</a></li>
+                            <li><a href="#none">환경설정</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hug-app">
+                <span class="title">HUG앱 추천하기</span>
+                <span class="sns">
+                    <a href="#none" class="ico-splite kakao"><span class="hide">카카오톡</span></a>
+                    <a href="#none" class="ico-splite facebook"><span class="hide">페이스북</span></a>
+                    <a href="#none" class="ico-splite twitter"><span class="hide">twitter</span></a>
+                    <a href="#none" class="ico-splite mail"><span class="hide">메일</span></a>
+                </span>
+            </div>
+            <div class="foot">
+                <address>부산광역시 남구 문현금융로 40 BIFC (우편번호:48400)</address>
+                <p class="call-area"><span><a href="tel:1566-9009">T. 1566-9009</a></span><span>F. 051-955-5405</span></p>
+                <p class="copyright">Copyright ⓒ Korea Housing & Urban Guarantee Corporation. All rights reserved.</p>
+            </div>
+        </div>
+        <h2 class="logo"><span class="hide">HUG</span></h2>
+        <div class="left-area">
+            <a href="#none" class="btn-gnb btn-prev btn-splite"><span class="hide">이전 페이지로 이동</span></a>
+            <a href="#none" class="btn-notice btn-splite"><span class="hide">알림보기</span></a>
+            <!-- 새로운 알림이 등록되었을 경우 -->
+            <!--a href="#none" class="btn-notice btn-splite new-notice"><span class="hide">알림보기</span></a-->
+            <!-- //새로운 알림이 등록되었을 경우 -->
+        </div>
+        <div class="right-area">
+            <a href="#none" class="btn-login btn-splite"><span class="hide">로그인</span></a>
+            <a href="#none" class="btn-certificate btn-splite"><span class="hide">공인인증서 로그인</span></a>
+        </div>
+    </div><!-- /.header -->
+
+    <div id="container">
+        <div class="contents">
+            <div class="my-calculator">
+                <div class="screening_progress">
+                    <span class="step01">01.<br> 대출신청자격확인</span>
+                    <span class="step02">02.<br> 대출신청정보입력</span>
+                    <span class="step03 on">03.<br> 예상대출금액산출</span><!-- 진행 중 상태 on 클래스 -->
+                </div>
+                <div class="guide-txt">
+                    <h3 class="main-txt">고객님이 입력한 정보 및 예상대출금액을확인하시기 바랍니다.</h3>
+                </div>
+                <div class="screening_step03">
+                    <div class="my-navi type03 bdr_top">
+                        <ul class="acco-container">
+                            <li class="depth">
+                                <a href="#none" class="title btn-acco close">정보입력사항</a>
+                                <div class="depth02 acco-view active">
+                                    <div class="bg-allow"></div>
+                                    <div class="depth02-cont">
+                                    	<div class="tbl-wrap">
+                                            <table class="tbl-style01">
+                                                <caption>정보입력사항 상세내역</caption>
+                                                <colgroup>
+                                                    <col style="width:40%">
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">본인연소득</th>
+                                                        <td>36,000,000 원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">배우자연소득</th>
+                                                        <td>0원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">본인부채</th>
+                                                        <td>36,000,000원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">배우자부채</th>
+                                                        <td>0원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">대출기간</th>
+                                                        <td>10년</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">거치기간</th>
+                                                        <td>1년</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">우대금리선택1</th>
+                                                        <td>해당사항 없음</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">우대금리선택2</th>
+                                                        <td>3년 &amp; 36회이상 납입</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">소재지</th>
+                                                        <td>울산광역시 울주군</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">방의 개수</th>
+                                                        <td>3개</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">소액임차보증금</th>
+                                                        <td>17,000,000원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">임차보증금</th>
+                                                        <td>320,000원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">선순위채권액</th>
+                                                        <td>0원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">희망대출금액</th>
+                                                        <td>8,200,000원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="depth">
+                                <a href="#none" class="title btn-acco">예상대출금액 산출결과</a>
+                                <div class="depth02 acco-view">
+                                    <div class="bg-allow"></div>
+                                    <div class="depth02-cont">
+                                    	<div class="tbl-wrap">
+                                            <table class="tbl-style01">
+                                                <caption>예상대출금액 산출결과</caption>
+                                                <colgroup>
+                                                    <col style="width:40%">
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">대출상품종류</th>
+                                                        <td>내집마련 디딤돌 대출 <a href="#none" class="link-join">상세보기</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">예상대출금액</th>
+                                                        <td>8,200,000원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="emph cType02 mgt10">예상대출금액은 최소한의 입력항목을 바탕으로 산출된 참고 금액이므로, 대출가능여부 및 예상대출금액은 실제와 다를 수 있음을 유의하시기 바랍니다.</p>
+                                        <p class="emph mgt5 mgb15">보다 정확한 대출 조건에 관한 문의는 주택도시보증공사 (대표번호 <a href="tel:0808009001" title="주택도시보증공사 전화걸기">080-800-9001</a>), 주택도시기금 수탁은행 또는 한국주택금융공사 (대표번호 <a href="tel:16888114" title="한국주택금융공사 전화걸기">1688-8114</a>)로 문의바랍니다.</p>
+                                    </div>
+                                </div>
+                            </li>
+							<li class="depth">
+                                <a href="#none" class="title btn-acco">예상대출금액 대출상환 조회 정보</a>
+                                <div class="depth02 acco-view">
+                                    <div class="bg-allow"></div>
+                                    <div class="depth02-cont">
+                                    	<div class="tbl-wrap">
+                                            <table class="tbl-style01">
+                                                <caption>예상대출금액 대출상환 조회 정보</caption>
+                                                <colgroup>
+                                                    <col style="width:40%">
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">대출기간</th>
+                                                        <td>10년</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">거치기간</th>
+                                                        <td>1년</td>
+                                                    </tr>
+													<tr>
+                                                        <th scope="row">대출금리</th>
+                                                        <td>2.3%<br><br>적용 가능한 우대금리를 모두 반영한 금리가 2.0% 이하일 경우 실제 적용되는 금리는 2.0%입니다.<br><span class="cType02">단, 2016.5.30.(월)부터 2016.11.30.(수)까지 신규접수분에 한하여 생애최초 주택구입자 우대 후 최종금리가 2.0% 미만인 경우에는 최종금리를 적용합니다.</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="emph mgt10 mgb15">대출금리는 확정금리가 아니며 변동될 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="depth">
+                                <a href="#none" class="title btn-acco">계산결과</a>
+                                <div class="depth02 acco-view">
+                                    <div class="bg-allow"></div>
+                                    <div class="depth02-cont">
+                                    	<p class="emph mgt15">예상대출금의 상환금액과 일정에 대한 계산결과입니다.</p>
+                                        <p class="emph mgt5">상기 이자는 월 단위로 계산한 것이며, 실제 대출 이자는 일단위로 계산하므로 차이가 있을 수 있습니다.</p>
+                                    	<div class="tbl-wrap bdr_t mgt10">
+                                            <table class="tbl-style01">
+                                                <caption>예상대출금의 상환금액과 일정에 대한 계산결과</caption>
+                                                <colgroup>
+                                                    <col style="width:40%">
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">상환방법</th>
+                                                        <td>원리금균등분할상환</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">대출원금</th>
+                                                        <td>8,200,000원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">대출기간</th>
+                                                        <td>120개월</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">거치기간</th>
+                                                        <td>12개월</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">대출이율</th>
+                                                        <td>2.3%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">월상황금 (원금+이자)</th>
+                                                        <td>84,128원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">총 이자액</th>
+                                                        <td>1,074,387원</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">원금 및 총 이자액 합계</th>
+                                                        <td>9,274,387원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tbl-wrap bdr_t mgt10">
+                                            <table class="tbl-style02">
+                                                <caption>회차별 상환금, 납입원금, 이자, 납입원금누계 및 잔금</caption>
+                                                <colgroup>
+                                                    <col style="width:10%">
+                                                    <col style="width:15%">
+                                                    <col style="width:18%">
+                                                    <col style="width:15%">
+                                                    <col style="width:21%">
+                                                    <col style="width:auto">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">회차</th>
+                                                        <th scope="col">상환금</th>
+                                                        <th scope="col">납입원금</th>
+                                                        <th scope="col">이자</th>
+                                                        <th scope="col">납입원금누계</th>
+                                                        <th scope="col">잔금</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>18</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>19</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>20</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>21</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>22</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>23</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>24</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>25</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>26</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>27</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>28</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>29</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>30</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>15,717</td>
+                                                        <td>-</td>
+                                                        <td>8,200,000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-area btn2">
+                        <div><a href="#none" class="btn-round type03">이전</a></div>
+                        <div><a href="#none" class="btn-round type01">처음으로</a></div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.contents -->
+    </div><!-- /.container -->
+
+    <div class="bg-modal"></div>
+</div>
+<script>
+	$(document).on("pagecreate",".gnb-layer",function(){
+		$(".gnb-layer").on("swipeleft",function(){
+			$(this).animate({left:-300});
+			$('.bg-modal').hide();
+			$('#wrapper').attr('style', '');
+		});
+	});
+	
+	jQuery(document).ready(function($){
+        fnAcco(".acco-container", ".btn-acco", ".acco-view", 2);
+    });
+</script>
+</body>
+</html>

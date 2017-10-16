@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>HUG 주택도시보증공사 - 내집마련 계산기</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<script type="text/javascript" src="../../common/js/jquery1.11.1.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="../../common/js/swiper.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="gnb-layer" data-role="page">
+            <div class="gnb-top">
+                <h1><a href="#"><img src="../../common/img/img/img_logo.png" alt="HUG 주택도시보증공사"></a></h1>
+                <span class="user">홍길동 고객님<span>오늘도 좋은 하루되세요</span></span>
+            </div>
+            <div class="state-area">
+                <dl>
+                    <dt>현재 접속상태</dt>
+                    <dd>일반계정으로 로그인하셨습니다. <button type="button" class="btn-logout">로그아웃</button></dd>
+                </dl>
+                <span>※ 보증 확인은 공인인증서로 로그인 하셔야 합니다.</span>
+                <a href="#none" class="btn-certificate">공인인증서<br>로그인</a>
+            </div>
+            <div class="my-link">
+                <dl class="my-complaint">
+                    <dt><span>나의민원</span></dt>
+                    <dd><a href="#none">처리중 <span class="cnt">5</span> 건</a></dd>
+                </dl>
+                <dl class="my-pim">
+                    <dt><span>개인정보관리</span></dt>
+                    <dd><a href="#none">수정후 <span class="cnt">3</span> 개월 경과</a></dd>
+                </dl>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="depth depth01"><span class="title">분양정보</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">HUG 분양정보</a></li>
+                            <li><a href="#none">분양정보 현황</a></li>
+                            <li><a href="#none">보증실적 현황</a></li>
+                            <li><a href="#none">아파트공정률</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth02"><span class="title">주택동향</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">주택통계</a></li>
+                            <li><a href="#none">월간동향</a></li>
+                            <li><a href="#none">보도자료</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth03"><span class="title">공매·입찰</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">공매공고</a></li>
+                            <li><a href="#none">공매물건</a></li>
+                            <li><a href="#none">입찰안내</a></li>
+                            <li><a href="#none">온비드입찰안내</a></li>
+                            <li><a href="#none">입찰정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth04"><span class="title">맞춤형HUG</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">맞춤보증상품 – 개인 10종</a></li>
+                            <li><a href="#none">맞춤보증상품 – 기업 15종</a></li>
+                            <li><a href="#none">전세금반환보증</a></li>
+                            <li><a href="#none">내집마련가이드</a></li>
+                            <li><a href="#none">맞춤형대출상품</a></li>
+                            <li><a href="#none">주택청약도우미</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth05"><span class="title">마이페이지</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">마이페이지 홈</a></li>
+                            <li><a href="#none">보증상품가입현황</a></li>
+                            <li><a href="#none">계약현황/납입정보</a></li>
+                            <li><a href="#none">공인인증서관리</a></li>
+                            <li><a href="#none">내집마련 계산기</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth06"><span class="title">고객센터</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">HUG 새소식</a></li>
+                            <li><a href="#none">HUG 콜센터</a></li>
+                            <li><a href="#none">알림서비스</a></li>
+                            <li><a href="#none">환경설정</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hug-app">
+                <span class="title">HUG앱 추천하기</span>
+                <span class="sns">
+                    <a href="#none" class="ico-splite kakao"><span class="hide">카카오톡</span></a>
+                    <a href="#none" class="ico-splite facebook"><span class="hide">페이스북</span></a>
+                    <a href="#none" class="ico-splite twitter"><span class="hide">twitter</span></a>
+                    <a href="#none" class="ico-splite mail"><span class="hide">메일</span></a>
+                </span>
+            </div>
+            <div class="foot">
+                <address>부산광역시 남구 문현금융로 40 BIFC (우편번호:48400)</address>
+                <p class="call-area"><span><a href="tel:1566-9009">T. 1566-9009</a></span><span>F. 051-955-5405</span></p>
+                <p class="copyright">Copyright ⓒ Korea Housing & Urban Guarantee Corporation. All rights reserved.</p>
+            </div>
+        </div>
+        <h2 class="logo"><span class="hide">HUG</span></h2>
+        <div class="left-area">
+            <a href="#none" class="btn-gnb btn-prev btn-splite"><span class="hide">이전 페이지로 이동</span></a>
+            <a href="#none" class="btn-notice btn-splite"><span class="hide">알림보기</span></a>
+            <!-- 새로운 알림이 등록되었을 경우 -->
+            <!--a href="#none" class="btn-notice btn-splite new-notice"><span class="hide">알림보기</span></a-->
+            <!-- //새로운 알림이 등록되었을 경우 -->
+        </div>
+        <div class="right-area">
+            <a href="#none" class="btn-login btn-splite"><span class="hide">로그인</span></a>
+            <a href="#none" class="btn-certificate btn-splite"><span class="hide">공인인증서 로그인</span></a>
+        </div>
+    </div><!-- /.header -->
+
+    <div id="container">
+        <div class="contents">
+            <div class="my-calculator">
+                <div class="screening_progress">
+                    <span class="step01">01.<br> 신청자격확인</span><!-- 진행 중 상태 on 클래스 -->
+                    <span class="step02">02.<br> 가점계산정보입력</span>
+                    <span class="step03 on">03.<br> 청약가점계산결과</span>
+                </div>
+                
+                <form class="calculator-info-form">
+                    <fieldset>
+                        <legend class="hide">청약신청 자격 확인을 위한 정보입력</legend>
+                        
+                        <div class="txt-box04"> 
+                            <div class="box-cont">
+                                <div class="guide-txt">
+                                    <h3 class="main-txt">청양가점 계산결과는 고객님이 입력하신 정보를 바탕으로 산출된 점수이므로 실제와 다를 수 있습니다.</h3>
+									<p class="txt">보다 정확한 가점점수는 청약통장 가입은행 방문 또는 금융결제원(1577-5500)으로 문의하시기 바랍니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="box-cont">
+                                <div class="title-wrap ty04">
+                                    <h4 class="h4-tit">청약가점 계산결과</h4>
+                                </div>
+                                <div class="tbl-wrap mgt5">
+									<table class="tbl-style02">
+										<caption>청약가점 계산결과</caption>
+										<colgroup>
+											<col style="width:36%">
+											<col style="width:38%">
+											<col style="width:26%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="txtC">항목</th>
+												<th scope="col" class="txtC">입력결과</th>
+												<th scope="col" class="txtC">점수</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="txtC">무주택 기간<br>(32점)</td>
+												<td class="txtC">무주택자가 아닙니다.</td>
+												<td class="txtC">0점</td>
+											</tr>
+											<tr>
+												<td class="txtC">부양가족수<br>(35점)</td>
+												<td class="txtC">1명</td>
+												<td class="txtC">10점</td>
+											</tr>
+											<tr>
+												<td class="txtC">청약통장 가입기간<br>(17점)</td>
+												<td class="txtC">8년 이상 ~ 9년 미만</td>
+												<td class="txtC">10점</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="score-box">
+									<dl>
+										<dt>고객님의 주택청약 가점은</dt>
+										<dd><span class="score">20</span>점 입니다.</dd>
+									</dl>
+								</div>
+
+								<div class="notice-box">
+									<span class="tit">신청시 유의사항</span>
+									<p class="txt"><strong>85m2 이하 민영주택은 가점제 신청, 85m2 초과 민영주택은 추첨제 신청</strong><br><br>단, 수도권 보금자리지구(GB해제면적 50% 이상), 주택거래신고지역, 투기과열지구는 주택면적에 관계없이 모두 가점제 적용하며 주택소유수에 따른 가점제적용기준도 일반주택과 상이한 점 유의하세요.</p>
+								</div>
+                            </div>
+
+							<div class="box-cont">
+                                <div class="title-wrap ty04">
+                                    <h4 class="h4-tit">분양정보 알아보기</h4>
+                                </div>
+								<ul class="sales-info-list">
+									<li>
+										<a href="http://www.onnara.go.kr/?menuCd=5" title="온나라 분양캘린더 새창으로 이동">
+											<span class="img-wrap"><img src="../../common/img/img/img_sales01.png" alt="온나라"></span>
+											<span class="title">온나라 분양캘린더</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://www.onnara.go.kr/?menuCd=6" title="온나라 분양중인 아파트 새창으로 이동">
+											<span class="img-wrap"><img src="../../common/img/img/img_sales01.png" alt="온나라"></span>
+											<span class="title">온나라 분양중인 아파트</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://www.apt2you.com/houseSaleSimpleInfo.do" title=" 아파트투유 분양중인 주택 새창으로 이동">
+											<span class="img-wrap"><img src="../../common/img/img/img_sales02.png" alt="아파트투유"></span>
+											<span class="title">APT2you 분양중인 주택</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://www.lh.or.kr/lh_main_offer.asp" title="LH 분양정보안내 새창으로 이동">
+											<span class="img-wrap"><img src="../../common/img/img/img_sales03.png" alt="LH"></span>
+											<span class="title">LH 분양정보안내</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://www.i-sh.co.kr/www/m_129/sil/viewSellHouseBlockInfo_list.do" title="SH 분양정보안내 새창으로 이동">
+											<span class="img-wrap"><img src="../../common/img/img/img_sales04.png" alt="SH"></span>
+											<span class="title">SH 분양정보안내</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://www.onnara.go.kr/ep/sale/saleLiving.jsp" title="NEW 입주자 모집 공고 새창으로 이동">
+											<span class="img-wrap"><img src="../../common/img/img/img_sales05.png" alt="NEW"></span>
+											<span class="title">NEW 입주자 모집 공고</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://www.duco.or.kr/jsp/dudc/board_list.jsp?appid=sale" title="대구도시공사 분양정보 새창으로 이동">
+											<span class="img-wrap"><img src="../../common/img/img/img_sales06.png" alt="대구도시공사"></span>
+											<span class="title">대구도시공사 분양정보</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://www.courtauction.go.kr/" title="대법원 경매정보 새창으로 이동">
+											<span class="img-wrap"><img src="../../common/img/img/img_sales07.png" alt="대법원"></span>
+											<span class="title">대법원 경매정보</span>
+										</a>
+									</li>
+								</ul>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="btn-area btn2">
+                    <div><a href="#none" class="btn-round type03">이전</a></div>
+                    <div><button type="button" class="btn-round type01">처음</button></div>
+                </div>
+            </div>
+        </div><!-- /.contents -->
+    </div><!-- /.container -->
+
+    <div class="bg-modal"></div>
+</div>
+
+<!-- layer pop : 도움말 -->
+<div class="layer-pop pop-interest-rate">
+    <div class="pop-wrap scroll">
+        <div class="pop-content">
+            <div class="txt-box05">
+                <div class="box-cont">
+                    <p class="tit"> 가족사항입력시 부양가족인정 기준 :<br>청약통장 가입자의 주민등록등본에 등재된 세대원</p>
+                    <ul class="list-type04 mgt10">
+						<li><span class="num">1.</span> 배우자</li>
+						<li><span class="num">2.</span> 직계존속(배우자의 직계존속 포함)</li>
+						<li><span class="num">3.</span> 직계비속(미혼자녀만 해당, 부모 모두 사망한 경우 미혼의 손자녀 포함)</li>
+						<li><span class="num">4.</span> 청약가입자의 배우자가 등본상 분리된 경우 배우자와 동일한 세대를 이루고 있는 세대원
+단, 입주자모집공고일 현재 청약가입자가 세대주로서 청약가입자의 직계존속(배우자의 직계존속 포함)을 3년이상 계속하여 부양(동일 주민등본에 등재)하는 경우에 한하여 부양가족으로 인정하며, 30세 이상의 직계비속은 공고일 기준 최근 1년이상 동일 등본에 등재시에만 부양가족으로 인정</li>
+					</ul>
+                </div>
+                <div class="box-cont">
+                    <p class="tit">주택을 소유하지 않는 것으로 인정되는 경우</p>
+                    <ul class="list-type04 mgt10">
+						<li><span class="num">1.</span> 청약자의 세대원 중 60세 이상의 직계존속이 주택을 소유하고 있는 경우</li>
+						<li><span class="num">2.</span> 20㎡이하의 주택을 1호 소유하고 있는 경우</li>
+						<li><span class="num">3.</span> 무허가 건물을 소유하고 있는 경우</li>
+						<li><span class="num">4.</span> 상속으로 인하여 주택의 공유지분을 취득한 경우에는 부적격자로 통보받은 날부터 3개월 이내에 그 지분을 처분한 경우</li>
+						<li><span class="num">5.</span> 소형이면서 저가주택 소유자 : 공고일 현재 전용 60㎡이하의 주택으로서 주택공시가격이 8천만원(수도권 1억3천만원)이하인 주택 1채를 소유한 자</li>
+					</ul>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn pop-close"><span class="hide">닫기</span></button>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+
+<script>
+	$(document).on("pagecreate",".gnb-layer",function(){
+		$(".gnb-layer").on("swipeleft",function(){
+			$(this).animate({left:-300});
+			$('.bg-modal').hide();
+			$('#wrapper').attr('style', '');
+		});
+	});
+	
+	jQuery(document).ready(function($){
+        fnAcco(".acco-container", ".btn-acco", ".acco-view", 2);
+    });
+	
+	/* 팝업 부분 */
+    var winH = $(window).height();
+    var popH = $('.layer-pop .pop-wrap').height();
+
+    /* 팝업 닫기 버튼 클릭 시 */
+    $('.pop-close, .alert-confirm').on('click', function(){
+        $('#wrapper').attr('style', '');
+        $('.layer-pop').removeClass('active').slideUp();
+    });
+    
+    /* 도움말 클릭 시 */
+    $('.btn-info').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.pop-interest-rate').css('height', winH-40+'px');
+        $('.pop-interest-rate').slideDown();
+    });
+</script>
+</body>
+</html>

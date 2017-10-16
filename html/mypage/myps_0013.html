@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>HUG 주택도시보증공사 - 내집마련 계산기</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<script type="text/javascript" src="../../common/js/jquery1.11.1.js"></script>
+<script type="text/javascript" src="../../common/js/swiper.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="gnb-layer" data-role="page">
+            <div class="gnb-top">
+                <h1><a href="#"><img src="../../common/img/img/img_logo.png" alt="HUG 주택도시보증공사"></a></h1>
+                <span class="user">홍길동 고객님<span>오늘도 좋은 하루되세요</span></span>
+            </div>
+            <div class="state-area">
+                <dl>
+                    <dt>현재 접속상태</dt>
+                    <dd>일반계정으로 로그인하셨습니다. <button type="button" class="btn-logout">로그아웃</button></dd>
+                </dl>
+                <span>※ 보증 확인은 공인인증서로 로그인 하셔야 합니다.</span>
+                <a href="#none" class="btn-certificate">공인인증서<br>로그인</a>
+            </div>
+            <div class="my-link">
+                <dl class="my-complaint">
+                    <dt><span>나의민원</span></dt>
+                    <dd><a href="#none">처리중 <span class="cnt">5</span> 건</a></dd>
+                </dl>
+                <dl class="my-pim">
+                    <dt><span>개인정보관리</span></dt>
+                    <dd><a href="#none">수정후 <span class="cnt">3</span> 개월 경과</a></dd>
+                </dl>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="depth depth01"><span class="title">분양정보</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">HUG 분양정보</a></li>
+                            <li><a href="#none">분양정보 현황</a></li>
+                            <li><a href="#none">보증실적 현황</a></li>
+                            <li><a href="#none">아파트공정률</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth02"><span class="title">주택동향</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">주택통계</a></li>
+                            <li><a href="#none">월간동향</a></li>
+                            <li><a href="#none">보도자료</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth03"><span class="title">공매·입찰</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">공매공고</a></li>
+                            <li><a href="#none">공매물건</a></li>
+                            <li><a href="#none">입찰안내</a></li>
+                            <li><a href="#none">온비드입찰안내</a></li>
+                            <li><a href="#none">입찰정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth04"><span class="title">맞춤형HUG</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">맞춤보증상품 – 개인 10종</a></li>
+                            <li><a href="#none">맞춤보증상품 – 기업 15종</a></li>
+                            <li><a href="#none">전세금반환보증</a></li>
+                            <li><a href="#none">내집마련가이드</a></li>
+                            <li><a href="#none">맞춤형대출상품</a></li>
+                            <li><a href="#none">주택청약도우미</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth05"><span class="title">마이페이지</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">마이페이지 홈</a></li>
+                            <li><a href="#none">보증상품가입현황</a></li>
+                            <li><a href="#none">계약현황/납입정보</a></li>
+                            <li><a href="#none">공인인증서관리</a></li>
+                            <li><a href="#none">내집마련 계산기</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth06"><span class="title">고객센터</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">HUG 새소식</a></li>
+                            <li><a href="#none">HUG 콜센터</a></li>
+                            <li><a href="#none">알림서비스</a></li>
+                            <li><a href="#none">환경설정</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hug-app">
+                <span class="title">HUG앱 추천하기</span>
+                <span class="sns">
+                    <a href="#none" class="ico-splite kakao"><span class="hide">카카오톡</span></a>
+                    <a href="#none" class="ico-splite facebook"><span class="hide">페이스북</span></a>
+                    <a href="#none" class="ico-splite twitter"><span class="hide">twitter</span></a>
+                    <a href="#none" class="ico-splite mail"><span class="hide">메일</span></a>
+                </span>
+            </div>
+            <div class="foot">
+                <address>부산광역시 남구 문현금융로 40 BIFC (우편번호:48400)</address>
+                <p class="call-area"><span><a href="tel:1566-9009">T. 1566-9009</a></span><span>F. 051-955-5405</span></p>
+                <p class="copyright">Copyright ⓒ Korea Housing & Urban Guarantee Corporation. All rights reserved.</p>
+            </div>
+        </div>
+        <h2 class="logo"><span class="hide">HUG</span></h2>
+        <div class="left-area">
+            <a href="#none" class="btn-gnb btn-prev btn-splite"><span class="hide">이전 페이지로 이동</span></a>
+            <a href="#none" class="btn-notice btn-splite"><span class="hide">알림보기</span></a>
+            <!-- 새로운 알림이 등록되었을 경우 -->
+            <!--a href="#none" class="btn-notice btn-splite new-notice"><span class="hide">알림보기</span></a-->
+            <!-- //새로운 알림이 등록되었을 경우 -->
+        </div>
+        <div class="right-area">
+            <a href="#none" class="btn-login btn-splite"><span class="hide">로그인</span></a>
+            <a href="#none" class="btn-certificate btn-splite"><span class="hide">공인인증서 로그인</span></a>
+        </div>
+    </div><!-- /.header -->
+
+    <div id="container">
+        <div class="contents">
+            <div class="my-calculator">
+                <div class="screening_progress">
+                    <span class="step01 on">01.<br> 대출신청자격확인</span><!-- 진행 중 상태 on 클래스 -->
+                    <span class="step02">02.<br> 대출신청정보입력</span>
+                    <span class="step03">03.<br> 예상대출금액산출</span>
+                </div>
+                <form class="calculator-form">
+                    <fieldset>
+                        <legend class="hide">대출신청 자격 확인을 위한 정보입력</legend>
+                        <div class="guide-txt">
+                        	<h3 class="main-txt"><span class="cType01">고객님의 대출신청자격</span>을 확인할 수 있습니다.</h3>
+                            <p class="bull-txt">대출신청 자격 문항은 <span class="cType02">총 9개</span>로 구성되어 있습니다.<br>각 문항별 해당하는 부분에 체크하시기 바랍니다.</p>
+                        </div>
+                        <div class="my-navi type05">
+                            <ul class="acco-container">
+                                <li class="depth">
+                                    <a href="#none" class="title btn-acco close"><span class="numb">01.</span>고객님은 주민등록등본상 세대주이십니까?</a>
+                                    <div class="depth02 acco-view active">
+                                        <div class="depth02-cont">
+                                        	<ul class="radio-list">
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_1_y" class="inp-chk" name="calculator01_1">
+                                                    <label for="calculator01_1_y">예</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_1_n" class="inp-chk" name="calculator01_1">
+                                                    <label for="calculator01_1_n">아니오</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none" class="title btn-acco"><span class="numb">02.</span>세대주 및 세대원 전원 현재 무주택자이십니까?</a>
+                                    <div class="depth02 acco-view">
+                                        <div class="depth02-cont">
+                                        	<ul class="radio-list">
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_2_y" class="inp-chk" name="calculator01_2">
+                                                    <label for="calculator01_2_y">예</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_2_n" class="inp-chk" name="calculator01_2">
+                                                    <label for="calculator01_2_n">아니오</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none" class="title btn-acco"><span class="numb">03.</span>고객님의 해당되는 사항은 무엇입니까?</a>
+                                    <div class="depth02 acco-view">
+                                        <div class="depth02-cont">
+                                        	<div class="radio-box">
+                                            	<input type="radio" id="calculator01_3_1" class="inp-chk" name="calculator01_3">
+                                                <label for="calculator01_3_1">신혼가구<br>(3개월 이내 결혼예정자 또는 혼인일로부터 5년이내)</label>
+                                            </div>
+                                        	<div class="radio-box">
+                                            	<input type="radio" id="calculator01_3_2" class="inp-chk" name="calculator01_3">
+                                                <label for="calculator01_3_2">혁신도시이전종사자<br>(타지역으로 이주하는 개발구역세입자)</label>
+                                            </div>
+                                            <div class="radio-box">
+                                            	<input type="radio" id="calculator01_3_3" class="inp-chk" name="calculator01_3">
+                                                <label for="calculator01_3_3">해당사항 없음</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none" class="title btn-acco"><span class="numb">04.</span>고객님은 신혼가구 또는 결혼예정자이며, 상여금을 포함한 부부합산 총소득 6천만원 이하이십니까?</a>
+                                    <div class="depth02 acco-view">
+                                        <div class="depth02-cont">
+                                        	<ul class="radio-list">
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_4_y" class="inp-chk" name="calculator01_4">
+                                                    <label for="calculator01_4_y">예</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_4_n" class="inp-chk" name="calculator01_4">
+                                                    <label for="calculator01_4_n">아니오</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none" class="title btn-acco"><span class="numb">05.</span>입주하고자 하는 주택이 공부상 (등기부등본, 건축물 관리대장) 주택이십니까?</a>
+                                    <div class="depth02 acco-view">
+                                        <div class="depth02-cont">
+                                        	<ul class="radio-list">
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_5_y" class="inp-chk" name="calculator01_5">
+                                                    <label for="calculator01_5_y">예</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_5_n" class="inp-chk" name="calculator01_5">
+                                                    <label for="calculator01_5_n">아니오</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none" class="title btn-acco"><span class="numb">06.</span>입주하고자 하는 주택의 전용면적이 85m²이하(수도권을 제외한 도시지역이 아닌 읍 또는 면 지역 100m²이하) 입니까?</a>
+                                    <div class="depth02 acco-view">
+                                        <div class="depth02-cont">
+                                        	<ul class="radio-list">
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_6_y" class="inp-chk" name="calculator01_6">
+                                                    <label for="calculator01_6_y">예</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_6_n" class="inp-chk" name="calculator01_6">
+                                                    <label for="calculator01_6_n">아니오</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none" class="title btn-acco"><span class="numb">07.</span>대출하고자 하는 전세가 신규계약 또는 재계약에 따른 증액입니까?</a>
+                                    <div class="depth02 acco-view">
+                                        <div class="depth02-cont">
+                                        	<ul class="radio-list">
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_7_1" class="inp-chk" name="calculator01_7">
+                                                    <label for="calculator01_7_1">신규계약</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_7_2" class="inp-chk" name="calculator01_7">
+                                                    <label for="calculator01_7_2">재계약 증액</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none" class="title btn-acco"><span class="numb">08.</span>고객님의 직업은 무엇입니까?</a>
+                                    <div class="depth02 acco-view">
+                                        <div class="depth02-cont">
+                                        	<ul class="radio-list">
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_8_1" class="inp-chk" name="calculator01_8">
+                                                    <label for="calculator01_8_1">신규계약</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_8_2" class="inp-chk" name="calculator01_8">
+                                                    <label for="calculator01_8_2">개인사업자</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_8_3" class="inp-chk" name="calculator01_8">
+                                                    <label for="calculator01_8_3">무소득</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none" class="title btn-acco"><span class="numb">09.</span>연소득 등록 시 소득인정을 어떻게 하시겠습니까?</a>
+                                    <div class="depth02 acco-view">
+                                        <div class="depth02-cont">
+                                        	<ul class="radio-list">
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_9_1" class="inp-chk" name="calculator01_9">
+                                                    <label for="calculator01_9_1">본인만 입력</label>
+                                                </li>
+                                                <li class="radio-box">
+                                                    <input type="radio" id="calculator01_9_2" class="inp-chk" name="calculator01_9">
+                                                    <label for="calculator01_9_2">본인과 배우자 입력</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                    <div class="guide-txt btm">
+	                    <p class="bull-txt cType02">모든 항목을 선택하셨습니다. 아래 ‘다음’ 버튼을 선택해주세요.</p>
+                    </div>
+                    <div class="btn-area btn2">
+                        <div><a href="#none" class="btn-round type03">이전</a></div>
+                        <div><button type="button" class="btn-round type01">다음</button></div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.contents -->
+    </div><!-- /.container -->
+
+    <div class="bg-modal"></div>
+</div>
+<script>
+	$(document).on("pagecreate",".gnb-layer",function(){
+		$(".gnb-layer").on("swipeleft",function(){
+			$(this).animate({left:-300});
+			$('.bg-modal').hide();
+			$('#wrapper').attr('style', '');
+		});
+	});
+	
+	jQuery(document).ready(function($){
+        fnAcco(".acco-container", ".btn-acco", ".acco-view", 2);
+    });
+</script>
+</body>
+</html>

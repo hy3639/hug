@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>HUG 주택도시보증공사 - 내집마련 계산기</title>
+<link rel="stylesheet" href="../../../common/css/common.css">
+<script type="text/javascript" src="../../../common/js/jquery1.11.1.js"></script>
+<script type="text/javascript" src="../../../common/js/swiper.min.js"></script>
+<script type="text/javascript" src="../../../common/js/common.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="gnb-layer" data-role="page">
+            <div class="gnb-top">
+                <h1><a href="#"><img src="../../../common/img/img/img_logo.png" alt="HUG 주택도시보증공사"></a></h1>
+                <span class="user">홍길동 고객님<span>오늘도 좋은 하루되세요</span></span>
+            </div>
+            <div class="state-area">
+                <dl>
+                    <dt>현재 접속상태</dt>
+                    <dd>일반계정으로 로그인하셨습니다. <button type="button" class="btn-logout">로그아웃</button></dd>
+                </dl>
+                <span>※ 보증 확인은 공인인증서로 로그인 하셔야 합니다.</span>
+                <a href="#none" class="btn-certificate">공인인증서<br>로그인</a>
+            </div>
+            <div class="my-link">
+                <dl class="my-complaint">
+                    <dt><span>나의민원</span></dt>
+                    <dd><a href="#none">처리중 <span class="cnt">5</span> 건</a></dd>
+                </dl>
+                <dl class="my-pim">
+                    <dt><span>개인정보관리</span></dt>
+                    <dd><a href="#none">수정후 <span class="cnt">3</span> 개월 경과</a></dd>
+                </dl>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="depth depth01"><span class="title">분양정보</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">HUG 분양정보</a></li>
+                            <li><a href="#none">분양정보 현황</a></li>
+                            <li><a href="#none">보증실적 현황</a></li>
+                            <li><a href="#none">아파트공정률</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth02"><span class="title">주택동향</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">주택통계</a></li>
+                            <li><a href="#none">월간동향</a></li>
+                            <li><a href="#none">보도자료</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth03"><span class="title">공매·입찰</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">공매공고</a></li>
+                            <li><a href="#none">공매물건</a></li>
+                            <li><a href="#none">입찰안내</a></li>
+                            <li><a href="#none">온비드입찰안내</a></li>
+                            <li><a href="#none">입찰정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth04"><span class="title">맞춤형HUG</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">맞춤보증상품 – 개인 10종</a></li>
+                            <li><a href="#none">맞춤보증상품 – 기업 15종</a></li>
+                            <li><a href="#none">전세금반환보증</a></li>
+                            <li><a href="#none">내집마련가이드</a></li>
+                            <li><a href="#none">맞춤형대출상품</a></li>
+                            <li><a href="#none">주택청약도우미</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth05"><span class="title">마이페이지</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">마이페이지 홈</a></li>
+                            <li><a href="#none">보증상품가입현황</a></li>
+                            <li><a href="#none">계약현황/납입정보</a></li>
+                            <li><a href="#none">공인인증서관리</a></li>
+                            <li><a href="#none">내집마련 계산기</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth06"><span class="title">고객센터</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">HUG 새소식</a></li>
+                            <li><a href="#none">HUG 콜센터</a></li>
+                            <li><a href="#none">알림서비스</a></li>
+                            <li><a href="#none">환경설정</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hug-app">
+                <span class="title">HUG앱 추천하기</span>
+                <span class="sns">
+                    <a href="#none" class="ico-splite kakao"><span class="hide">카카오톡</span></a>
+                    <a href="#none" class="ico-splite facebook"><span class="hide">페이스북</span></a>
+                    <a href="#none" class="ico-splite twitter"><span class="hide">twitter</span></a>
+                    <a href="#none" class="ico-splite mail"><span class="hide">메일</span></a>
+                </span>
+            </div>
+            <div class="foot">
+                <address>부산광역시 남구 문현금융로 40 BIFC (우편번호:48400)</address>
+                <p class="call-area"><span><a href="tel:1566-9009">T. 1566-9009</a></span><span>F. 051-955-5405</span></p>
+                <p class="copyright">Copyright ⓒ Korea Housing & Urban Guarantee Corporation. All rights reserved.</p>
+            </div>
+        </div>
+        <h2 class="logo"><span class="hide">HUG</span></h2>
+        <div class="left-area">
+            <a href="#none" class="btn-gnb btn-prev btn-splite"><span class="hide">이전 페이지로 이동</span></a>
+            <a href="#none" class="btn-notice btn-splite"><span class="hide">알림보기</span></a>
+            <!-- 새로운 알림이 등록되었을 경우 -->
+            <!--a href="#none" class="btn-notice btn-splite new-notice"><span class="hide">알림보기</span></a-->
+            <!-- //새로운 알림이 등록되었을 경우 -->
+        </div>
+        <div class="right-area">
+            <a href="#none" class="btn-login btn-splite"><span class="hide">로그인</span></a>
+            <a href="#none" class="btn-certificate btn-splite"><span class="hide">공인인증서 로그인</span></a>
+        </div>
+    </div><!-- /.header -->
+
+    <div id="container">
+        <div class="contents">
+            <div class="help-wrap help-question-cont">
+				<div class="tab-wrap">
+					<ul class="tab-style01 tab-container">
+						<li class="tab01 on"><button type="button" class="cus-tab">보증약관</button></li>
+						<li class="tab02"><button type="button" class="cus-tab">상담연락처</button></li>
+					</ul>
+					<div class="tab-view-container">
+						<div class="tab-cont cont01 active">
+							<div class="question-form">
+								<div class="my-navi type05">
+									<ul class="acco-container">
+										<li class="depth">
+											<a href="#none" class="title btn-acco"><span class="numb"><span class="cType01">Q.</span></span>어떤 경우에 보증 사고가 발생한 것으로 보나요?</a>
+											<div class="depth02 acco-view">
+												<div class="question-cont">
+                                                    7가지 경우 중 어느 하나에 해당하는 경우를 말합니다. 대출 취급 금융기관(보중채권자)은 보증사고가 발생된 때에 그 사실을 통지기한내에 주택도시보증공사에 통지하여야 합니다.<br><br>
+                                                    첫째, 보증부대출의 원금이 약정기일에 변제되지 아니한 때 / 사고사유발생일로부터 1개월 이내에 통지<br><br>
+                                                    둘째, 보증부대출의 이자가 약정기일에 변제되지 아니하고 3개월이 경과한 때 / 사고사유발생일 해당월의 말일로부터 1개월 이내에 통지 등 (나머지 보증사고사유 및 통지기한에 대해서는 제8조를 참고해주세요)
+												</div>
+											</div>
+										</li>
+										<li class="depth">
+											<a href="#none" class="title btn-acco"><span class="numb"><span class="cType01">Q.</span></span>보증사고 발생시 임차인이 해야 할 일이 있나요?</a>
+											<div class="depth02 acco-view">
+												<div class="question-cont">
+                                                    금융기관은 보증사고사유 중 어느 하나라도 발생된 경우, 주택도시보증공사 동의가 없는 한, 보증부대출을 실행하여서는 안 됩니다.<br>
+                                                    또한, 주택도시보증공사가 정한 때로부터 (자세한 사항은 제10조 참고) 6개월 이내에 보증채무이행을 청구해야 합니다.
+												</div>
+											</div>
+										</li>
+										<li class="depth">
+											<a href="#none" class="title btn-acco"><span class="numb"><span class="cType01">Q.</span></span>주택도시보증공사는 언제, 어떻게 보증채무를 이행하나요?</a>
+											<div class="depth02 acco-view">
+												<div class="question-cont">
+													주택도시보증공사는 다음 각 호 금액의 합계액 전액을 일시에 상환합니다.<br><br>
+                                                    - 보증부대출 채권액 중 미 회수액에 보증비율을 곱한 금액으로 보증금액을 초과하지 아니하는 원금<br>
+                                                    - 위에 의한 이행액에 대하여 보증채무이행일까지의 미수이자액<br>
+                                                    - 금융기관이 보증부대출 회수를 위하여 지급한 비용 중 주택도시보증공사가 인정한 금액에 보증비율을 곱한 금액
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+                        <div class="tab-cont cont02">
+							<div class="txt-wrap mg0">
+								<p>주택도시보증공사와 최초로 보증 거래하고자 하는 고객은 등기부등본상의 본점소재지를 기준으로 정해진 관할영업지사에 업무거래등록을 해야만 업무거래가 가능합니다.</p>
+							</div>
+							<div class="title-wrap mg0">
+								<h4 class="h4-tit">주택도시보증공사 지사별 업무구역</h4>
+							</div>
+							<div class="tbl-wrap">
+								<table class="tbl-style02 type02">
+									<caption>주택도시보증공사 지사별 업무구역</caption>
+									<colgroup>
+										<col style="width:25%">
+										<col style="width:75%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="txtC">관할영업지사</th>
+											<th class="txtC">업무구역</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th rowspan="2">서울서부지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 영등포구 여의도동 의사당대로21 주택도시보증공사 1층 (우, 07237)</li>
+													<li>전화 : 02)3771-6270 / 팩스 : 02)3771-6298</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="txt-list">
+													<li>서울특별시 : 강서구, 관악구, 구로구, 금천구, 동작구, 양천구, 영등포구</li>
+													<li>경기도 : 광명시, 김포시, 부천시, 안양시, 고양시, 파주시</li>
+													<li>인천광역시 전역</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">서울북부지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 종로구 청계천로 35 (서린B/D 5층) (우, 03188)</li>
+													<li>전화 : 02)397-2760 / 팩스 : 02)397-2701</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="txt-list">
+													<li>서울특별시 : 강북구, 광진구, 노원구, 도봉구, 동대문구, 마포구, 서대문구, 성동구, 성북구, 용산구, 은평구, 종로구, 중구, 중랑구</li>
+													<li>경기도 : 구리시, 남양주시, 동두천시, 의정부시, 가평군, 양주군, 연천군, 포천군</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">서울동부지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 강남구 테헤란로 326 역삼아이타워 2층 (우, 06211)</li>
+													<li>전화 : 02)2050-7860 / 팩스 : 02)2050-7811</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="bull-txt">서울특별시 : 강남구, 강동구, 송파구</p>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">서울남부지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 서초구 서초대로 314 (정보통신공제조합 B/D 5층) (우, 06633)</li>
+													<li>전화 : 02)6009-7960 / 팩스 : 02)6009-7911</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<ul class="txt-list">
+													<li>서울특별시 : 서초구</li>
+													<li>경기도 : 과천시, 광주시, 이천시, 하남시, 양평군, 여주군</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">부산울산지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 부산광역시 동구 중앙대로 240(현대해상 부산사옥 14층) (우, 48400)</li>
+													<li>전화 : 051)922-7760 / 팩스 : 051)922-7777</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="bull-txt">부산광역시, 울산광역시 전역</p>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">대구경북지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 대구광역시 수성구 동대구로 334 교원공제회관 7층 (우, 42028)</li>
+													<li>전화 : 053)210-2960 / 팩스 : 053)210-2930</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="bull-txt">대구광역시 및 경상북도 전역</p>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">광주전남지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 광주광역시 서구 시청로26 (광주빛고을센터 6층) (우, 61964)</li>
+													<li>전화 : 062)350-5960 / 팩스 : 062)350-5991</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="bull-txt">광주광역시, 전라남도 및 제주도 전역</p>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">대전충청지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 대전시 서구 둔산중로 8 (교원공제회관 4층) (우, 35260)</li>
+													<li>전화 : 042)479-8560 / 팩스 : 042)479-8501</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="bull-txt">대전광역시 및 충청남·북도 전역</p>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">경남지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 경상남도 성산구 상남로 25 (산업은행 1층) (우, 51505)</li>
+													<li>전화 : 055)210-3470 / 팩스 : 055)210-3450</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="bull-txt">경상남도 전역</p>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">전북지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 전북 전주시 완산구 온고을로 1 (교원공제회관 3층) (우, 54949)</li>
+													<li>전화 : 063)250-6460 / 팩스 : 063)250-6450</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="bull-txt">전라북도 전역</p>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">경기지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 경기도 수원시 팔달구 권광로 178 (한국교직원공제회관) 9층 (우, 16488)</li>
+													<li>전화 : 031)8002-7060 / 팩스 : 031)8002-7070</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="bull-txt">경기도 : 성남시, 수원시, 안성시, 용인시, 안산시, 시흥시, 평택시, 화성시, 오산시, 의왕시, 군포시</p>
+											</td>
+										</tr>
+										<tr>
+											<th rowspan="2">강원지사</th>
+											<td>
+												<ul class="txt-list">
+													<li>주소 : 강원도 원주시 북원로 2135 NH 농협은행 원주시지부 3층 (우, 26383)</li>
+													<li>전화 : 033)902-6660 / 팩스 : 033)902-6699</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="bull-txt">강원도 전역</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="title-wrap mg0">
+								<h4 class="h4-tit">유의사항</h4>
+							</div>
+							<p class="info-txt">인터넷보증 업무거래등록은 거래고객 당사자 확인을 위하여 공인인증서가 반드시 필요합니다.</p>
+						</div>
+					</div>
+					<script>
+						$(document).ready(function(){
+							fnTab($(".tab-wrap"));
+						});
+					</script>
+				</div>
+            </div>
+        </div><!-- /.contents -->
+    </div><!-- /.container -->
+
+    <div class="bg-modal"></div>
+</div>
+<script>
+	$(document).on("pagecreate",".gnb-layer",function(){
+		$(".gnb-layer").on("swipeleft",function(){
+			$(this).animate({left:-300});
+			$('.bg-modal').hide();
+			$('#wrapper').attr('style', '');
+		});
+	});
+
+	jQuery(document).ready(function($){
+        fnAcco(".acco-container", ".btn-acco", ".acco-view", 2);
+    });
+</script>
+</body>
+</html>

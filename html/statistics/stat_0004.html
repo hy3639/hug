@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>HUG 주택도시보증공사 - 분양통계현황</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<script type="text/javascript" src="../../common/js/jquery1.11.1.js"></script>
+<script type="text/javascript" src="../../common/js/swiper.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div class="gnb-layer" data-role="page">
+			<div class="gnb-top">
+				<h1><a href="#"><img src="../common/img/img/img_logo.png" alt="HUG 주택도시보증공사"></a></h1>
+				<span class="user">홍길동 고객님<span>오늘도 좋은 하루되세요</span></span>
+			</div>
+			<div class="state-area">
+				<dl>
+					<dt>현재 접속상태</dt>
+					<dd>일반계정으로 로그인하셨습니다. <button type="button" class="btn-logout">로그아웃</button></dd>
+				</dl>
+				<span>※ 보증 확인은 공인인증서로 로그인 하셔야 합니다.</span>
+				<a href="#none" class="btn-certificate">공인인증서<br>로그인</a>
+			</div>
+			<div class="my-link">
+				<dl class="my-complaint">
+					<dt><span>나의민원</span></dt>
+					<dd><a href="#none">처리중 <span class="cnt">5</span> 건</a></dd>
+				</dl>
+				<dl class="my-pim">
+					<dt><span>개인정보관리</span></dt>
+					<dd><a href="#none">수정후 <span class="cnt">3</span> 개월 경과</a></dd>
+				</dl>
+			</div>
+			<div class="nav">
+				<ul>
+					<li class="depth depth01"><span class="title">분양정보</span>
+						<ul class="two-depth">
+							<li><a href="#none">HUG 분양정보</a></li>
+							<li><a href="#none">분양정보 현황</a></li>
+							<li><a href="#none">보증실적 현황</a></li>
+							<li><a href="#none">아파트공정률</a></li>
+						</ul>
+					</li>
+					<li class="depth depth02"><span class="title">주택동향</span>
+						<ul class="two-depth">
+							<li><a href="#none">주택통계</a></li>
+							<li><a href="#none">월간동향</a></li>
+							<li><a href="#none">보도자료</a></li>
+						</ul>
+					</li>
+					<li class="depth depth03"><span class="title">공매·입찰</span>
+						<ul class="two-depth">
+							<li><a href="#none">공매공고</a></li>
+							<li><a href="#none">공매물건</a></li>
+							<li><a href="#none">입찰안내</a></li>
+							<li><a href="#none">온비드입찰안내</a></li>
+							<li><a href="#none">입찰정보</a></li>
+						</ul>
+					</li>
+					<li class="depth depth04"><span class="title">맞춤형HUG</span>
+						<ul class="two-depth">
+							<li><a href="#none">맞춤보증상품 – 개인 10종</a></li>
+							<li><a href="#none">맞춤보증상품 – 기업 15종</a></li>
+							<li><a href="#none">전세금반환보증</a></li>
+							<li><a href="#none">내집마련가이드</a></li>
+							<li><a href="#none">맞춤형대출상품</a></li>
+							<li><a href="#none">주택청약도우미</a></li>
+						</ul>
+					</li>
+					<li class="depth depth05"><span class="title">마이페이지</span>
+						<ul class="two-depth">
+							<li><a href="#none">마이페이지 홈</a></li>
+							<li><a href="#none">보증상품가입현황</a></li>
+							<li><a href="#none">계약현황/납입정보</a></li>
+							<li><a href="#none">공인인증서관리</a></li>
+							<li><a href="#none">내집마련 계산기</a></li>
+						</ul>
+					</li>
+					<li class="depth depth06"><span class="title">고객센터</span>
+						<ul class="two-depth">
+							<li><a href="#none">HUG 새소식</a></li>
+							<li><a href="#none">HUG 콜센터</a></li>
+							<li><a href="#none">알림서비스</a></li>
+							<li><a href="#none">환경설정</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="hug-app">
+				<span class="title">HUG앱 추천하기</span>
+				<span class="sns">
+					<a href="#none" class="ico-splite kakao"><span class="hide">카카오톡</span></a>
+					<a href="#none" class="ico-splite facebook"><span class="hide">페이스북</span></a>
+					<a href="#none" class="ico-splite twitter"><span class="hide">twitter</span></a>
+					<a href="#none" class="ico-splite mail"><span class="hide">메일</span></a>
+				</span>
+			</div>
+			<div class="foot">
+				<address>부산광역시 남구 문현금융로 40 BIFC (우편번호:48400)</address>
+				<p class="call-area"><span><a href="tel:1566-9009">T. 1566-9009</a></span><span>F. 051-955-5405</span></p>
+				<p class="copyright">Copyright ⓒ Korea Housing & Urban Guarantee Corporation. All rights reserved.</p>
+			</div>
+		</div>
+		<h2 class="logo"><span class="hide">HUG</span></h2>
+		<div class="left-area">
+			<a href="#none" class="btn-gnb btn-prev btn-splite"><span class="hide">이전 페이지로 이동</span></a>
+			<a href="#none" class="btn-notice btn-splite"><span class="hide">알림보기</span></a>
+			<!-- 새로운 알림이 등록되었을 경우 -->
+			<!--a href="#none" class="btn-notice btn-splite new-notice"><span class="hide">알림보기</span></a-->
+			<!-- //새로운 알림이 등록되었을 경우 -->
+		</div>
+		<div class="right-area">
+			<a href="#none" class="btn-login btn-splite"><span class="hide">로그인</span></a>
+			<a href="#none" class="btn-certificate btn-splite"><span class="hide">공인인증서 로그인</span></a>
+		</div>
+	</div><!-- /.header -->
+
+	<div id="container">
+		<div class="contents">
+			<div class="statistics">
+				<div class="link-wrap">
+					<div>
+						<ul class="statistics-list">
+							<li><a href="#none"><span>분양<br>가격</span></a></li>
+							<li class="on"><a href="#none"><span>분양<br>가격지수</span></a></li>
+							<li><a href="#none"><span>분양<br>세대수</span></a></li>
+							<li><a href="#none"><span>초기<br>분양율</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="link-wrap pd0">
+					<ul class="link-tab">
+						<li class="link01"><a href="#none">지역별 ㎡당 분양가격</a></li>
+						<li class="link02 on"><a href="#none">규모별 ㎡당 분양가격</a></li>
+					</ul>
+				</div>
+				<div class="filter-wrap">
+					<ul class="filter-list">
+						<li class="on"><a href="#none">60㎡ 이하</a></li>
+						<li><a href="#none">60㎡초과 85㎡이하</a></li>
+						<li><a href="#none">85㎡초과 102㎡이하</a></li>
+						<li><a href="#none">102㎡초과</a></li>
+					</ul>
+				</div>
+				<div class="view-tab-wrap tab-wrap">
+					<div class="tab-head-wrap ty02">
+						<div class="sel-box">
+							<select title="최근 1년간 월 선택">
+								<option value="0" selected="selected">2016.10월</option>
+								<option value="1">2016.09월</option>
+								<option value="2">2016.08월</option>
+								<option value="3">2016.07월</option>
+								<option value="4">2016.06월</option>
+								<option value="5">2016.05월</option>
+								<option value="6">2016.04월</option>
+								<option value="7">2016.03월</option>
+								<option value="8">2016.02월</option>
+								<option value="9">2016.01월</option>
+								<option value="10">2015.12월</option>
+								<option value="11">2015.11월</option>
+								<option value="12">2015.10월</option>
+							</select>
+						</div>
+						<ul class="view-tab tab-container">
+							<li class="tab01 on">
+								<button type="button" class="cus-tab">테이블뷰</button>
+							</li>
+							<li class="tab02">
+								<button type="button" class="cus-tab">그래프뷰</button>
+							</li>
+						</ul>
+						<span class="unit-txt">단위 : 천원/㎡</span>
+					</div>
+					<div class="tab-view-container">
+						<div class="stat-cont tab-cont cont01 active">
+							<div class="title-wrap ty04 first">
+								<h4 class="h4-tit">총괄</h4>
+							</div>
+							<div class="table-scroll-wrap">
+								
+								<div class="table-fixed">
+									<table class="tbl-style05">
+										<caption>총괄</caption>
+										<colgroup>
+											<col style="width:86px;">
+										</colgroup>
+										<thead>
+											<th scope="col" class="type02">지역별</th>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">전국</th>
+											</tr>
+											<tr>
+												<th scope="row">수도권</th>
+											</tr>
+											<tr>
+												<th scope="row">광역시<br>및<br>세종시</th>
+											</tr>
+											<tr>
+												<th scope="row">지방</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="table-scroll" style="left:87px;">
+									<table class="tbl-style05" style="width:600px;">
+										<caption>전국 지역별 ㎡당 분양가격</caption>
+										<thead>
+											<tr>
+												<th colspan="4">최근 1년간 평균 분양가격</th>
+												<th colspan="3">분양가격 변동</th>
+											</tr>
+											<tr>
+												<th>금월</th>
+												<th>전월</th>
+												<th>전년말</th>
+												<th>전년동월</th>
+												<th>전월비</th>
+												<th>전년말비</th>
+												<th>전년동월비</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr style="height:60px;">
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="title-wrap ty04 first">
+								<h4 class="h4-tit">수도권(서울, 경기, 인천)</h4>
+							</div>
+							<div class="table-scroll-wrap">
+								
+								<div class="table-fixed">
+									<table class="tbl-style05">
+										<caption>수도권(서울, 경기, 인천)</caption>
+										<colgroup>
+											<col style="width:86px;">
+										</colgroup>
+										<thead>
+											<th scope="col" class="type02">지역별</th>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">서울</th>
+											</tr>
+											<tr>
+												<th scope="row">인천</th>
+											</tr>
+											<tr>
+												<th scope="row">경기</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="table-scroll" style="left:87px;">
+									<table class="tbl-style05" style="width:600px;">
+										<caption>전국 및 수도권의 지역별 ㎡당 분양가격</caption>
+										<thead>
+											<tr>
+												<th colspan="4">최근 1년간 평균 분양가격</th>
+												<th colspan="3">분양가격 변동</th>
+											</tr>
+											<tr>
+												<th>금월</th>
+												<th>전월</th>
+												<th>전년말</th>
+												<th>전년동월</th>
+												<th>전월비</th>
+												<th>전년말비</th>
+												<th>전년동월비</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="title-wrap ty04">
+								<h4 class="h4-tit">광역시 및 세종시</h4>
+							</div>
+							<div class="table-scroll-wrap">
+								<div class="table-fixed">
+									<table class="tbl-style05">
+										<caption>광역시 및 세종시</caption>
+										<colgroup>
+											<col style="width:86px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="type02">지역별</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">부산</th>
+											</tr>
+											<tr>
+												<th scope="row">대구</th>
+											</tr>
+											<tr>
+												<th scope="row">광주</th>
+											</tr>
+											<tr>
+												<th scope="row">대전</th>
+											</tr>
+											<tr>
+												<th scope="row">울산</th>
+											</tr>
+											<tr>
+												<th scope="row">세종</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="table-scroll" style="left:87px;">
+									<table class="tbl-style05" style="width:600px;">
+										<caption>전국 및 수도권의 지역별 ㎡당 분양가격</caption>
+										<thead>
+											<tr>
+												<th colspan="4">최근 1년간 평균 분양가격</th>
+												<th colspan="3">분양가격 변동</th>
+											</tr>
+											<tr>
+												<th>금월</th>
+												<th>전월</th>
+												<th>전년말</th>
+												<th>전년동월</th>
+												<th>전월비</th>
+												<th>전년말비</th>
+												<th>전년동월비</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="title-wrap ty04">
+								<h4 class="h4-tit">지방</h4>
+							</div>
+							<div class="table-scroll-wrap">
+								
+								<div class="table-fixed">
+									<table class="tbl-style05">
+										<caption>지방</caption>
+										<colgroup>
+											<col style="width:86px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="type02">지역별</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">강원</th>
+											</tr>
+											<tr>
+												<th scope="row">충북</th>
+											</tr>
+											<tr>
+												<th scope="row">충남</th>
+											</tr>
+											<tr>
+												<th scope="row">전북</th>
+											</tr>
+											<tr>
+												<th scope="row">전남</th>
+											</tr>
+											<tr>
+												<th scope="row">경북</th>
+											</tr>
+											<tr>
+												<th scope="row">경남</th>
+											</tr>
+											<tr>
+												<th scope="row">제주</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="table-scroll" style="left:87px;">
+									<table class="tbl-style05" style="width:600px;">
+										<caption>전국 및 수도권의 지역별 ㎡당 분양가격</caption>
+										<thead>
+											<tr>
+												<th colspan="4">최근 1년간 평균 분양가격</th>
+												<th colspan="3">분양가격 변동</th>
+											</tr>
+											<tr>
+												<th>금월</th>
+												<th>전월</th>
+												<th>전년말</th>
+												<th>전년동월</th>
+												<th>전월비</th>
+												<th>전년말비</th>
+												<th>전년동월비</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td></td>
+												<td></td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+											<tr>
+												<td>8,984</td>
+												<td>6,984</td>
+												<td>7,821</td>
+												<td>7,821</td>
+												<td>5</td>
+												<td>108</td>
+												<td>213</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="stat-cont tab-cont cont02">
+							<div class="title-wrap ty04 first">
+								<h4 class="h4-tit">총괄</h4>
+							</div>
+							<div class="chart-wrap">
+								<div class="chart01 statistics-chart"></div>
+							</div>
+							<div class="title-wrap ty04">
+								<h4 class="h4-tit">수도권(서울, 경기, 인천)</h4>
+							</div>			
+							<div class="chart-wrap">
+								<div class="chart02 statistics-chart"></div>
+							</div>
+							<div class="title-wrap ty04">
+								<h4 class="h4-tit">광역시 및 세종시</h4>
+							</div>			
+							<div class="chart-wrap">
+								<div class="chart03 statistics-chart"></div>
+							</div>
+							<div class="title-wrap ty04">
+								<h4 class="h4-tit">지방</h4>
+							</div>					
+							<div class="chart-wrap">
+								<div class="chart04 statistics-chart"></div>
+							</div>
+						</div>
+						<div class="stat-info-box">
+							<p class="info-txt">※ 월별 평균분양가격은 공표직전 12개월 간 (작성 기준월 포함)의 자료를 평균하여 작성</p>
+							<p class="info-txt">※ 본 자료는 HUG주택도시보증공사의 분양보증서 발급일을 기준으로 작성되었으며, 실제 입주자 모집공고일과 분양보증서 발급일간에는 약간의 시차가 존재할 수 있음</p>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(document).ready(function(){
+						fnTab($(".tab-wrap"));
+					});
+				</script>
+			</div><!-- /.statistics -->
+		</div><!-- /.contents -->
+	</div><!-- /.container -->
+
+	<div class="bg-modal"></div>
+</div>
+<script src="../../common/js/highcharts.js"></script>
+<script>
+	$(document).on("pagecreate",".gnb-layer",function(){
+		$(".gnb-layer").on("swipeleft",function(){
+			$(this).animate({left:-300});
+			$('.bg-modal').hide();
+			$('#wrapper').attr('style', '');
+		});
+	});
+
+	function chart01(){
+		$('.chart01').highcharts({
+			chart: {
+				type: 'column'
+			},
+			title: {
+				text: false
+			},
+			yAxis: {
+				min:0,
+				title: {
+					text: false
+				},
+				labels: {
+                    enabled: true,
+                    formatter: function() {
+                     return parseInt((this.value  * this.value ));
+                    }
+                }
+			},
+			xAxis: {
+				categories: ['전국', '수도권', '광역시<br/>및 세종시', '지방']
+			},
+			legend: {
+				enabled: false
+			},
+			tooltip: {
+				pointFormat: '천원/㎡ : <b>{point.y:.1f} %</b>'
+			},
+			credits:{ 
+				enabled:false 
+			},
+			series: [{
+				data: [{
+					name: '전국',
+					color: '#7cb5ec',
+					y: 56.3
+				}, {
+					name: '수도권',
+					color: '#434348',
+					y: 24.0
+				}, {
+					name: '광역시 및 세종시',
+					color: '#90ed7d',
+					y: 10.4
+				}, {
+					name: '지방',
+					color: '#f7a35c',
+					y: 4.8
+				}]
+			}]
+		});
+	}
+	chart01();
+
+	function chart02(){
+		$('.chart02').highcharts({
+			chart: {
+				type: 'column'
+			},
+			title: {
+				text: false
+			},
+			yAxis: {
+				min:0,
+				title: {
+					text: false
+				},
+				labels: {
+                    enabled: true,
+                    formatter: function() {
+                     return parseInt((this.value  * this.value ));
+                    }
+                }
+			},
+			xAxis: {
+				categories: ['서울', '경기', '인천']
+			},
+			legend: {
+				enabled: false
+			},
+			tooltip: {
+				pointFormat: '천원/㎡ : <b>{point.y:.1f} %</b>'
+			},
+			credits:{ 
+				enabled:false 
+			},
+			series: [{
+				data: [{
+					name: '서울',
+					color: '#7cb5ec',
+					y: 56.3
+				}, {
+					name: '경기',
+					color: '#434348',
+					y: 34.0
+				}, {
+					name: '인천',
+					color: '#90ed7d',
+					y: 20.4
+				}]
+			}]
+		});
+	}
+	chart02();
+
+	function chart03(){
+		$('.chart03').highcharts({
+			chart: {
+				type: 'column'
+			},
+			title: {
+				text: false
+			},
+			yAxis: {
+				min:0,
+				title: {
+					text: false
+				},
+				labels: {
+                    enabled: true,
+                    formatter: function() {
+                     return parseInt((this.value  * this.value ));
+                    }
+                }
+			},
+			xAxis: {
+				categories: ['부산', '대구', '광주', '대전', '울산', '세종']
+			},
+			legend: {
+				enabled: false
+			},
+			tooltip: {
+				pointFormat: '천원/㎡ : <b>{point.y:.1f} %</b>'
+			},
+			credits:{ 
+				enabled:false 
+			},
+			series: [{
+				data: [{
+					name: '부산',
+					color: '#7cb5ec',
+					y: 56.3
+				}, {
+					name: '대구',
+					color: '#434348',
+					y: 34.0
+				}, {
+					name: '광주',
+					color: '#90ed7d',
+					y: 20.4
+				}, {
+					name: '대전',
+					color: '#f7a35c',
+					y: 14.8
+				}, {
+					name: '울산',
+					color: '#acacac',
+					y: 10.9
+				}, {
+					name: '세종',
+					color: '#8e1faa',
+					y: 5.2
+				}]
+			}]
+		});
+	}
+	chart03();
+
+	function chart04(){
+		$('.chart04').highcharts({
+			chart: {
+				type: 'column'
+			},
+			title: {
+				text: false
+			},
+			yAxis: {
+				min:0,
+				title: {
+					text: false
+				},
+				labels: {
+                    enabled: true,
+                    formatter: function() {
+                     return parseInt((this.value  * this.value ));
+                    }
+                }
+			},
+			xAxis: {
+				categories: ['강원', '충북', '충남', '전북', '전남', '경북', '경남', '제주']
+			},
+			legend: {
+				enabled: false
+			},
+			tooltip: {
+				pointFormat: '천원/㎡ : <b>{point.y:.1f} %</b>'
+			},
+			credits:{ 
+				enabled:false 
+			},
+			series: [{
+				data: [{
+					name: '강원',
+					color: '#7cb5ec',
+					y: 56.3
+				}, {
+					name: '충북',
+					color: '#434348',
+					y: 34.0
+				}, {
+					name: '충남',
+					color: '#90ed7d',
+					y: 20.4
+				}, {
+					name: '전북',
+					color: '#f7a35c',
+					y: 14.8
+				}, {
+					name: '전남',
+					color: '#acacac',
+					y: 10.9
+				}, {
+					name: '경북',
+					color: '#8e1faa',
+					y: 46.2
+				}, {
+					name: '경남',
+					color: '#f507af',
+					y: 25.2
+				}, {
+					name: '제주',
+					color: '#e1e1e1',
+					y: 15.2
+				}]
+			}]
+		});
+	}
+	chart04();
+</script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>HUG 주택도시보증공사 - 내집마련 계산기</title>
+<link rel="stylesheet" href="../../common/css/common.css">
+<script type="text/javascript" src="../../common/js/jquery1.11.1.js"></script>
+<script type="text/javascript" src="../../common/js/swiper.min.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="gnb-layer" data-role="page">
+            <div class="gnb-top">
+                <h1><a href="#"><img src="../../common/img/img/img_logo.png" alt="HUG 주택도시보증공사"></a></h1>
+                <span class="user">홍길동 고객님<span>오늘도 좋은 하루되세요</span></span>
+            </div>
+            <div class="state-area">
+                <dl>
+                    <dt>현재 접속상태</dt>
+                    <dd>일반계정으로 로그인하셨습니다. <button type="button" class="btn-logout">로그아웃</button></dd>
+                </dl>
+                <span>※ 보증 확인은 공인인증서로 로그인 하셔야 합니다.</span>
+                <a href="#none" class="btn-certificate">공인인증서<br>로그인</a>
+            </div>
+            <div class="my-link">
+                <dl class="my-complaint">
+                    <dt><span>나의민원</span></dt>
+                    <dd><a href="#none">처리중 <span class="cnt">5</span> 건</a></dd>
+                </dl>
+                <dl class="my-pim">
+                    <dt><span>개인정보관리</span></dt>
+                    <dd><a href="#none">수정후 <span class="cnt">3</span> 개월 경과</a></dd>
+                </dl>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="depth depth01"><span class="title">분양정보</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">HUG 분양정보</a></li>
+                            <li><a href="#none">분양정보 현황</a></li>
+                            <li><a href="#none">보증실적 현황</a></li>
+                            <li><a href="#none">아파트공정률</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth02"><span class="title">주택동향</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">주택통계</a></li>
+                            <li><a href="#none">월간동향</a></li>
+                            <li><a href="#none">보도자료</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth03"><span class="title">공매·입찰</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">공매공고</a></li>
+                            <li><a href="#none">공매물건</a></li>
+                            <li><a href="#none">입찰안내</a></li>
+                            <li><a href="#none">온비드입찰안내</a></li>
+                            <li><a href="#none">입찰정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth04"><span class="title">맞춤형HUG</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">맞춤보증상품 – 개인 10종</a></li>
+                            <li><a href="#none">맞춤보증상품 – 기업 15종</a></li>
+                            <li><a href="#none">전세금반환보증</a></li>
+                            <li><a href="#none">내집마련가이드</a></li>
+                            <li><a href="#none">맞춤형대출상품</a></li>
+                            <li><a href="#none">주택청약도우미</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth05"><span class="title">마이페이지</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">마이페이지 홈</a></li>
+                            <li><a href="#none">보증상품가입현황</a></li>
+                            <li><a href="#none">계약현황/납입정보</a></li>
+                            <li><a href="#none">공인인증서관리</a></li>
+                            <li><a href="#none">내집마련 계산기</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth depth06"><span class="title">고객센터</span>
+                        <ul class="two-depth">
+                            <li><a href="#none">HUG 새소식</a></li>
+                            <li><a href="#none">HUG 콜센터</a></li>
+                            <li><a href="#none">알림서비스</a></li>
+                            <li><a href="#none">환경설정</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hug-app">
+                <span class="title">HUG앱 추천하기</span>
+                <span class="sns">
+                    <a href="#none" class="ico-splite kakao"><span class="hide">카카오톡</span></a>
+                    <a href="#none" class="ico-splite facebook"><span class="hide">페이스북</span></a>
+                    <a href="#none" class="ico-splite twitter"><span class="hide">twitter</span></a>
+                    <a href="#none" class="ico-splite mail"><span class="hide">메일</span></a>
+                </span>
+            </div>
+            <div class="foot">
+                <address>부산광역시 남구 문현금융로 40 BIFC (우편번호:48400)</address>
+                <p class="call-area"><span><a href="tel:1566-9009">T. 1566-9009</a></span><span>F. 051-955-5405</span></p>
+                <p class="copyright">Copyright ⓒ Korea Housing & Urban Guarantee Corporation. All rights reserved.</p>
+            </div>
+        </div>
+        <h2 class="logo"><span class="hide">HUG</span></h2>
+        <div class="left-area">
+            <a href="#none" class="btn-gnb btn-prev btn-splite"><span class="hide">이전 페이지로 이동</span></a>
+            <a href="#none" class="btn-notice btn-splite"><span class="hide">알림보기</span></a>
+            <!-- 새로운 알림이 등록되었을 경우 -->
+            <!--a href="#none" class="btn-notice btn-splite new-notice"><span class="hide">알림보기</span></a-->
+            <!-- //새로운 알림이 등록되었을 경우 -->
+        </div>
+        <div class="right-area">
+            <a href="#none" class="btn-login btn-splite"><span class="hide">로그인</span></a>
+            <a href="#none" class="btn-certificate btn-splite"><span class="hide">공인인증서 로그인</span></a>
+        </div>
+    </div><!-- /.header -->
+
+    <div id="container">
+        <div class="contents">
+            <div class="my-calculator">
+                <div class="screening_progress">
+                    <span class="step01">01.<br> 대출신청자격확인</span>
+                    <span class="step02 on">02.<br> 대출신청정보입력</span><!-- 진행 중 상태 on 클래스 -->
+                    <span class="step03">03.<br> 예상대출금액산출</span>
+                </div>
+                <form class="calculator-form">
+                    <fieldset>
+                        <legend class="hide">대출신청 정보입력</legend>
+                        <div class="guide-txt">
+                        	<h3 class="main-txt">고객님의 대출신청 정보를 모두 입력해주시기 바랍니다.</h3>
+                        </div>
+                        <div class="form-box">
+                            <div class="tbl-wrap mgb0">
+                                <table class="tbl-style01">
+                                    <caption>대출신청 정보입력</caption>
+                                    <colgroup>
+                                        <col style="width:90px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+										<tr>
+                                            <th scope="row">소재지</th>
+                                            <td class="input-wrap">
+                                            	고객님(신청인)이 입주하고자 하는 주택의 소재지는 어디입니까?
+                                                <div class="sel-row input-cel01 mgt5">
+                                                	<label for="calculator02_1_1" class="hide">시/도 선택</label>
+                                                    <select id="calculator02_1_1" class="sel-type">
+                                                        <option>시/도</option>
+                                                        <option>시/도01</option>
+                                                        <option>시/도02</option>
+                                                        <option>시/도03</option>
+                                                        <option>시/도04</option>
+                                                    </select>
+                                                </div>
+                                                <div class="sel-row input-cel01 mgt5">
+                                                	<label for="calculator02_1_2" class="hide">시/구/군 선택</label>
+                                                    <select id="calculator02_1_2" class="sel-type">
+                                                        <option>시/구/군</option>
+                                                        <option>시/구/군01</option>
+                                                        <option>시/구/군02</option>
+                                                        <option>시/구/군03</option>
+                                                        <option>시/구/군04</option>
+                                                    </select>
+                                                </div>
+                                                <div class="sel-row input-cel01 mgt5">
+                                                	<label for="calculator02_1_3" class="hide">읍/면/동 선택</label>
+                                                    <select id="calculator02_1_3" class="sel-type">
+                                                        <option>읍/면/동</option>
+                                                        <option>읍/면/동01</option>
+                                                        <option>읍/면/동02</option>
+                                                        <option>읍/면/동03</option>
+                                                        <option>읍/면/동04</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+										<tr>
+                                            <th scope="row"><label for="calculator02_2">오피스텔<br>구입가격</label></th>
+                                            <td class="won">
+                                                고객님(신청인)이 입주하고자 하는 주택의 예상가격은 얼마입니까?
+                                                <div class="mgt5"><input type="text" id="calculator02_2"> 원</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><label for="calculator02_3">방의 갯수</label></th>
+                                            <td class="won">
+                                                고객님(신청인)이 입주하고자 하는 주택의 방수는 몇 개 입니까?
+                                                <div class="mgt5"><input type="text" id="calculator02_3"> 개</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><label for="calculator02_4">소액임차<br>보증금</label></th>
+                                            <td class="won">
+                                                고객님(신청인)의 소액임차보증금액입니다.
+                                                <div class="mgt5"><input type="text" id="calculator02_4"> 원</div>
+                                            </td>
+                                        </tr>
+										<tr>
+                                            <th scope="row">기타금액입력</th>
+                                            <td class="won">
+                                            	해당사항이 있는 금액만 입력하세요.
+                                                <div class="mgt5"><label for="calculator02_5_1" class="hide">임차보증금</label><input type="text" id="calculator02_5_1" placeholder="임차보증금"> 원</div>
+                                                <div class="mgt5"><label for="calculator02_5_2" class="hide">선위채권액</label><input type="text" id="calculator02_5_2" placeholder="선위채권액"> 원</div>
+                                                <p class="emph cType02 mgt5">순선위채권액의 경우 기금대출은 원칙적으로 1순위 근저당권을 설정해야 하므로 극히 예외적인 경우를 제외하고는 선순위근저당권이 있는 경우 대출이 불가합니다.<br><br>보다 자세한 내용은 은행 영업점 창구를 통해 상담하시기 바랍니다.</p>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th scope="row">다자녀가구</th>
+                                            <td>
+												만 19세 미만 자녀는 3명 이상 입니까?
+												<ul class="radio-list mgt5">
+													<li class="radio-box">
+														<input type="radio" id="calculator012_6_y" class="inp-chk" name="calculator02_6">
+														<label for="calculator01_1_y">예</label>
+													</li>
+													<li class="radio-box">
+														<input type="radio" id="calculator02_6_n" class="inp-chk" name="calculator02_6">
+														<label for="calculator01_1_n">아니요</label>
+													</li>
+												</ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">금리우대<br>(중복불가)<a href="#none" class="link-info-pop interest-rate"><span class="hide">설명 팝업</span></a></th>
+                                            <td>
+                                                <ul class="radio-list">
+                                                    <li class="radio-box">
+                                                        <input type="radio" id="calculator02_7_1" class="inp-chk" name="calculator02_7">
+                                                        <label for="calculator02_7_1">다자녀가구</label>
+                                                    </li>
+                                                    <li class="radio-box">
+                                                        <input type="radio" id="calculator02_7_2" class="inp-chk" name="calculator02_7">
+                                                        <label for="calculator02_7_2">다문화가구</label>
+                                                    </li>
+                                                    <li class="radio-box">
+                                                        <input type="radio" id="calculator02_7_3" class="inp-chk" name="calculator02_7">
+                                                        <label for="calculator02_7_3">장애인가구</label>
+                                                    </li>
+                                                    <li class="radio-box">
+                                                        <input type="radio" id="calculator02_7_4" class="inp-chk" name="calculator02_7">
+                                                        <label for="calculator02_7_4">신혼가구</label>
+                                                    </li>
+                                                    <li class="radio-box">
+                                                        <input type="radio" id="calculator02_7_5" class="inp-chk" name="calculator02_7">
+                                                        <label for="calculator02_7_5">해당없음</label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+										<tr>
+                                            <th scope="row">연소득</th>
+                                            <td class="won">
+												고객님(배우자포함)의 총연소득(상여금포함)은 얼마 입니까?
+                                                <div class="mgt5"><label for="calculator02_8_1" class="hide">연소득</label><input type="text" id="calculator02_8_1" placeholder=""> 원</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="btn-area btn2">
+                        <div><a href="#none" class="btn-round type03">이전</a></div>
+                        <div><button type="button" class="btn-round type01">다음</button></div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.contents -->
+    </div><!-- /.container -->
+
+    <div class="bg-modal"></div>
+</div>
+
+<!-- layer pop : 금리 우대 안내 -->
+<div class="layer-pop pop-interest-rate">
+    <div class="pop-wrap">
+        <div class="pop-content">
+            <div class="txt-box04">
+                <div class="box-cont">
+                    <p class="tit">다문화가구</p>
+                    <p class="bull-txt">「다문화 가족 지원법」 제 2조 제 1호에 의거 가족관계증명서 또는 기본증명서(귀화자)에 신청인과 배우자로 이루어진 가구로 신청인의 배우자가 외국인이거나 귀화로 인한 국적취득자 또는 신청인이 귀화로 국적취득자인 가구</p>
+                </div>
+                <div class="box-cont">
+                    <p class="tit">장애우가구</p>
+                    <p class="bull-txt">신청인 또는 배우자, 신청인(배우자 포함)의 직계존비속인 세대원중 1인 이상이 장애인 증명서 국가유공자확인원(전상군경, 공상군경, 4.19 혁명부상자, 상공무원, 국가사회발전 특별공로상이자, 6.18 자유상이자, 전투종사 군무원상이자) 발급대상 가구 또는 국가보훈처로부터 지원공상군경, 지원공상공무원임을 확인 받은 가구</p>
+                </div>
+                <div class="box-cont">
+                    <p class="tit">다자녀가구</p>
+                    <p class="bull-txt">가족관계증명서 또는 주민등록등본상 신청인의 만 19세 미만의 자녀가 3인이상인 가구(세대분리된 자녀 포함)</p>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn pop-close"><span class="hide">닫기</span></button>
+    </div>
+    <div class="pop-bg"></div>
+</div>
+
+<script>
+	$(document).on("pagecreate",".gnb-layer",function(){
+		$(".gnb-layer").on("swipeleft",function(){
+			$(this).animate({left:-300});
+			$('.bg-modal').hide();
+			$('#wrapper').attr('style', '');
+		});
+	});
+	
+	jQuery(document).ready(function($){
+        fnAcco(".acco-container", ".btn-acco", ".acco-view", 2);
+    });
+
+    /* 팝업 부분 */
+    var winH = $(window).height();
+    var popH = $('.layer-pop .pop-wrap').height();
+
+    /* 팝업 닫기 버튼 클릭 시 */
+    $('.pop-close, .alert-confirm').on('click', function(){
+        $('#wrapper').attr('style', '');
+        $('.layer-pop').removeClass('active').slideUp();
+    });
+    
+    /* 금리 우대 안내 버튼 클릭 시 */
+    $('.interest-rate').on('click', function(){
+        $('#wrapper').css('height', winH+'px');
+        $('.layer-pop').css('height', winH-40+'px');
+        $('.pop-interest-rate').slideDown();
+    });
+</script>
+</body>
+</html>
