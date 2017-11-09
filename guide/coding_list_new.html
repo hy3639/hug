@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width" />
+<title>HUG 주택도시보증공사 - 코딩리스트</title>
+<style type="text/css">
+	* {margin:0; padding:0;}
+	html {overflow-y:scroll;}
+	body {background:#fff; min-width:1024px; color:#000; font:12px/1.4 'Malgun Gothic', Tahoma, Sans-serif;}
+	a {color:#27e; text-decoration:none;}
+	a:focus, a:hover, a:active {text-decoration:underline;}
+	.guide-header {width:100%; position:relative; background:#2d5785; box-shadow:0 2px 5px 0 #999; font:12px/1.5 'Malgun Gothic', Tahoma, Sans-serif;}
+	.guide-header h1 {padding:.2em; color:#f2f2f2; font-size:24px;}
+	.guide-header h1 strong {font-size:16px;}
+	.guide-header .nav {list-style:none; background:#296f15; border-top:1px solid #224c7a; padding:.5em .5em .4em; color:#f9f9f9; font-weight:bold; font-size:16px;}
+	.guide-header .nav li {display:inline; margin-right:.5em;}
+	.guide-header .nav li a {color:#f2f2f2;}
+	.guide-header .nav li a.on {color:#fff !important; text-shadow:#333 1px 1px 2px; text-decoration:underline;}
+	.guide-header .nav li:before {content:'•'; font-weight:normal; font-size:14px; margin-right:.7em;}
+	.guide-header .nav li:first-child:before {content:none !important; margin:0 !important;}
+	.guide-header .nav + .nav {background:#2d5785; font-size:14px;}
+	.guide-header .nav + .nav li:before {content:'|';}
+	.rule {background:#eeeff3; margin:0 0 2em; padding:1em; color:#4d4d4d;}
+	.rule dt {margin-bottom:.3em; font-size:13px; font-weight:bold;}
+	.rule dd {padding-left:.5em; line-height:1.8;}
+	.rule dd ul {list-style-type:square; margin-left:1.2em;}
+	.title-topsection {margin:1em .8em .3em; font-size:24px;}
+	.total {margin:1em 1em .5em; padding-left:.3em; font-weight:bold; font-size:14px;}
+	.total .per {font-size:12px;}
+	.guide-body {padding-bottom:200px;}
+	.section {margin:0 1em;}
+	.section .title {margin:0; padding:.6em; border:1px solid #666f79; background:#777f87; color:#fff; font-weight:bold; font-size:14px; margin-top:-1px; position:relative; *zoom:1; cursor:pointer;}
+	.section .title-toggle {margin:0; padding:.6em; background:#d9dce3; position:relative; *zoom:1;}
+	.section .title-toggle .togglebtn {padding:2px 5px; margin:0; background:#666f79; border:0; border-radius:3px; color:#fff; font:bold 12px/1.5 'Malgun Gothic', Tahoma, Sans-serif; cursor:pointer;}
+	.section table {width:100%; border-collapse:collapse; border-spacing:0; border:0;}
+	.section table caption {display:none;}
+	.section table th, table td {padding:0.8em; border:1px solid #ccc;}
+	.section table th {color:#333; background:#eeeff3; font-size:11px; text-align:center;}
+	.section table td {text-align:left;}
+	.section table td.tit {color:#333; font-weight:bold;}
+	.section table td.file {color:#d4d4d4 !important;}
+	.section table td.date {text-align:center; font-style:italic; white-space:nowrap;}
+	.section table td.date del {display:block; color:#aaa !important;}
+	.section table td.stat {text-align:center;}
+	.section table td.desc, .section table td.note, .section table td.history {font-style:italic; color:#666;}
+	.section table td.author {text-align:center; white-space:nowrap;}
+	.section table td ul {list-style:none; margin:0; padding:0; font-style:italic;}
+	.section table td ul li {margin:2px 0;}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="./js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="./js/lib/jquery-migrate-1.2.1.min.js"></script> -->
+<script type="text/javascript">
+	jQuery.fn.stat = function (options) {
+		var settings = jQuery.extend({
+				total: '.total',
+				toggleBtn: '.togglebtn',
+				title: 'h2.title',
+				content: 'div.content',
+				files: 'tbody tr',
+				stat: 'td.stat',
+				completed: '●',
+				index: 0,
+				openAll: true
+			}, options),
+			all_sections = this;
+
+		return this.each(function () {
+			var self = this,
+				$self = $(self),
+				title_text = [],
+				completed = 0;
+			self.section_title = $(settings.title, $self);
+			self.content = $(settings.content, $self);
+			self.files = $(settings.files, $self);
+			self.files.each(function () {
+				var stat = $(settings.stat, this);
+				stat.each(function () {
+					var text = $(this).text();
+					if (text && (text === settings.completed)) {
+						completed++;
+					}
+				});
+			});
+			title_text = [self.section_title.text(), ' (',completed,'/',self.files.length,')'];
+			self.section_title.text(title_text.join(''));
+			self.section_title.click(function() {
+				self.content.slideToggle('fast');
+			});
+			$(settings.toggleBtn).text('전체닫기').toggle(function() {
+				$(settings.toggleBtn).text('전체열기');
+				$(settings.content).hide();
+			}, function() {
+				$(settings.toggleBtn).text('전체닫기');
+				$(settings.content).show();
+			});
+
+			//total
+			var completedAll = 0;
+			$(settings.stat).each(function () {
+				var text = $(this).text();
+				if (text && (text == settings.completed)) {
+					completedAll++;
+				}
+			});
+			$(settings.total).html('Total : '+completedAll+'/'+$(settings.files).length+'pages <span class="per">(진행율 '+Math.round(completedAll/$(settings.files).length*100)+'%)</span>');
+
+		});
+	};
+
+	$(document).ready(function() {
+		$('div.section').stat();
+
+		//over-coloring
+		$('div.section tbody tr').mouseover(function() {
+			$(this).addClass('overcoloring');
+		}).mouseout(function() {
+			$(this).removeClass('overcoloring');
+		});
+
+		autoLink();
+
+	});
+
+	var autoLink = function(){
+		jQuery.each($('.section'), function(i){
+			var lan = $(this).find('tbody tr');
+			var path = '';
+			var path3 = $(this).find('tbody tr').eq(0).find('.path').text();
+			jQuery.each(lan, function(j){
+
+				//if ($(this).find('.stat').text() == '●' || $(this).find('.stat').text() == '○'){
+					if ($(this).find('.file a').hasClass('manual')) return;
+					$(this).find('.file a').attr({
+						//'href' : path + '../html' + path3 + $(this).find('.file a').text() + '.html'
+						'href' : path + path3 + $(this).find('.file a').text()
+					});
+
+			});
+		});
+	};
+</script>
+</head>
+<body>
+<div class="guide-header">
+	<h1>HUG 주택도시보증공사 <strong>코딩 리스트</strong></h1>
+	<ul class="nav">
+		<li><a href="#" class="on">FILE List</a></li>
+		<li><a href="guide.html">Guide</a></li>
+		<li><a href="default.html" target="_blank">Layout</a></li>
+	</ul>
+	<ul class="nav">
+		<li><a href="coding_list_combine.html">통합메인</a></li>
+        <li><a href="coding_list_sale_info.html">분양정보</a></li>
+        <li><a href="coding_list_statistics.html">HUG주택통계</a></li>
+        <li><a href="coding_list_auction.html">공매.입찰</a></li>
+        <li><a href="coding_list_help.html">HUG맞춤도우미</a></li>
+        <li><a href="coding_list_mypage_individual.html">마이페이지-개인</a></li>
+        <li><a href="coding_list_mypage_business.html">마이페이지-사업자</a></li>
+        <li><a href="coding_list_customer.html">고객센터</a></li>
+        <li><a href="coding_list.html">공통</a></li>
+				<li><a href="coding_list_new.html" class="on">고도화</a></li>
+	</ul>
+</div>
+<dl class="rule">
+	<dt>작업현황판 작성 규칙</dt>
+	<dd>
+		<ul>
+			<li>상태표기 :  '△'(작업중대기) , '○'(진행) , '●'(완료) 중 알맞은 것으로 표기. <span style="text-decoration:underline;">'●'(완료) 표기부터 개발작업 가능.</span></li>
+			<li>날짜의 형식은 yyyy-mm-dd 으로 하며, HTML 파일 내용이 수정되었을 경우, 최초작성일('●'(완료)일 기준)은 남겨두고 옆에 마지막 수정일자를 표기함. (예) <del>2016-08-29</del> 2016-08-29)</li>
+			<li>'description'란은 화면에 대한 추가적인 설명, 'note'란은 작업자들 간에 서로 알 수 있는 메모(notice)를 기재함. 중요한 수정내역은 'history'란을 통해 날짜별로 기재한다.</li>
+		</ul>
+	</dd>
+</dl>
+<div class="guide-body">
+    <h2 class="title-topsection">고도화 신규/수정페이지</h2>
+    <p class="total"></p>
+
+		<div class="section">
+				<div class="content">
+						<table border="1">
+								<thead>
+									<tr>
+											<th scope="col" style="width:10%;">1depth</th>
+											<th scope="col" style="width:10%;">2depth</th>
+											<th scope="col" style="width:10%;">3depth</th>
+											<th scope="col" style="width:10%;">4depth</th>
+											<th scope="col" style="width:10%;">5depth</th>
+											<th scope="col" style="width:10%;">path</th>
+											<th scope="col" style="width:10%;">file</th>
+											<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+											<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+											<th scope="col" style="width:10%;">description</th>
+											<th scope="col" style="width:8%;">note</th>
+									</tr>
+								</thead>
+								<tbody>
+										<!-- 메인 -->
+										<tr>
+												<td class="tit">메인</td>
+												<td>index</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/</td>
+												<td class="file"><a target="_blank" href="#">index.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note">하단 고정영역 레이아웃 샘플</td>
+										</tr>
+										<!-- <tr>
+												<td>상세</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/customer/</td>
+												<td class="file"><a target="_blank" href="#">center_0009.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr> -->
+								</tbody>
+						</table>
+				</div>
+		</div>
+    <div class="section">
+				<div class="content">
+						<table border="1">
+								<thead>
+										<tr>
+												<th scope="col" style="width:10%;">1depth</th>
+												<th scope="col" style="width:10%;">2depth</th>
+												<th scope="col" style="width:10%;">3depth</th>
+												<th scope="col" style="width:10%;">4depth</th>
+												<th scope="col" style="width:10%;">5depth</th>
+												<th scope="col" style="width:10%;">path</th>
+												<th scope="col" style="width:10%;">file</th>
+												<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+												<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+												<th scope="col" style="width:10%;">description</th>
+												<th scope="col" style="width:8%;">note</th>
+										</tr>
+								</thead>
+								<tbody>
+										<!-- 공사∙분양정보 -->
+										<tr>
+												<td rowspan="6" class="tit">공사∙분양정보</td>
+												<td rowspan="4">내아파트 공사정보</td>
+												<td>링크페이지</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/sale_info/</td>
+												<td class="file"><a target="_blank" href="#">pre_0008.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td rowspan="2">지도로 공사정보 찾기</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/sale_info/</td>
+												<td class="file"><a target="_blank" href="#">pre_0007.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note">하단 고정영역 레이아웃 샘플</td>
+										</tr>
+										<tr>
+												<td>상세</td>
+												<td></td>
+												<td class="path">../html/sale_info/</td>
+												<td class="file"><a target="_blank" href="#">pre_0005.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>지역으로 공사정보 찾기</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/sale_info/</td>
+												<td class="file"><a target="_blank" href="#">pre_0005_area.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note">네비게이션 적용된 페이지</td>
+										</tr>
+										<tr>
+											<td rowspan="2">분양정보</td>
+												<td>리스트</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/sale_info/</td>
+												<td class="file"><a target="_blank" href="#">pre_0001.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>상세</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/sale_info/</td>
+												<td class="file"><a target="_blank" href="#">pre_0002.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note">하단 고정영역 레이아웃 샘플</td>
+										</tr>
+								</tbody>
+						</table>
+				</div>
+		</div>
+
+		<div class="section">
+				<div class="content">
+						<table border="1">
+								<thead>
+									<tr>
+											<th scope="col" style="width:10%;">1depth</th>
+											<th scope="col" style="width:10%;">2depth</th>
+											<th scope="col" style="width:10%;">3depth</th>
+											<th scope="col" style="width:10%;">4depth</th>
+											<th scope="col" style="width:10%;">5depth</th>
+											<th scope="col" style="width:10%;">path</th>
+											<th scope="col" style="width:10%;">file</th>
+											<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+											<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+											<th scope="col" style="width:10%;">description</th>
+											<th scope="col" style="width:8%;">note</th>
+									</tr>
+								</thead>
+								<tbody>
+										<!-- HUG뉴스 -->
+										<tr>
+												<td class="tit" rowspan="7">HUG뉴스</td>
+												<td>HUG소개</td>
+												<td>리스트</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/customer/</td>
+												<td class="file"><a target="_blank" href="#">center_0008.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"> 게시판 제목 클릭시 상세 팝업 노출</td>
+										</tr>
+										<tr>
+												<td rowspan="6">HUG웹툰</td>
+												<td>링크페이지</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/customer/</td>
+												<td class="file"><a target="_blank" href="#">center_0011.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>전세금안심대출보증편</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/customer/</td>
+												<td class="file"><a target="_blank" href="#">center_0012.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>하자보수보증이행편</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/customer/</td>
+												<td class="file"><a target="_blank" href="#">center_0013.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>분양보증 사고 및 이행절차편</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/customer/</td>
+												<td class="file"><a target="_blank" href="#">center_0014.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>분양보증 면책사항편</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/customer/</td>
+												<td class="file"><a target="_blank" href="#">center_0015.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>전세보증금 반환 보증이행편</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/customer/</td>
+												<td class="file"><a target="_blank" href="#">center_0016.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+								</tbody>
+						</table>
+				</div>
+		</div>
+
+		<div class="section">
+        <div class="content">
+            <table border="1">
+                <thead>
+									<tr>
+											<th scope="col" style="width:10%;">1depth</th>
+											<th scope="col" style="width:10%;">2depth</th>
+											<th scope="col" style="width:10%;">3depth</th>
+											<th scope="col" style="width:10%;">4depth</th>
+											<th scope="col" style="width:10%;">5depth</th>
+											<th scope="col" style="width:10%;">path</th>
+											<th scope="col" style="width:10%;">file</th>
+											<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+											<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+											<th scope="col" style="width:10%;">description</th>
+											<th scope="col" style="width:8%;">note</th>
+									</tr>
+                </thead>
+                <tbody>
+										<!-- HUG상품 -->
+                    <tr>
+                        <td rowspan="5" class="tit">HUG상품</td>
+                        <td rowspan="5">개인</td>
+                        <td rowspan="5">전세금안심대출보증</td>
+												<td>서브메인</td>
+                        <td></td>
+                        <td class="path">../html/help/개인_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_goods_0010_0.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+										<tr>
+                        <td>상품개요</td>
+                        <td></td>
+                        <td class="path">../html/help/개인_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_goods_0010_1.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+										<tr>
+                        <td>이용절차 및 제출서류</td>
+                        <td></td>
+                        <td class="path">../html/help/개인_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_goods_0010_2.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+										<tr>
+                        <td>자주하는질문</td>
+                        <td></td>
+                        <td class="path">../html/help/개인_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_goods_0010_3.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+										<tr>
+                        <td>약관 및 상담연락처</td>
+                        <td></td>
+                        <td class="path">../html/help/개인_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_goods_0010_4.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+		<div class="section">
+        <div class="content">
+            <table border="1">
+                <thead>
+									<tr>
+											<th scope="col" style="width:10%;">1depth</th>
+											<th scope="col" style="width:10%;">2depth</th>
+											<th scope="col" style="width:10%;">3depth</th>
+											<th scope="col" style="width:10%;">4depth</th>
+											<th scope="col" style="width:10%;">5depth</th>
+											<th scope="col" style="width:10%;">path</th>
+											<th scope="col" style="width:10%;">file</th>
+											<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+											<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+											<th scope="col" style="width:10%;">description</th>
+											<th scope="col" style="width:8%;">note</th>
+									</tr>
+                </thead>
+                <tbody>
+										<!-- HUG상품 -->
+                    <tr>
+                        <td rowspan="13" class="tit">HUG상품</td>
+                        <td rowspan="13">기금</td>
+                        <td rowspan="7">내집마련디딤돌대출</td>
+                        <td>서브메인</td>
+                        <td></td>
+                        <td class="path">../html/help/기금_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_fd_goods_0001_0.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+										<tr>
+												<td>일반대출 안내</td>
+												<td></td>
+												<td class="path">../html/help/기금_맞춤보증상품/</td>
+												<td class="file"><a target="_blank" href="#">help_fd_goods_0001_1.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>유한책임대출안내</td>
+												<td></td>
+												<td class="path">../html/help/기금_맞춤보증상품/</td>
+												<td class="file"><a target="_blank" href="#">/help_fd_goods_0001_2.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>모기지신용보증(MCG) 안내</td>
+												<td></td>
+												<td class="path">../html/help/기금_맞춤보증상품/</td>
+												<td class="file"><a target="_blank" href="#">help_fd_goods_0001_3.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>이용절차 및 제출서류</td>
+												<td></td>
+												<td class="path">../html/help/기금_맞춤보증상품/</td>
+												<td class="file"><a target="_blank" href="#">help_fd_goods_0001_4.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>자주하는질문</td>
+												<td></td>
+												<td class="path">../html/help/기금_맞춤보증상품/</td>
+												<td class="file"><a target="_blank" href="#">help_fd_goods_0001_5.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>원금상환유예 제도안내</td>
+												<td></td>
+												<td class="path">../html/help/기금_맞춤보증상품/</td>
+												<td class="file"><a target="_blank" href="#">help_fd_goods_0001_6.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+                        <td rowspan="6">버팀목전세자금</td>
+                        <td>서브메인</td>
+                        <td></td>
+                        <td class="path">../html/help/기금_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_fd_goods_0002_0.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+										<tr>
+                        <td>상품안내</td>
+                        <td></td>
+                        <td class="path">../html/help/기금_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_fd_goods_0002_1.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+										<tr>
+                        <td>임차중도금 대출</td>
+                        <td></td>
+                        <td class="path">../html/help/기금_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_fd_goods_0002_2.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+										<tr>
+                        <td>제2금융권 대환대출</td>
+                        <td></td>
+                        <td class="path">../html/help/기금_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_fd_goods_0002_3.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+										<tr>
+                        <td>이용절차 및 제출서류</td>
+                        <td></td>
+                        <td class="path">../html/help/기금_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_fd_goods_0002_4.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+										<tr>
+                        <td>자주하는질문</td>
+                        <td></td>
+                        <td class="path">../html/help/기금_맞춤보증상품/</td>
+                        <td class="file"><a target="_blank" href="#">help_fd_goods_0002_5.html</a></td>
+                        <td class="stat"></td>
+                        <td class="date"></td>
+                        <td class="desc"></td>
+                        <td class="note"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+		<div class="section">
+        <div class="content">
+            <table border="1">
+                <thead>
+									<tr>
+											<th scope="col" style="width:10%;">1depth</th>
+											<th scope="col" style="width:10%;">2depth</th>
+											<th scope="col" style="width:10%;">3depth</th>
+											<th scope="col" style="width:10%;">4depth</th>
+											<th scope="col" style="width:10%;">5depth</th>
+											<th scope="col" style="width:10%;">path</th>
+											<th scope="col" style="width:10%;">file</th>
+											<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+											<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+											<th scope="col" style="width:10%;">description</th>
+											<th scope="col" style="width:8%;">note</th>
+									</tr>
+                </thead>
+                <tbody>
+										<!-- HUG통계 -->
+										<tr>
+												<td rowspan="3" class="tit">HUG통계</td>
+												<td rowspan="2">하자보수보증정보공개</td>
+												<td>리스트</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/statistics/</td>
+												<td class="file"><a target="_blank" href="#">stat_0018.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note">하단 고정영역 레이아웃 샘플</td>
+										</tr>
+										<tr>
+												<td>상세</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/statistics/</td>
+												<td class="file"><a target="_blank" href="#">stat_0019.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note">하단 고정영역 레이아웃 샘플</td>
+										</tr>
+										<tr>
+												<td>우리동네주택통계</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/statistics/</td>
+												<td class="file"><a target="_blank" href="#">stat_0020.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note">하단 고정영역 레이아웃 샘플</td>
+										</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+		<div class="section">
+        <div class="content">
+            <table border="1">
+                <thead>
+									<tr>
+											<th scope="col" style="width:10%;">1depth</th>
+											<th scope="col" style="width:10%;">2depth</th>
+											<th scope="col" style="width:10%;">3depth</th>
+											<th scope="col" style="width:10%;">4depth</th>
+											<th scope="col" style="width:10%;">5depth</th>
+											<th scope="col" style="width:10%;">path</th>
+											<th scope="col" style="width:10%;">file</th>
+											<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+											<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+											<th scope="col" style="width:10%;">description</th>
+											<th scope="col" style="width:8%;">note</th>
+									</tr>
+                </thead>
+                <tbody>
+										<!--실무강좌콜센터 -->
+										<tr>
+												<td class="tit">실무강좌콜센터</td>
+												<td>공동주택관리실무강좌</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/customer/</td>
+												<td class="file"><a target="_blank" href="#">center_0010.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+		<p style="padding:20px; font-size:25px; font-weight:bold;">수정 페이지</p>
+		<div class="section">
+        <div class="content">
+            <table border="1">
+                <thead>
+									<tr>
+											<th scope="col" style="width:10%;">1depth</th>
+											<th scope="col" style="width:10%;">2depth</th>
+											<th scope="col" style="width:10%;">3depth</th>
+											<th scope="col" style="width:10%;">4depth</th>
+											<th scope="col" style="width:10%;">5depth</th>
+											<th scope="col" style="width:10%;">path</th>
+											<th scope="col" style="width:10%;">file</th>
+											<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+											<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+											<th scope="col" style="width:10%;">description</th>
+											<th scope="col" style="width:8%;">note</th>
+									</tr>
+                </thead>
+                <tbody>
+										<!--실무강좌콜센터 -->
+										<tr>
+												<td class="tit" rowspan="3">맞춤형HUG</td>
+												<td rowspan="2">내집마련가이드</td>
+												<td>전월세계약가이드</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/help/</td>
+												<td class="file"><a target="_blank" href="#">help_0012.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>내집마련123</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/help/</td>
+												<td class="file"><a target="_blank" href="#">help_0013.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>기금대출상품</td>
+												<td>링크페이지</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/help/</td>
+												<td class="file"><a target="_blank" href="#">help_0015.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td class="tit" rowspan="2">내집마련</td>
+												<td rowspan="2">내집마련계산기</td>
+												<td>링크페이지</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/help/</td>
+												<td class="file"><a target="_blank" href="#">help_0014.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td>전세금반환보증 보증한도조회</td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/help/</td>
+												<td class="file"><a target="_blank" href="#">help_0011.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+										<tr>
+												<td class="tit" rowspan="2">HUG상품</td>
+												<td>개인</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/help/</td>
+												<td class="file"><a target="_blank" href="#">help_0001_1.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note">페이지분리</td>
+										</tr>
+										<tr>
+												<td>기업</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/help/</td>
+												<td class="file"><a target="_blank" href="#">help_0001_2.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note">페이지분리</td>
+										</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+		<div class="section">
+        <div class="content">
+            <table border="1">
+                <thead>
+									<tr>
+											<th scope="col" style="width:10%;">1depth</th>
+											<th scope="col" style="width:10%;">2depth</th>
+											<th scope="col" style="width:10%;">3depth</th>
+											<th scope="col" style="width:10%;">4depth</th>
+											<th scope="col" style="width:10%;">5depth</th>
+											<th scope="col" style="width:10%;">path</th>
+											<th scope="col" style="width:10%;">file</th>
+											<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+											<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+											<th scope="col" style="width:10%;">description</th>
+											<th scope="col" style="width:8%;">note</th>
+									</tr>
+                </thead>
+                <tbody>
+										<!--공매정보 -->
+										<tr>
+												<td class="tit">공매정보</td>
+												<td>입찰안내</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/auction/</td>
+												<td class="file"><a target="_blank" href="#">Auction_0006.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+		<div class="section">
+        <div class="content">
+            <table border="1">
+                <thead>
+									<tr>
+											<th scope="col" style="width:10%;">1depth</th>
+											<th scope="col" style="width:10%;">2depth</th>
+											<th scope="col" style="width:10%;">3depth</th>
+											<th scope="col" style="width:10%;">4depth</th>
+											<th scope="col" style="width:10%;">5depth</th>
+											<th scope="col" style="width:10%;">path</th>
+											<th scope="col" style="width:10%;">file</th>
+											<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+											<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+											<th scope="col" style="width:10%;">description</th>
+											<th scope="col" style="width:8%;">note</th>
+									</tr>
+                </thead>
+                <tbody>
+										<!--hug가이드 -->
+										<tr>
+												<td class="tit">실무강좌.콜센터</td>
+												<td>HUG가이드</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/customer/</td>
+												<td class="file"><a target="_blank" href="#">center_0005.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+		<div class="section">
+        <div class="content">
+            <table border="1">
+                <thead>
+									<tr>
+											<th scope="col" style="width:10%;">1depth</th>
+											<th scope="col" style="width:10%;">2depth</th>
+											<th scope="col" style="width:10%;">3depth</th>
+											<th scope="col" style="width:10%;">4depth</th>
+											<th scope="col" style="width:10%;">5depth</th>
+											<th scope="col" style="width:10%;">path</th>
+											<th scope="col" style="width:10%;">file</th>
+											<th scope="col" style="width:4%;" title="△ :대기 / ○ :진행 / ● :완료">stat</th>
+											<th scope="col" style="width:8%;" title="yyyy-mm-dd">date</th>
+											<th scope="col" style="width:10%;">description</th>
+											<th scope="col" style="width:8%;">note</th>
+									</tr>
+                </thead>
+                <tbody>
+										<!--마이페이지 -->
+										<tr>
+												<td class="tit">마이페이지</td>
+												<td>즐겨찾기</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td class="path">../html/mypage/</td>
+												<td class="file"><a target="_blank" href="#">myps_0002.html</a></td>
+												<td class="stat"></td>
+												<td class="date"></td>
+												<td class="desc"></td>
+												<td class="note"></td>
+										</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

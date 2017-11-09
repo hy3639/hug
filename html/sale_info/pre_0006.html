@@ -208,7 +208,7 @@
 										<span class="rate-date">2016-08-04 기준</span>
 									</div>
 								</div>
-							</div> 
+							</div>
 						</li>
 						<li>
 							<span class="title">월별 공정률 현황</span>
@@ -222,7 +222,9 @@
 							<div class="rate-photo">
 								<div class="bg-allow"></div>
 								<div class="swiper-container">
-									<ul class="swiper-wrapper">
+									<!-- S : 171024 -->
+									<ul class="swiper-wrapper horizontal">
+									<!-- E : 171024  -->
 										<li class="swiper-slide">
 											<img src="../../common/img/temp/@temp_slide01.jpg" alt="현황사진">
 										</li>
@@ -256,7 +258,7 @@
 								<div class="chart03"></div>
 							</div>
 						</li>
-					</ul>					
+					</ul>
 				</div>
 				<div class="btn-area">
 					<button type="button" class="btn-gps"><span>지도/인근편의시설</span></button>
@@ -515,33 +517,33 @@
 	/* 팝업 부분 */
 	var winH = $(window).height();
 	var popH = $('.layer-pop .pop-wrap').height();
-	
+
 	$('.sales-info .view-title h3').on('click', function(){
 		$('#wrapper').css('height', winH+'px');
 		$('.layer-pop').css('height', winH-40+'px');
 		$('.pop-favorites').slideDown();
 	});
-	
+
 	/* 즐겨 찾기 확인 버튼 클릭 시 */
 	$('.pop-favorites .btn-confirm').click(function(){
 		$('#wrapper').attr('style', '');
 		$('.layer-pop').removeClass('active').slideUp();
 		$('.view-title .btn-favorites').addClass('on');
 	});
-	
+
 	/* 즐겨 찾기 취소 버튼 클릭 시 */
 	$('.pop-favorites .btn-cancle').on('click', function(){
 		$('#wrapper').attr('style', '');
 		$('.layer-pop').removeClass('active').slideUp();
 		$('.view-title .btn-favorites').removeClass('on');
 	});
-	
+
 	/* 팝업 닫기 버튼 클릭 시 */
 	$('.pop-close').on('click', function(){
 		$('#wrapper').attr('style', '');
 		$('.layer-pop').removeClass('active').slideUp();
 	});
-	
+
 	/* 분양정보 상세보기 버튼 클릭 시 */
 	$('.sales-info .btn-detail').on('click', function(){
 		$('#wrapper').css('height', winH+'px');
@@ -573,7 +575,7 @@
 	$('.sales-slide .title').on('click', function(){
 		if ($(this).parent('li').hasClass('on'))
 		{
-			$(this).next('div').slideUp();	
+			$(this).next('div').slideUp();
 			$(this).parent('li').removeClass('on');
 		}else{
 			$(this).parent('li').addClass('on');
@@ -636,8 +638,8 @@
 	                center: ['30%', '90%']
 	            }
 	        },
-	        credits:{ 
-	        	enabled:false 
+	        credits:{
+	        	enabled:false
 	        },
 	        series: [{
 	            type: 'pie',
@@ -681,8 +683,8 @@
 			tooltip: {
 				pointFormat: '월별 공정률: <b>{point.y:.1f} %</b>'
 			},
-			credits:{ 
-				enabled:false 
+			credits:{
+				enabled:false
 			},
 			series: [{
 				data: [{

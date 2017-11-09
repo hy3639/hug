@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>HUG 주택도시보증공사 - 입찰정보</title>
+<title>HUG 주택도시보증공사 - 분양정보</title>
 <link rel="stylesheet" href="../../common/css/common.css">
 <script type="text/javascript" src="../../common/js/jquery1.11.1.js"></script>
 <script type="text/javascript" src="../../common/js/swiper.min.js"></script>
@@ -124,9 +124,9 @@
 		<div class="contents">
 			<div class="sales-info">
 				<form class="form-area03 type03">
-                    <fieldset>
-                        <legend class="hide">제목과 상세조회</legend>
-                        <div class="form-box">
+          <fieldset>
+              <legend class="hide">제목과 상세조회</legend>
+              <div class="form-box type2">
 							<div class="search-wrap">
 								<div class="search-input">
 									<div class="input-cont">
@@ -135,7 +135,7 @@
 								</div>
 								<div class="search-btn">
 									<span class="btn-search-cont">
-										<button type="button" class="type05" title="검색"></button>	
+										<button type="button" class="type05" title="검색"></button>
 									</span>
 									<span class="btn-search-cont detail-btn">
 										<button type="button" class="type06" title="상세조회">상세조회</button>
@@ -235,17 +235,12 @@
 				<!-- //상세조회 펼침영역 -->
 
 				<div class="total-sale">
-					<div class="txt-box02">
-						<p>분양홍보관의 내용은 관련건설사가 자율적으로 올리는 공간으로 내용에 대하여 주택도시보증공사가 책임을 지지 않습니다.</p>
-					</div>
+					<!--S : 171024  -->
+					<!-- 텍스트 영역 삭제 및 검색결과 문구수정, sorting-area삭제 -->
 					<div class="result-box pdt10">
-						<span class="result">*검색결과 총 <span class="num">250</span>건</span>
-						<div class="sorting-area">
-							<button type="button" class="btn-sorting up">입주시기</button>
-							<button type="button" class="btn-sorting down">분양시기</button>
-							<button type="button" class="btn-sorting down">총세대순</button>
-						</div>
+						<span class="result">* 총 <span class="num">250</span>건</span>
 					</div>
+					<!--E : 171024  -->
 					<ul class="sale-list type02">
 						<li>
 							<dl>
@@ -313,7 +308,7 @@
 			$('#wrapper').attr('style', '');
 		});
 	});
-	
+
 	/* 상세조회 열고닫힘 */
 	$('.search-form .detail-search').on('click', function(){
 		$('.detail-table-area').slideToggle();

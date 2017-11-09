@@ -124,58 +124,384 @@
 	<div id="container">
 		<div class="contents">
 			<div class="help-wrap help-goods-cont">
-				<div class="txt-box mg0 mgt15">
-					<p>공시된 금리는 주택도시보증공사 <strong>전세금안심대출보증을 담보</strong>로 취급된 은행재원 <strong>전세자금대출의 평균금리</strong>입니다. <br>
-					안내하는 금리는 취급기간 동안 <span class="cType02">해당 금융기관에서 제공한 평균금리</span>로서 금융기관별, 대출신청인별로 산정방식이 상이할 수 있습니다. <br>
-					자세한 내용은 <span class="cType02">해당 금융기관</span>으로 문의하시기 바랍니다.
-					</p>
+				<div class="txt-wrap mg0">
+					<ul class="txt-list pd0 none-border-top">
+						<li>임차인에게 전세보증금반환(전세보증금반환보증)과 금융기관에 전세자금대출의 원리금 상환(전세자금대출특약보증)을 함께 책임지는 보증상품</li>
+						<li><span class="txt-bold">보증서 발급 시 임대인 협조사항</span> : 임대인은 채권양도통지서를 수령(통지형)하거나, 채권양도승낙서에 동의(승낙형)하여야 하며, 전세계약 사실 등을 유선통화를 통해 확인할 수 있어야 합니다</li>
+					</ul>
 				</div>
+				<div class="my-navi type03">
+					<ul class="acco-container">
+						<li class="depth depth01"><a href="#none" class="title btn-acco close">그림으로 쉽게보기</a>
+							<div class="depth02 acco-view active">
+								<div class="bg-allow"></div>
+								<div class="img-content-box">
+									<p class="img-tit">보증책임 시기</p>
+									<img src="../../../common/img/img/img_help_goods17.jpg" alt="임차인 ⇒ 금융기관 : 전세대출금 상환불가">
+									<p class="img-txt">임차인이 전세대출금을 상환할 수 없는 경우</p>
+								</div>
+								<div class="img-content-box">
+									<p class="img-tit">보증책임 내용</p>
+									<img src="../../../common/img/img/img_help_goods18.jpg" alt="주택도시보증공사 ⇒ 금융기관 : 전세대출금 상환 책임">
+									<p class="img-txt">금융기관에 대한 전세대출금 상환을 책임집니다.</p>
+								</div>
+							</div>
+						</li>
+						<li class="depth depth01"><a href="#none" class="title btn-acco">보증상품개요</a>
+							<div class="depth02 acco-view">
+								<div class="bg-allow"></div>
+								<div class="tbl-wrap mgt20">
+									<table class="tbl-style02">
+										<caption>보증상품개요</caption>
+										<colgroup>
+											<col style="width:33.33%">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>대출취급 금융기관<br>(‘17.08월 기준)</th>
+												<td>
+													<ul class="txt-list">
+														<li>신한은행, 국민은행, 우리은행, NH농협, KEB하나은행, 부산은행</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>보증신청 기한</th>
+												<td>
+													<ul class="txt-list">
+														<li>전세계약을 체결한 날로부터 다음 아래의 기한 이내
+															<ul class="sub-list">
+																<li>신규 전세계약인 경우: 전세계약서상의 잔금지급일과 전입신고일 중 빠른 날로부터 3개월 이내</li>
+																<li>갱신 전세계약인 경우: 갱신계약을 체결한 날(월세를 전세로 전환한 경우에는 전환일)로부터 3개월 이내</li>
+															</ul>
+														</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>보증대상 주택유형</th>
+												<td>
+													<ul class="txt-list">
+														<li>대상주택 : 단독 · 다가구, 연립 · 다세대, 아파트, 주거용 오피스텔</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>보증채권자</th>
+												<td>
+													<ul class="txt-list">
+														<li>전세자금을 대출하는 금융기관</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>주채무자</th>
+												<td>
+													<ul class="txt-list">
+														<li>전세계약을 체결한 임차인으로서 전세자금대출을 받은 차주 (만 19세 이상의 자연인)</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>보증금액</th>
+												<td>
+													<ul class="txt-list">
+														<li>전세보증금반환보증: (보증한도 이내에서)보증신청인이 신청한 금액</li>
+														<li>전세자금대출특약보증: 전세대출금</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>보증기간</th>
+												<td>
+													<ul class="txt-list">
+														<li>보증부대출 실행일 ~ 대출원금의 상환기일(전세계약기간 만료일 후 1개월)</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>보증한도</th>
+												<td>
+													<ul class="txt-list">
+														<li>주택별 보증한도(다음 중 적은 금액 적용)
+															<ul class="sub-list">
+																<li>전세보증금*의 80% 이내
+																	<ul class="sub-list02">
+																		<li>* 보증부 월세계약(전세보증금이 있는 월세계약)인 경우 보증기간 전체에 해당하는 월세 합계액을 차감</li>
+																	</ul>
+																</li>
+																<li>전세보증금반환보증금액*의 80% 이내
+																	<ul class="sub-list02">
+																		<li>* 전세보증금반환보증금액 한도
+																			<ul class="sub-list03">
+																				<li>주택가격(100%) - 선순위채권*</li>
+																			</ul>
+																		</li>
+																		<li>* 선순위채권 :전세보증금보다 우선변제권이 인정되는 담보채권.<br>다만. 단독(다가구)주택의 경우에는 보증신청인보다 우선하는 선순위 전세보증금의 합계를 포함</li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>보증조건</th>
+												<td>
+													<ul class="txt-list">
+														<li>주택의 인도와 전입신고를 마치고 전세계약서상 확정일자를 갖출 것</li>
+														<li>보증대상 주택의 건물과 토지는 모두 동일 임대인의 소유일 것(공공택지로서 지적미정리로 대지권 미등기인 경우 보증가능)</li>
+														<li>보증대상 주택 소유권에 대한 권리침해 (경매신청, 압류, 가압류, 가처분 및 가등기 등)가 없을 것</li>
+														<li>전입세대열람내역 확인 결과 타 세대의 전입내역이 없을 것 (단독, 다가구 제외)</li>
+														<li>전세권이 설정된 경우 이를 공사로 이전하거나 말소</li>
+														<li>건축물대장에 위반건축물로 기재되어 있지 않을 것</li>
+														<li>전세계약기간이 1년 이상일 것</li>
+														<li>전세보증금 수도권 5억원 이하, 그 외 지역 4억원 이하</li>
+														<li>공인중개사가 확인(날인)한 전세계약</li>
+														<li>선순위채권 ≤ 주택가격의 60%</li>
+														<li>[선순위채권+전세보증금] ≤ 주택가격(100%)</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>유의사항</th>
+												<td>
+													<ul class="txt-list">
+														<li>주대출을 받은 임차인은 대출실행일로부터 4일 이내에 임차주택 주소지로 전입신고를 마친 후 주민등록등본을 은행으로 제출</li>
+														<li>대출취급 금융기관의 대출심사기준과 공사의 보증업무 처리 기준에 따라 대출여부 및 대출한도(보증한도)가 결정</li>
+														<li>대출금리, 대출금의 상환 또는 이자납입이 지연된 경우의 연체이율 등은 고객과 대출취급 금융기관이 약정한 내용에 따름</li>
+														<li>신용거래 정보가 부족하거나 신용하락의 요인이 될 수 있는 경력(연체 경험 등)이 있을 경우 대출취급이 제한 될 수 있음</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</li>
 
-				<div class="tbl-wrap mgt15">
-					<table class="tbl-style02 type02">
-						<caption>금융기관별 보증부 대출금리로 구성됨</caption>
-						<colgroup>
-							<col style="width:36%">
-							<col style="width:33%">
-							<col style="width:31%">
-						</colgroup>
-						<thead>
-							<tr>
-								<th class="txtC" scope="col">금융기관</th>
-								<th class="txtC" scope="col">보증부 대출금리</th>
-								<th class="txtC" scope="col">기타</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="txtC">신한은행</td>
-								<td class="txtC">3.27</td>
-								<td class="txtC"></td>
-							</tr>
-							<tr>
-								<td class="txtC">농협은행은행</td>
-								<td class="txtC">3.05</td>
-								<td class="txtC"></td>
-							</tr>
-							<tr>
-								<td class="txtC">국민은행</td>
-								<td class="txtC">2.63</td>
-								<td class="txtC"></td>
-							</tr>
-							<tr>
-								<td class="txtC">하나은행</td>
-								<td class="txtC">3.1</td>
-								<td class="txtC"></td>
-							</tr>
-							<tr>
-								<td class="txtC">우리은행</td>
-								<td class="txtC">2.85</td>
-								<td class="txtC"></td>
-							</tr>
-						</tbody>
-					</table>
+						<!-- <li class="depth depth01"><a href="#none" class="title btn-acco">보증한도</a>
+							<div class="depth02 acco-view">
+								<div class="bg-allow"></div>
+								<div class="tbl-wrap mgt20">
+									<table class="tbl-style02 type02">
+										<caption>정비사업자금대출보증 보증한도: 보증구분, 보증한도, 주채무자(연대보증인)으로 구성됨</caption>
+										<colgroup>
+											<col style="width:36%">
+											<col style="width:33%">
+											<col style="width:31%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="txtC" scope="col">보증구분</th>
+												<th class="txtC" scope="col">보증한도</th>
+												<th class="txtC" scope="col">주채무자<br>(연대보증인)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="txtC">조합원이주비대출보증</td>
+												<td class="txtC">조합원별 종전자산 평가액의 70%</td>
+												<td class="txtC">조합원(조합)</td>
+											</tr>
+											<tr>
+												<td class="txtC">조합원부담금대출보증</td>
+												<td class="txtC">조합원별 부담금의 70%</td>
+												<td class="txtC">조합원(조합)</td>
+											</tr>
+											<tr>
+												<td class="txtC">조합사업비대출보증</td>
+												<td class="txtC">총 사업비의 50%</td>
+												<td class="txtC">조합</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</li> -->
+
+						<li class="depth depth01"><a href="#none" class="title btn-acco">보증료</a>
+							<div class="depth02 acco-view">
+								<div class="bg-allow"></div>
+								<div class="title-wrap first">
+									<h4 class="h4-tit">보증료 산정식</h4>
+								</div>
+								<div class="content-box">
+									<ul class="txt-list">
+										<li>보증료 = (전세보증금반환보증금액 × 보증료율 × 보증기간의 총 일수 / 365) + (전세자금대출특약보증금액 × 보증료율 × 보증기간의 총 일수 / 365) </li>
+									</ul>
+								</div>
+								<div class="title-wrap">
+									<h4 class="h4-tit">보증료율</h4>
+								</div>
+								<div class="content-box">
+									<ul class="txt-list">
+										<li>전세보증금반환보증: 연 0.128%(아파트) / 연 0.154%(그 외 주택)</li>
+										<li>전세자금대출특약보증: 연 0.05%</li>
+									</ul>
+								</div>
+								<div class="title-wrap">
+									<h4 class="h4-tit">보증료 분납</h4>
+								</div>
+								<div class="content-box">
+									<ul class="txt-list">
+										<li>6개월 단위로 분납 가능</li>
+									</ul>
+								</div>
+								<div class="title-wrap">
+									<h4 class="h4-tit">보증료 할인</h4>
+								</div>
+								<div class="content-box">
+									<ul class="txt-list pdb10">
+										<li>해당 주택의 LTV(선순위채권+전세보증금)에 따라 할인</li>
+									</ul>
+									<div class="tbl-wrap none-border-bottom pdb20 txtC">
+										<table class="tbl-style02">
+											<caption>보증료 할인</caption>
+											<colgroup>
+												<col style="width:70%">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">구분</th>
+													<th scope="col">할인율</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>LTV (선순위채권+전세보증금)가 주택가격의 80% ~ 70%</td>
+													<td class="txtC">10%</td>
+												</tr>
+												<tr>
+													<td>LTV (선순위채권+전세보증금)가 주택가격의 70% ~ 60%</td>
+													<td class="txtC">20%</td>
+												</tr>
+												<tr>
+													<td>LTV (선순위채권+전세보증금)가 주택가격의 60%</td>
+													<td class="txtC">30%</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<ul class="txt-list pdb10">
+										<li>사회배려계층에 해당할 경우 할인</li>
+									</ul>
+									<div class="tbl-wrap none-border-bottom pdb20">
+										<table class="tbl-style02">
+											<caption>보증료 할인</caption>
+											<colgroup>
+												<col style="width:33.3%">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row" class="txtC">사회배려계층<br>할인대상</th>
+													<td>
+														<ul class="txt-list">
+															<li>피보증인(배우자 포함)의 연소득이 40백만원 이하인 자</li>
+															<li>피보증인의 만 19세 미만 자녀가 3인 이상인 다자녀가구</li>
+															<li>피보증인 또는 배우자, 피보증인(배우자 포함)의 직계존비속인 세대원 중 1인 이상이 장애인증명서 발급대상자인 가구</li>
+															<li>피보증인 또는 배우자, 피보증인(배우자 포함)의 직계존속인 세대원 중 1인 이상이 만 65세 이상인 고령자가구 또는 노인부양가구. 노인부양가구의 경우 보증신청일 기준 1년 이상의 기간 동안 만 65세 이상인 고령자와 동일한 세대를 구성하고 있는 가구에 한함</li>
+															<li>보증신청인과 그의 현재 배우자의 합산 연소득이 60백만원 이하 이고, 혼인기간이 5년이내인 신혼부부(3개월 이내 결혼 예정자 포함)인 경우</li>
+															<li>피보증인이 「한부모가족지원법」에 따라 지원되는 한부모가족인 경우</li>
+															<li>「다문화가족지원법」제2조제1호에 따라 피보증인의 배우자가 외국인이거나 귀화로 인한 국적취득자 또는 배우자 있는 피보증인이 귀화로 인한 국적취득자인 가구</li>
+															<li>보증신청인 또는 배우자, 보증신청인 (배우자포함)의 직계존비속인 세대원 중 1인 이상이 국가유공자 또는 국가유공자의 선순위 유족인 가구로서 독립유공자(유족)확인원, 국가유공자(유족)확인원, 보훈보상대상자(유족)확인원, 5.18민주유공자(유족)확인원, 특수임무유공자(유족)확인원, 고엽제법 적용대상 확인원, 지원대상자(유족) 확인원으로 유공자 본인 또는 수권자임을 확인 받은 가구</li>
+															<li>보증신청인 또는 배우자, 보증신청인(배우자포함)의 직계존비속인 세대원 중 1인 이상이 「의사상자등 예우 및 지원에 관한 법률」에 따라 의사자 증서, 의사자 유족증, 의상자 증서, 의상자증으로 의상자 본인 또는 의사상자 수권자임을 확인 받은 가구</li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="txtC">할인율</td>
+													<td>30%를 할인 (중복할인은 하지 않음)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<ul class="txt-list pdb10">
+										<li>보증료를 일시에 전액 납부한 경우 1년 초과분에 대하여 3% 할인<br>※ 임차인용 전세금안심대출보증 보증료 예시 (아파트 기준)</li>
+									</ul>
+									<div class="table-scroll-wrap">
+										<div class="table-fixed ty02">
+											<table class="tbl-style05">
+												<caption>보증료할인 테이블</caption>
+												<colgroup>
+													<col style="width:86px;">
+													<col style="width:86px;">
+													<col style="width:86px;">
+													<col style="width:86px;">
+													<col style="width:86px;">
+													<col style="width:86px;">
+													<col style="width:86px;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" class="type03" rowspan="2">전세보증금(a)</th>
+														<th scope="col" rowspan="2">대출금액<br>(a* 80%)</th>
+														<th scope="col" class="type03" colspan="2">반환보증료(a)(전세보증금 기준)</th>
+														<th scope="col" rowspan="2">특약보증료(b)<br>(대출금액 기준)</th>
+														<th scope="col" class="type03" colspan="2">보증료 합계(b + c)</th>
+													</tr>
+													<tr>
+														<th  scope="col">최소</th>
+														<th  scope="col">최대</th>
+														<th  scope="col">최소</th>
+														<th  scope="col">최대</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1억</td>
+														<td>8천만원</td>
+														<td>62,720원</td>
+														<td>128,000원	</td>
+														<td>40,000원</td>
+														<td>102,720원</td>
+														<td>168,000원</td>
+													</tr>
+													<tr>
+														<td>2억</td>
+														<td>1억 6천만원</td>
+														<td>125,440원</td>
+														<td>256,000원</td>
+														<td>80,000원</td>
+														<td>205,440원</td>
+														<td>336,000원</td>
+													</tr>
+													<tr>
+														<td>3억</td>
+														<td>2억 4천만원</td>
+														<td>188,160원</td>
+														<td>384,000원</td>
+														<td>120,000원</td>
+														<td>308,160원</td>
+														<td>504,000원</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<p class="txt-type01 pdt0 mgb15">* 최소보증료 산출 예시: 주택가격 대비 LTV(선순위채권+전세보증금)가 60%이내인 경우 할인율 30%과 사회배려계층 할인 율 30% 할인 적용(보증료율 연0.128% 적용)</p>
+
+								</div>
+
+								<div class="title-wrap">
+									<h4 class="h4-tit">보증료 할증</h4>
+								</div>
+								<div class="content-box">
+									<ul class="txt-list">
+										<li>보증신청인이 개인(주택임대차보호법 적용 중소기업임차인 포함)인 경우로서 주택가격 대비 선순위 채권금액이 50%를 초과하는 경우 산출한 보증료에서 10%를 할증</li>
+									</ul>
+								</div>
+
+
+							</div>
+						</li>
+
+					</ul>
 				</div>
-			</div>
+			</div><!-- /.sub-wrap-->
+
 		</div><!-- /.contents -->
 	</div><!-- /.container -->
 
@@ -188,6 +514,10 @@
 			$('.bg-modal').hide();
 			$('#wrapper').attr('style', '');
 		});
+	});
+
+	jQuery(document).ready(function($){
+			fnAcco(".acco-container", ".btn-acco", ".acco-view", 2);
 	});
 </script>
 </body>

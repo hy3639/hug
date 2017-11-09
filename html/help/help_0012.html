@@ -126,16 +126,20 @@
 		<div class="contents">
 			<div class="help-wrap help-guide-wrap">
 				<div class="tab-wrap">
-					<ul class="tab-style01 tab3ea tab-container">
-						<li class="tab01"><button type="button" class="cus-tab">전월세계약 가이드</button></li>
-						<li class="tab02 on"><button type="button" class="cus-tab">내집마련 123</button></li>
+					<!--S : 171024 (클래스 수정)-->
+					<ul class="tab-style01 tab2ea tab-container">
+					<!--E : 171024 (클래스 수정)-->
+						<li class="tab01 on"><button type="button" class="cus-tab">전월세계약 가이드</button></li>
+						<li class="tab02"><button type="button" class="cus-tab">내집마련 123</button></li>
+						<!-- 171024 삭제
 						<li class="tab03"><button type="button" class="cus-tab">내집마련계산기</button></li>
+					 	-->
 					</ul>
 					<div class="tab-view-container">
-						<div class="tab-cont cont01">
+						<div class="tab-cont cont01 active">
 							<div class="txt-wrap mg0">
 								<p>전월세계약 &amp; 전세금안심대출보증을 알기쉽게 가이드해 드립니다.</p>
-							</div>	
+							</div>
 							<div class="my-navi type03">
 								<ul class="acco-container">
 									<li class="depth depth01"><a href="#none" class="title btn-acco close">전월세계약 시 상황별 유의사항</a>
@@ -308,7 +312,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="tab-cont cont02 active">
+						<div class="tab-cont cont02">
 							<ul class="txt-list type02 pdb0">
 								<li>내집마련 123은 사전준비, 정보수집, 계약, 소유권이전등기, 이사하기 등 총 5가지 단계로 구분하여 진행하실 수 있습니다.</li>
 								<li>각 단계별 안내 및 필요 정보를 확인하시려면 아래 각 과정별 버튼을 선택해 주세요.</li>
@@ -1544,6 +1548,7 @@
 								</ul>
 							</div>
 						</div>
+						<!-- 101724 삭제
 						<div class="tab-cont cont03">
 							<div class="txt-wrap type02 mg0">
 								<p>대출한도, 청약가점 점수, 세금계산기, 중개수수료, 단위 게산기 등 내집마련에 필요한 계산기를 편리하게 이용하실 수 있습니다.</p>
@@ -1560,13 +1565,14 @@
 								</ul>
 							</div>
 						</div>
+						-->
 					</div>
-                    <script>
-                        $(document).ready(function(){
-                            fnTab($(".tab-wrap"));
-                        });
-                    </script>
-				</div>					
+          <script>
+              $(document).ready(function(){
+                  fnTab($(".tab-wrap"));
+              });
+          </script>
+				</div>
 			</div><!-- /.sub-wrap-->
 		</div><!-- /.contents -->
 	</div><!-- /.container -->
@@ -1586,7 +1592,7 @@
 		fnAcco(".acco-container", ".btn-acco", ".acco-view", 2);
 		fnAcco(".acco-sup", ".btn-acco-sup", ".acco-view-sup", 2);
 		fnAcco(".acco-question", ".btn-acco-question", ".acco-view-question", 2);
-			question
+		
 	});
 </script>
 </body>

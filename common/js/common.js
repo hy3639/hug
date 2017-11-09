@@ -29,16 +29,25 @@ $(document).ready(function(){
         }
     });
 
+// 171024 수정
 	/* location */
 	$('.location .depth .sel').click(function(){
+		var location_h = $('.inner-box').outerHeight() + 1;
+
 		if ($(this).parents('.depth').hasClass('on'))
 		{
 			$(this).parents('.depth').removeClass('on').find('.sub-depth').hide();
+			$(this).parents('.inner-box').removeClass('on');
 		}else{
 			$(this).parents('.depth').siblings('li').removeClass('on').find('.sub-depth').hide();
 			$(this).parents('.depth').addClass('on').find('.sub-depth').show();
+			$(this).parents('.inner-box').addClass('on');
+
+			$('.sub-depth').css('top',location_h);
 		}
 	});
+
+	// 171024 수정끝
 
 	$('.location .sub-depth .close').click(function(){
 		$(this).parents('.depth').removeClass('on').find('.sub-depth').hide();
@@ -68,102 +77,102 @@ $(window).load(function(){
 		$('.quick-area').addClass('open');
 		$('#wrapper').outerHeight(winH);
 	});
-	
+
 	$('.quick-close').on('click', function(){
 		$('.quick-area').removeClass('open');
 		$('#wrapper').attr('style', '');
 	});
 });
 
-// 탭 관련 
+// 탭 관련
 // obj_tab_wrap > (obj_tab_container > children > .cus-tab) > (obj_tab_view_container > children) 이런 구조를 default 로
 function fnTab(obj_tab_wrap, obj_tab_container, obj_tab_view_container) {
-    
+
     var $tab_wrap       = $(obj_tab_wrap);
     var $tab_container  = $(obj_tab_container).length > 0 ? $(obj_tab_container) : $tab_wrap.find(".tab-container");
     var $view_container = $(obj_tab_view_container).length > 0 ? $(obj_tab_view_container) : $tab_wrap.find(".tab-view-container");
     var idx_tab;
-    
+
     $tab_container.find(".cus-tab").on("click.cus-tab", function(e) {
-        
+
         if( $(this)[0].tagName.toLowerCase() == 'a' ) {
             e.preventDefault();
         }
-        
+
         idx_tab = $tab_container.find(".cus-tab").index( $(this) );
         $tab_container.children().eq(idx_tab).addClass("on").siblings().removeClass("on");
         $view_container.children().eq(idx_tab).addClass("active").siblings().removeClass("active");
     });
 }
 
-// tab type2 
+// tab type2
 // 탭이 형제 사이고 view 부분을 selector 로 받는다
 // 탭의 class name 의 default 는 .cus-tab
 function fnTab2(arg_obj_tab_container, arg_selector_view, arg_tab_class_name) {
-	
+
 	var $tab_container  = $(arg_obj_tab_container);
 	var $tab_view		= $(arg_selector_view);
 	var $tab			= $(arg_tab_class_name || ".cus-tab", $tab_container);
 	var idx_tab;
-	
+
 	$tab.on("click", function(e) {
-		
+
 		if( $(this)[0].tagName.toLowerCase() == 'a' ) {
             e.preventDefault();
         }
-		
+
 		idx_tab = $tab.index( $(this) );
 		$tab.eq(idx_tab).addClass("on").siblings().removeClass("on");
 		$tab_view.eq(idx_tab).addClass("active").siblings().removeClass("active");
-		
+
 	});
-	
+
 }
 
 function fnTab3(arg_obj_tab_container, arg_selector_view, arg_tab_class_name) {
-    
+
     var $tab_container  = $(arg_obj_tab_container);
     var $tab_view       = $(arg_selector_view);
     var $tab            = $(arg_tab_class_name || ".cus-tab", $tab_container);
     var idx_tab;
-    
+
     $tab.on("change", function(e) {
-        
+
         idx_tab = $tab.index( $(this) );
         $tab.eq(idx_tab).addClass("on").siblings().removeClass("on");
         $tab_view.eq(idx_tab).addClass("active").siblings().removeClass("active");
-        
+
     });
 }
 
-/* 아코디언 펑션 
+/* 아코디언 펑션
     gbn_act : 1 - 다른 아코디언 닫히지 않음
     gbn_act : 2 - 다른 아코디언 닫힘
 */
 function fnAcco(sel_acco_container, sel_btn_acco, sel_acco_view, arg_gbn_act) {
-    
+
     var $acc_container  = $(sel_acco_container);
     var $btn_acco       = $(sel_btn_acco, $acc_container);
     var $acc_view       = $(sel_acco_view, $acc_container);
     var gbn_act         = arg_gbn_act || 1;
     var idx_tmp;
-    
+
     $btn_acco.on("click", function(e){
-        
+
         if( $(this)[0].tagName.toLowerCase() == 'a' ) {
             e.preventDefault();
         }
-        
+
         idx_tmp = $btn_acco.index($(this));
-        
-            
+
+
         if ($acc_view.eq(idx_tmp).is(":visible")) {
 
             $btn_acco.eq(idx_tmp).removeClass("close");
             $acc_view.eq(idx_tmp).stop().slideUp();
-            
+
         } else {
-            
+
             if (gbn_act == 1) {
                 $btn_acco.eq(idx_tmp).addClass("close");
                 $acc_view.eq(idx_tmp).stop().slideDown();
@@ -174,9 +183,9 @@ function fnAcco(sel_acco_container, sel_btn_acco, sel_acco_view, arg_gbn_act) {
                     .end().not(":eq("+ idx_tmp +")").stop().slideUp();
             }
         }
-            
+
     });
-    
+
 }
 /*
 function modal_cont01(modalLocation){
@@ -190,7 +199,7 @@ function modal_cont01(modalLocation){
     var position_top = ((browser_height-popupID_height)/2);
     var close_trigger = $('.pop-close');
 
-    $(modal).insertAfter(popupID).slideDown().addClass('modal-overlay').css({'height' : browser_height}); 
+    $(modal).insertAfter(popupID).slideDown().addClass('modal-overlay').css({'height' : browser_height});
 	$(popupID).slideDown().addClass('layer-on').css({'top' : position_top});
 	$('#wrapper').css({'height' : browser_height});
 
