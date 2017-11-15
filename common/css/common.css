@@ -3030,6 +3030,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 /* 허그소개 */
 .note-detail .list-cont .img-area {font-size: 0; width: 100%; margin:15px 0 20px;}
 .note-detail .list-cont .img-area.type02 {margin:0;}
+.note-detail .list-cont .txt-area .notice-tit {display:block; margin:8px 0 12px; font-size:11px; line-height:13px; color:#999; text-align:center;}
 .note-detail .list-cont .img-area img {width: 100%; height: auto;}
 .note-detail .list-cont .txt-area dt {margin-bottom:10px; font-size: 13px; color:#333; font-weight: bold; line-height:16px;}
 .note-detail .list-cont .txt-area dt.type2 {color:#1863af;}
