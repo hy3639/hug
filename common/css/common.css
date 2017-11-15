@@ -3035,5 +3035,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .note-detail .list-cont .txt-area dt.type2 {color:#1863af;}
 .note-detail .list-cont .txt-area dt.type3 {color:#666;}
 .note-detail .list-cont .txt-area dd {margin-bottom:17px; font-size: 11px; color:#666; line-height: 14px;}
-.note-detail .list-cont .txt-area dd span {display: block; font-weight: bold;}
+.note-detail .list-cont .txt-area dd span.tit {display: block; font-weight: bold;}
+.note-detail .list-cont .txt-area dd span.bold {font-weight:bold;}
 .note-detail .list-cont .txt-area dd em.blue {color:#1863af}
