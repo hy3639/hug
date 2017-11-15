@@ -3028,9 +3028,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 /*E : 171024 */
 
 /* 허그소개 */
-.note-detail .list-cont .img-area {font-size: 0; width: 100%; margin:15px 0 25px;}
+.note-detail .list-cont .img-area {font-size: 0; width: 100%; margin:15px 0 20px;}
 .note-detail .list-cont .img-area.type02 {margin:0;}
 .note-detail .list-cont .img-area img {width: 100%; height: auto;}
 .note-detail .list-cont .txt-area dt {margin-bottom:10px; font-size: 13px; color:#333; font-weight: bold; line-height:16px;}
-  .note-detail .list-cont .txt-area dd {margin-bottom:17px; font-size: 11px; color:#666; line-height: 14px;}
-    .note-detail .list-cont .txt-area dd span {display: block; font-weight: bold;}
+.note-detail .list-cont .txt-area dt.type2 {color:#1863af;}
+.note-detail .list-cont .txt-area dt.type3 {color:#666;}
+.note-detail .list-cont .txt-area dd {margin-bottom:17px; font-size: 11px; color:#666; line-height: 14px;}
+.note-detail .list-cont .txt-area dd span {display: block; font-weight: bold;}
+.note-detail .list-cont .txt-area dd em.blue {color:#1863af}
