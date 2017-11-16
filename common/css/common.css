@@ -3041,6 +3041,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .note-detail .list-cont .txt-area p .tit {display: block; font-weight: bold;}
 .note-detail .list-cont .txt-area dd span.bold {font-weight:bold;}
 .note-detail .list-cont .txt-area dd em.blue {color:#1863af}
+.note-detail .list-cont .txt-area p span.bold {font-weight:bold;}
 
 .file-area {overflow:hidden; margin-top:20px; padding:10px; border:2px solid #e1e1e1; border-radius:10px; }
 .file-area p {float:left; color:#333; line-height:19px;}
