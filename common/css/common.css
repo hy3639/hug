@@ -500,6 +500,7 @@ E :171024*/
 .bg-none {background:none !important}
 .txt-list.bg-none {padding:10px}
 .bdt-none {border-top:0 !important;}
+.bdb-none {border-bottom:0 !important;} /*171120 추가*/
 /* 텍스트 컬러 타입 */
 .cType01 {color:#0d6fb8}
 .cType02 {color:#b80d0d}
@@ -788,11 +789,15 @@ input[type=text].inp-type05 {width:93%}
 .form-area03.type03 .form-box {margin:20px 0}
 .form-area03.type03 .search-wrap {padding:0 14px; background-color:#fff}
 .form-area03.type03 .search-wrap .search-input .input-cont {margin-left:0}
-.form-area03.type03 .search-wrap .search-input {width:70%}
-.form-area03.type03 .search-wrap .search-btn {width:30%}
+/* S : 171120 */
+.form-area03.type03 .search-wrap .search-input {width:68%}
+.form-area03.type03 .search-wrap .search-btn {width:32%}
+/* E : 171120 */
 .form-area03.type03 .search-wrap .btn-search-cont {position:relative; top:0; right:0; display:inline-block}
 .form-area03.type03 .search-wrap .btn-search-cont {padding-left:4px; width:27px}
-.form-area03.type03 .search-wrap .btn-search-cont.detail-btn {position:relative; padding:0 0 0 10px; width:42px}
+/* S : 171120 */
+.form-area03.type03 .search-wrap .btn-search-cont.detail-btn {position:relative; padding:0 0 0 10px; width:47px; }
+/* S : 171120 */
 .form-area03.type03 .search-wrap .btn-search-cont.detail-btn:before {content:''; display:block; position:absolute; top:7px; left:0; width:2px; height:18px; background-color:#e1e1e1; border-radius:1px}
 .form-area03.type03 .search-wrap .btn-search-cont .type06 {font-size:11px; font-weight:bold; color:#272727}
 .form-area03.type03 .search-wrap input {height:31px; line-height:31px}
@@ -1095,7 +1100,9 @@ a.tel-info:before {content:''; position:absolute; top:50%; left:0; margin-top:-8
 .table-scroll-wrap .tbl-style05 thead th {height:30px; background-color:#ececec; font-size:11px; border-bottom:1px solid #cccccc; border-left:1px solid #ccc; line-height:30px}
 .table-scroll-wrap .tbl-style05 thead th:first-child {border-right:1px solid #cccccc}
 .table-scroll-wrap .table-fixed tbody th, .table-box .table-scroll tbody th {padding:7px 10px; background-color:#ffffff; font-size:11px; border-bottom:1px solid #cccccc; line-height:15px}
-
+/*S : 171120*/
+.table-scroll-wrap .table-fixed tbody th.ty02, .table-box .table-scroll tbody th.ty02 {padding:7px 0;}
+/*E : 171120*/
 .table-scroll-wrap .table-fixed .tbl-style05 tbody td {padding:7px 0; font-size:11px; color:#666; text-align:left; border-top:1px solid #ccc; border-right:1px solid #cccccc; border-left:1px solid #ccc; word-wrap:break-word; line-height:15px; text-align:center}
 .table-scroll .tbl-style05 tbody td {padding:7px 10px; font-size:11px; color:#666; text-align:left; border-top:1px solid #ccc; border-left:1px solid #ccc; word-wrap:break-word; line-height:15px; text-align:center}
 .table-scroll-wrap .table-scroll .tbl-style05 {border-right:0 none}
@@ -1626,10 +1633,10 @@ a.tel-info:before {content:''; position:absolute; top:50%; left:0; margin-top:-8
 .sale-list li {position:relative; margin-bottom:3px; border-top:1px solid #ccc; border-bottom:1px solid #ccc}
 .sale-list li:first-child {border-top:2px solid #999}
 .sale-list li dl {min-height:113px; padding:12px 105px 12px 15px; box-sizing:border-box;}
-.sale-list li dl .title {margin-bottom:8px; font-size:13px; font-weight:bold; color:#666}
-/* 2016-10-05 수정 */
-.sale-list li dl .title .ico {padding:0 5px; font-size:11px; color:#b80d0d; border:1px solid #b80d0d; border-radius:30px}
-/* //2016-10-05 수정 */
+/* S: 171120 */
+.sale-list li dl .title {margin-bottom:8px; padding-right:5px; font-size:13px; font-weight:bold; color:#666}
+.sale-list li dl .title .ico {padding:0 5px; font-size:11px; color:#b80d0d; border:1px solid #b80d0d; border-radius:30px; word-break: keep-all;}
+/* E: 171120 */
 .sale-list li dl .title .ico.ty02 {color:#1574ba; border:1px solid #1574ba}
 .sale-list li dl .text {margin-bottom:3px; font-size:11px; color:#666}
 /* 2016-10-05 추가 */
@@ -2068,7 +2075,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .help-cont-wrap .ico-thumb img {width:50px; height:50px; vertical-align:top;}
 .help-cont-wrap .tv-area {background:none; padding:20px 0; min-height:93px;}
 .help-cont-wrap .tv-area .link-join.long {display:inline-block; margin-top:24px; width:auto; padding:0 4px}
-.help-cont-wrap .tv-area .top-box {position:relative; padding:0 90px 0 65px; width:100%; min-height:50px; font-size:11px; color:#666; line-height:16px; box-sizing:border-box; word-break:keep-all;}
+/*S :171120 */
+.help-cont-wrap .tv-area .top-box {position:relative; padding:0 90px 0 65px; width:100%; min-height:78px; font-size:11px; color:#666; line-height:16px; box-sizing:border-box; word-break:keep-all;}
+/*E :171120 */
 .help-cont-wrap .tv-area .top-box .goods {display:block; margin-bottom:5px; font-size:15px; font-weight:bold; color:#0d6fb9; line-height:25px; word-break:break-all;}
 .help-cont-wrap .tv-area .top-box .img-wrap {position:absolute; top:0; right:0; width:82px; height:93px;}
 .help-cont-wrap .tv-area .top-box .img-wrap img {width:100%; vertical-align:top;}
@@ -2569,7 +2578,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .pop-map .map-cont .spot-area {position:absolute; top:3px; left:3px; right:3px; z-index:1; background-color:#f5f5f5;}
 .pop-map .map-cont .spot-area .spot-addr {display:block; padding:5px 10px 5px 30px; background:url(../img/ico/ico_spot.png) 5px 5px no-repeat; background-size:16px 16px; color:#333; font-size:11px;}
 .pop-map .map-cont .map-area {position:relative; z-index:0; overflow:hidden; width:100%; height:100%}
-.pop-map .map-cont .map-area .location {display:inline-block; width:23px; height:30px;}
+/*S : 171120*/
+.map-area .location {display:inline-block; width:23px; height:30px; background-color:inherit; border-bottom:none;}
+/*E : 171120*/
 .pop-map .map-cont .map-area .location img {width:100%; vertical-align:top;}
 .pop-map .map-cont .map-area .ico-spot {display:inline-block; width:23px; height:30px;}
 .pop-map .map-cont .map-area .ico-spot img {width:100%; vertical-align:top;}
@@ -3027,10 +3038,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .note-detail .webtoon-box img {width:100%; vertical-align:top;}
 /*E : 171024 */
 
-/* 허그소개 */
+/* S : 허그소개 171120 */
 .note-detail .list-cont .img-area {font-size: 0; width: 100%; margin:15px 0 20px;}
 .note-detail .list-cont .img-area.type02 {margin:0;}
-.note-detail .list-cont .m-title {font-size: 13px; font-weight: bold; color:#1863af;}
+.note-detail .list-cont .m-title {font-size: 13px; font-weight: bold; color:#1863af; line-height: 16px;}
 .note-detail .list-cont .txt-area .notice-tit {display:block; margin:8px 0 12px; font-size:11px; line-height:13px; color:#999; text-align:center;}
 .note-detail .list-cont .txt-area .title_l {font-size: 13px; color: #333; font-weight: bold;}
 .note-detail .list-cont .img-area img {width: 100%; height: auto;}
@@ -3048,3 +3059,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .file-area {overflow:hidden; margin-top:20px; padding:10px; border:2px solid #e1e1e1; border-radius:10px; }
 .file-area p {float:left; color:#333; line-height:19px;}
 .file-area .btn-normal {float:right;}
+/* E : 허그소개 171120 */
