@@ -2672,6 +2672,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .pop-interest-rate .box-cont,
 .pop-interest-rate2 .box-cont{padding-top:10px}
 
+/* S: 171122*/
+.layer-pop.olympic {display: block; z-index: 60; left:0; right:0; top:0; bottom:0; width: 100%; padding:0; background: url(../img/bg/bg_modal.png) 0 0 repeat;}
+.layer-pop.olympic .pop-wrap {position:absolute; left:0; right:0; top:0; bottom:0; width: 100%; background-color: inherit; border-radius: inherit;}
+.layer-pop.olympic .pop-content {position:absolute; left:50%; top:50%; width:70%; position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);}
+@media screen and (max-width:767px) {
+.layer-pop.olympic .pop-content  {width:90%;}
+}
+.layer-pop.olympic .pop-content img {width: 100%;}
+.layer-pop.olympic .close {position: fixed; bottom:0; left:0; width: 100%; height:47px; background-color:#f7f7f7; font-size: 15px; color:#333; text-align: center; line-height: 47px;}
+/* E: 171122*/
+
 .onbid-box {}
 .onbid-box .img-wrap {margin-top:10px; text-align:center}
 .onbid-box .img-wrap img {max-width:100%}
