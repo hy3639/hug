@@ -269,12 +269,20 @@ body {background-color:#fff}
 .main-contents .bg1 {/*position:relative;padding: 0 4%;*/ background:url(../img/bg/bg_main1.png) center top no-repeat; background-size:cover;}
 .main-contents .bg2{/*position:relative;padding: 0 4%;*/ background:url(../img/bg/bg_main2.png) center top no-repeat; background-size:cover;}
 
+/*S:171129*/
+.main-contents .bg3{/*position:relative;padding: 0 4%;*/ background:url(../img/bg/bg_main3.png) center top no-repeat; background-size:cover;}
+/*E:171129*/
 .main-contents .swiper-slide {text-align: center;}
-.main-contents .swiper-slide img {width: 80%;margin-top:5%}
+/*S:171129*/
+.main-contents .swiper-slide.bg3 img {width:90%;}
+/*E:171129*/
+/*S : 171205*/
+.main-contents .swiper-slide img {width: 100%;margin-top:5%}
 
 @media screen and (max-width:320px) {
-.main-contents .swiper-slide img {width:70%; margin-top:3%;}
+.main-contents .swiper-slide img {margin-top:3%;}
 }
+/*E : 171205*/
 @media screen and (min-width:414px) and (max-width:768px) {
 .main-contents .swiper-slide img {margin-top:12%;}
 }
@@ -312,6 +320,10 @@ body {background-color:#fff}
 
 .sub-link {overflow:hidden; padding:15px 17px; background:url(../img/bg/bg_main_btm.jpg) center no-repeat; background-size:cover; border-left:0;}
 .sub-link li {float: left;width: 25%; min-height:53px;  border-left:1px solid rgba(255, 255, 255, .2); box-sizing: border-box;}
+/*S :171205 */
+.sub-link li.kakao a{color:#f8df00}
+.sub-link li.kakao em {padding-right:2px;}
+/*E :171205 */
 .sub-link li:nth-child(1),
 .sub-link li:nth-child(2),
 .sub-link li:nth-child(3),
@@ -319,11 +331,14 @@ body {background-color:#fff}
 .sub-link li:nth-child(1),
 .sub-link li:nth-child(5) {border-left:0}
 .sub-link li a {display: block; padding:12px 0; color: #fff; font-size: 12px; font-family: 'ng_bold'; line-height: 14px; text-align: center;}
-.sub-link li:nth-child(4) a {padding:19px 0;}
+/*.sub-link li:nth-child(4) a {padding:19px 0;} 171205 삭제 */
 @media screen and (max-width:320px) {
 .sub-link li {min-height: 47px;}
 .sub-link li a {font-size:11px; padding:9px 0;}
-.sub-link li:nth-child(4) a {padding:16px 0}
+/*S : 171205*/
+.sub-link li.kakao em {padding-right: 0;}
+/*.sub-link li:nth-child(4) a {padding:16px 0} 삭제 */
+/*E : 171205*/
 }
 
 
