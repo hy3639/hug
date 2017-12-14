@@ -298,7 +298,7 @@
 var swiper = new Swiper('.main-notice-slide .swiper-container', {
 	nextButton: '.main-notice-slide .btn-next',
 	prevButton: '.main-notice-slide .btn-prev',
-	 direction: 'vertical',
+	direction: 'vertical',
 	loop: true,
 	noSwipingClass: 'main-visual-slide',
 	 autoplay: '2000'
@@ -350,7 +350,9 @@ var swiper2 = new Swiper('.main-contents .swiper-container', {
 
 $(window).load(function(){
 	function resizeMid(){
-		var winH = $(window).height();
+		/*S : 171214*/
+		var winH = $(window).height()+1;
+		/*E : 171214*/
 		var headH = $('#main-header').outerHeight();
 		var sectionH = $('.section').outerHeight();
 		var linkH = $('.sub-link').outerHeight();
