@@ -281,9 +281,12 @@ body {background-color:#fff}
 /*S : 171205*/
 .main-contents .swiper-slide img {width: 100%;margin-top:5%}
 
+/* S :171215 */
 @media screen and (max-width:320px) {
-.main-contents .swiper-slide img {margin-top:3%;}
+.main-contents .swiper-slide img {margin-top:5%;}
 }
+/* E :171215 */
+
 /*E : 171205*/
 @media screen and (min-width:414px) and (max-width:768px) {
 .main-contents .swiper-slide img {margin-top:12%;}
@@ -319,9 +322,10 @@ body {background-color:#fff}
 .main-link li a span {font-size:11px; bottom:5px; line-height: 12px;}
 }
 
-
-.sub-link {overflow:hidden; padding:15px 17px; background:url(../img/bg/bg_main_btm.jpg) center no-repeat; background-size:cover; border-left:0;}
-.sub-link li {float: left;width: 25%; min-height:53px;  border-left:1px solid rgba(255, 255, 255, .2); box-sizing: border-box;}
+/* S : 171215 */
+.sub-link {overflow:hidden; padding:7px 8px; background:url(../img/bg/bg_main_btm.jpg) center no-repeat; background-size:cover; border-left:0;position:absolute; bottom:0}
+.sub-link li {float: left;width: 25%; border-left:1px solid rgba(255, 255, 255, .2); box-sizing: border-box; }
+/* E : 171215 */
 /*S :171205 */
 .sub-link li.kakao a{color:#f8df00}
 .sub-link li.kakao em {padding-right:2px;}
@@ -332,11 +336,20 @@ body {background-color:#fff}
 .sub-link li:nth-child(4) {border-bottom:1px solid rgba(255, 255, 255, .2);}
 .sub-link li:nth-child(1),
 .sub-link li:nth-child(5) {border-left:0}
-.sub-link li a {display: block; padding:12px 0; color: #fff; font-size: 12px; font-family: 'ng_bold'; line-height: 14px; text-align: center;}
+
+/*S : 171215*/
+.sub-link li a {display: block; padding:6px 0; color: #fff; font-size: 12px; font-family: 'ng_bold'; line-height: 14px; text-align: center;}
+/*E : 171215*/
+
 /*.sub-link li:nth-child(4) a {padding:19px 0;} 171205 삭제 */
+
 @media screen and (max-width:320px) {
-.sub-link li {min-height: 47px;}
-.sub-link li a {font-size:11px; padding:9px 0;}
+
+/* S : 171215 */
+.sub-link li {}
+.sub-link li a {font-size:11px; padding:4px 0; line-height:14px;}
+/* E : 171215 */
+
 /*S : 171205*/
 .sub-link li.kakao em {padding-right: 0;}
 /*.sub-link li:nth-child(4) a {padding:16px 0} 삭제 */
@@ -371,12 +384,12 @@ body {background-color:#fff}
 .main-visual .pager .swiper-pagination .swiper-pagination-bullet-active {background-color:#2c95e8;}
 E : 171024 */
 
-/*S : 171024*/
-.section {padding:4% 4% 2% 4%;}
+/*S : 171215*/
+.section {padding:4% 4% 4% 4%;}
 @media screen and (max-width:320px) {
 .section {padding:8% 4% 4% 4%;}
 }
-/*E : 171024*/
+/*S : 171215*/
 .menu-box {overflow:hidden; box-sizing:border-box;}
 .menu-box ul {height:100%;}
 .menu-box ul li {float:left; width:33.3%; height:50%; padding:7px 0 8px; text-align:center; box-sizing:border-box;}

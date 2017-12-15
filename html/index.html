@@ -14,6 +14,9 @@
 </head>
 <body>
 <div id="wrapper" class="main-wrap">
+	<div class="top-header" style="height20px; background-color:red">
+		dd
+	</div>
 	<div id="main-header">
 		<div class="gnb-layer" data-role="page">
 			<div class="gnb-top">
@@ -294,31 +297,41 @@
 <!-- E : 171122 -->
 
 <script>
-// 알림 슬라이드
-var swiper = new Swiper('.main-notice-slide .swiper-container', {
-	nextButton: '.main-notice-slide .btn-next',
-	prevButton: '.main-notice-slide .btn-prev',
-	direction: 'vertical',
-	loop: true,
-	noSwipingClass: 'main-visual-slide',
-	 autoplay: '2000'
+$(window).load(function(){
+		sliderLoad();
+		setTimeout(function(){
+			sliderLoad();
+			alert('실행');
+		}, 1500);
 });
 
-$('.btn-controller .change').click(function(){
-	if($(this).hasClass('btn-pause')){
-		$(this).removeClass('btn-pause').addClass('btn-play');
-		 swiper.stopAutoplay();
-	}else{
-		$(this).removeClass('btn-play').addClass('btn-pause');
-		swiper.startAutoplay();
-	}
-});
+function sliderLoad(){
+	// 알림 슬라이드
+	var swiper = new Swiper('.main-notice-slide .swiper-container', {
+		nextButton: '.main-notice-slide .btn-next',
+		prevButton: '.main-notice-slide .btn-prev',
+		direction: 'vertical',
+		loop: true,
+		noSwipingClass: 'main-visual-slide',
+		 autoplay: '2000'
+	});
 
-var swiper2 = new Swiper('.main-contents .swiper-container', {
-	direction: 'horizontal',
- 	loop: true,
- 	autoplay: '4000'
-});
+	$('.btn-controller .change').click(function(){
+		if($(this).hasClass('btn-pause')){
+			$(this).removeClass('btn-pause').addClass('btn-play');
+			 swiper.stopAutoplay();
+		}else{
+			$(this).removeClass('btn-play').addClass('btn-pause');
+			swiper.startAutoplay();
+		}
+	});
+
+	var swiper2 = new Swiper('.main-contents .swiper-container', {
+		direction: 'horizontal',
+	 	loop: true,
+	 	autoplay: '4000'
+	});
+}
 
 
 /* 팝업 부분 */
@@ -350,16 +363,17 @@ var swiper2 = new Swiper('.main-contents .swiper-container', {
 
 $(window).load(function(){
 	function resizeMid(){
-		/*S : 171214*/
-		var winH = $(window).height()+1;
-		/*E : 171214*/
+		/*S : 171215*/
+		var winH = $(window).height();
+		/*E : 171215*/
 		var headH = $('#main-header').outerHeight();
 		var sectionH = $('.section').outerHeight();
 		var linkH = $('.sub-link').outerHeight();
 		var fixH = $('#fix-menu').outerHeight();
+		var headTH =$('.top-header').outerHeight();
 
-		var ContH = winH - headH - fixH;
-		var mainContH = winH - headH - fixH - sectionH - linkH;
+		var ContH = winH - headH - fixH -headTH;
+		var mainContH = winH - headH - fixH - sectionH - linkH -headTH;
 
 		console.log("총높이" + winH);
 		console.log("헤더"+headH);
