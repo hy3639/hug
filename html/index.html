@@ -14,9 +14,9 @@
 </head>
 <body>
 <div id="wrapper" class="main-wrap">
-	<div class="top-header" style="height20px; background-color:red">
+	<!-- <div class="top-header" style="height20px; background-color:red">
 		dd
-	</div>
+	</div> -->
 	<div id="main-header">
 		<div class="gnb-layer" data-role="page">
 			<div class="gnb-top">
@@ -129,15 +129,15 @@
 
 		<div class="main-contents">
 			<div class="swiper-container">
-				<!--S : 171129 -->
+				<!--S :171215_2 -->
 				<div class="swiper-wrapper horizontal">
-					<div class="swiper-slide bg1"><img src="../common/img/bg/bg_main_txt1.png" alt="사람중심의 상품과 국민행복을 실현합니다."></div>
-					<div class="swiper-slide bg2"><img src="../common/img/bg/bg_main_txt2.png" alt="고객 모두에 대한 공감으로 상생의 가치를 나눕니다."></div>
+					<div class="swiper-slide bg1"><div class="img-wp" style="position:relative;"><img src="../common/img/bg/bg_main_txt1.png" alt="사람중심의 상품과 국민행복을 실현합니다."></div></div>
+					<div class="swiper-slide bg2"><div class="img-wp" style="position:relative;"><img src="../common/img/bg/bg_main_txt2.png" alt="고객 모두에 대한 공감으로 상생의 가치를 나눕니다."></div></div>
 					<!-- 171205 : 임시주석처리(나중에오픈)
 					<div class="swiper-slide bg3"><img src="../common/img/bg/bg_main_txt3.png" alt="주택도시금융의 리더로서 끊임없이 변화하고 성장합니다."></div>
 					-->
 				</div>
-				<!--E : 171129 -->
+				<!--S :171215_2 -->
 			</div>
 			<div class="main-link">
 				<ul>
@@ -301,7 +301,6 @@ $(window).load(function(){
 		sliderLoad();
 		setTimeout(function(){
 			sliderLoad();
-			alert('실행');
 		}, 1500);
 });
 
@@ -316,20 +315,21 @@ function sliderLoad(){
 		 autoplay: '2000'
 	});
 
-	$('.btn-controller .change').click(function(){
-		if($(this).hasClass('btn-pause')){
-			$(this).removeClass('btn-pause').addClass('btn-play');
+
+	$(document).on('click', '.btn-controller .change.btn-pause', function(){
+			$('.main-notice-slide .btn-controller .change.btn-pause').removeClass('btn-pause').addClass('btn-play');
 			 swiper.stopAutoplay();
-		}else{
-			$(this).removeClass('btn-play').addClass('btn-pause');
+	});
+
+	$(document).on('click', '.btn-controller .change.btn-play', function(){
+			$('.main-notice-slide .btn-controller .change.btn-play').removeClass('btn-play').addClass('btn-pause');
 			swiper.startAutoplay();
-		}
 	});
 
 	var swiper2 = new Swiper('.main-contents .swiper-container', {
 		direction: 'horizontal',
 	 	loop: true,
-	 	autoplay: '4000'
+	 //	autoplay: '4000'
 	});
 }
 
@@ -370,10 +370,10 @@ $(window).load(function(){
 		var sectionH = $('.section').outerHeight();
 		var linkH = $('.sub-link').outerHeight();
 		var fixH = $('#fix-menu').outerHeight();
-		var headTH =$('.top-header').outerHeight();
+	//	var headTH =$('.top-header').outerHeight();
 
-		var ContH = winH - headH - fixH -headTH;
-		var mainContH = winH - headH - fixH - sectionH - linkH -headTH;
+		var ContH = winH - headH - fixH;
+		var mainContH = winH - headH - fixH - sectionH - linkH;
 
 		console.log("총높이" + winH);
 		console.log("헤더"+headH);
@@ -386,6 +386,10 @@ $(window).load(function(){
 		$('#container').css('height', ContH+'px');
 		$('.main-contents').css('height', mainContH+'px');
 
+    /*S : 171215_2*/
+		var h = mainContH - 180;
+		$('.img-wp').css('height', h+'px');
+		/*E : 171215_2*/
 	}
 	$(window).resize(resizeMid);
 	resizeMid();

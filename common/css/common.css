@@ -278,19 +278,15 @@ body {background-color:#fff}
 /*S:171129*/
 .main-contents .swiper-slide.bg3 img {width:90%;}
 /*E:171129*/
-/*S : 171205*/
-.main-contents .swiper-slide img {width: 100%;margin-top:5%}
 
-/* S :171215 */
+/*S : 171215_2*/
+.main-contents .swiper-slide img {width: 100%; position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);}
+
 @media screen and (max-width:320px) {
-.main-contents .swiper-slide img {margin-top:5%;}
+.main-contents .swiper-slide .img-wp {height:100px !important; }
 }
-/* E :171215 */
+/*E : 171215_2*/
 
-/*E : 171205*/
-@media screen and (min-width:414px) and (max-width:768px) {
-.main-contents .swiper-slide img {margin-top:12%;}
-}
 
 .main-link {position: absolute; bottom:-4%; left:4%; right:4%; z-index: 2;}
 .main-link ul {overflow: hidden; border-radius: 10px;-webkit-box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.4);-moz-box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.4);box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.4);}
@@ -322,10 +318,11 @@ body {background-color:#fff}
 .main-link li a span {font-size:11px; bottom:5px; line-height: 12px;}
 }
 
-/* S : 171215 */
-.sub-link {overflow:hidden; padding:7px 8px; background:url(../img/bg/bg_main_btm.jpg) center no-repeat; background-size:cover; border-left:0;position:absolute; bottom:0}
+/* S : 171215_2 */
+.sub-link {width:100%;overflow:hidden; padding:7px 8px; background:url(../img/bg/bg_main_btm.jpg) center no-repeat; background-size:cover; border-left:0;position:absolute; bottom:0;box-sizing: border-box;}
+/* E : 171215_2 */
 .sub-link li {float: left;width: 25%; border-left:1px solid rgba(255, 255, 255, .2); box-sizing: border-box; }
-/* E : 171215 */
+
 /*S :171205 */
 .sub-link li.kakao a{color:#f8df00}
 .sub-link li.kakao em {padding-right:2px;}
@@ -428,10 +425,12 @@ E : 171024 */
 
 /*S :171024*/
 .main-notice-slide {}
+/* S : 171215_2 */
 .main-notice-slide .swiper-container {
 	overflow:hidden;
-	height:36px;
+	height:20px;
   background:url(../img/ico/ico_noti.png) 6px center no-repeat; background-size:15px 15px;
+  margin:6px 0 14px;
 	/*border:1px solid #ddd;
 	background-color:#fff;*/
 }
@@ -446,11 +445,12 @@ E : 171024 */
 	color:#fff;
 	font-size:12px;
 	text-overflow:ellipsis;
-	line-height:36px;
+	line-height:20px;
 	white-space:nowrap;
   text-decoration: none;
 
 }
+/* E : 171215_2 */
 .main-notice-slide .swiper-slide .link span{color: #00ffff; font-weight: bold;}
 .btn-controller {overflow: hidden;}
 .btn-controller div {float:left; width:16px;;height:18px; border:1px solid rgba(255, 255, 255, .2); background:url(../img/ico/ico_controller.png) 0 0 no-repeat; background-size:16px 100px;}
