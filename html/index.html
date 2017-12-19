@@ -386,10 +386,12 @@ $(window).load(function(){
 		$('#container').css('height', ContH+'px');
 		$('.main-contents').css('height', mainContH+'px');
 
-    /*S : 171215_2*/
-		var h = mainContH - 180;
+    /*S : 171218_2*/
+		var mainlinkH =  $('.main-link').outerHeight();
+		var h = mainContH - mainlinkH;
+
 		$('.img-wp').css('height', h+'px');
-		/*E : 171215_2*/
+		/*E : 171218_2*/
 	}
 	$(window).resize(resizeMid);
 	resizeMid();
