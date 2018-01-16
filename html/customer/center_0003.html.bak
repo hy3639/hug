@@ -179,7 +179,6 @@
 									<th scope="col">상세업무</th>
 								</tr>
 							</thead>
-                           <!-- S : 180116 -->
 							<tbody>
 								<tr>
 									<td>1</td>
@@ -217,7 +216,6 @@
 									<td class="txtL">영업점 담당자 직접연결</td>
 								</tr>
 							</tbody>
-                            <!-- E : 180116 -->
 						</table>
 					</div>
 					<div class="info-box type02">
