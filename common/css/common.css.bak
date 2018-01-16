@@ -1707,9 +1707,9 @@ a.tel-info:before {content:''; position:absolute; top:50%; left:0; margin-top:-8
 .sale-list li dl .img-wrap img {width:100%; vertical-align:top;}
 /* //2016-10-05 추가 */
 
-/*S: 180110*/
-.sale-list li .sub-info {overflow:hidden;/*border-top:1px solid #ccc*/clear:both;}
-/*E: 180110*/
+/*S: 180108*/
+.sale-list li .sub-info {overflow:hidden;/*border-top:1px solid #ccc*/}
+/*E: 180108*/
 
 
 /* 2016-10-05 수정 */
