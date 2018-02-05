@@ -2539,6 +2539,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .arithmometer-menu.type02 ul li {float:left; width:50%; text-align:left; box-sizing:border-box}
 .arithmometer-menu.type02 ul li span {position:relative; display:block; padding:74px 10px 10px 9px; font-size:11px; font-weight:bold; color:#333; background-color:#f1f1f1; border-radius:5px; text-align:center; line-height:13px}
 .arithmometer-menu.type02 ul li span:before {content:''; position:absolute; left:50%; display:block;}
+/*S : 180205*/
+.arithmometer-menu.type02 ul li.menu00 span:before {top:21px; width:37px; height:35px; margin-left:-18px; background:url(../img/ico/ico_help_menu00.png) no-repeat; background-size:37px 35px;}
+/*E : 180205*/
 .arithmometer-menu.type02 ul li.menu01 span:before {top:23px; width:35px; height:32px; margin-left:-17px; background:url(../img/ico/ico_help_menu01.png) no-repeat; background-size:35px 32px;}
 .arithmometer-menu.type02 ul li.menu02 span:before {top:22px; width:35px; height:34px; margin-left:-17px; background:url(../img/ico/ico_help_menu02.png) no-repeat; background-size:35px 34px;}
 .arithmometer-menu.type02 ul li.menu03 span:before {top:23px; width:35px; height:32px; margin-left:-17px; background:url(../img/ico/ico_help_menu03.png) no-repeat; background-size:35px 32px;}
@@ -2546,7 +2549,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .arithmometer-menu.type02 ul li.menu05 span:before {top:20px; width:33px; height:38px; margin-left:-16px; background:url(../img/ico/ico_help_menu05.png) no-repeat; background-size:33px 38px;}
 .arithmometer-menu.type02 ul li.menu06 span:before {top:22px; width:45px; height:29px; margin-left:-23px; background:url(../img/ico/ico_help_menu06.png) no-repeat; background-size:45px 29px;}
 .arithmometer-menu.type02 ul li.menu07 span:before {top:23px; width:32px; height:32px; margin-left:-16px; background:url(../img/ico/ico_help_menu07.png) no-repeat; background-size:32px 32px;}
-.arithmometer-menu.type02 ul li.menu08 span:before {top:23px; width:37px; height:35px; margin-left:-18px; background:url(../img/ico/ico_help_menu08.png) no-repeat; background-size:37px 35px;}
+/*S : 180205*/
+.arithmometer-menu.type02 ul li.menu08 span:before {top:20px; width:40px; height:31px; margin-left:-20px; background:url(../img/ico/ico_help_menu08.png) no-repeat; background-size:40px 31px;}
+/*E : 180205*/
 
 /* 서비스 이용약관 */
 .service .txt-list.type02 {border-bottom:1px solid #e1e1e1}
@@ -2613,8 +2618,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 /*--------------------------------------------------------------------------------------
 	레이어 팝업 영역
 ---------------------------------------------------------------------------------------*/
-.layer-pop {display:none; position:fixed; top:40px; left:0; z-index:10; width:100%; height:auto; padding:10px 15px; box-sizing:border-box}
-.layer-pop .pop-bg {position:absolute; top:0; left:0; z-index:0; width:100%; height:100%; background-color:rgba(0,0,0, .6)}
+/*S : 180205*/
+.layer-pop {display:none; overflow-y:auto; position:fixed; top:40px; left:0; z-index:10; width:100%; height:auto; padding:10px 15px; box-sizing:border-box}
+.layer-pop .pop-bg {position:fixed; top:0; left:0; z-index:0; width:100%; height:100%; background-color:rgba(0,0,0, .6)}
+/*E : 180205*/
 .layer-pop .pop-wrap {position:relative; z-index:1; width:100%; background-color:#fff;  border-radius:15px}
 .layer-pop .pop-wrap.scroll {overflow-y:auto; overflow-x:hidden; height:100%}
 .layer-pop .pop-wrap .pop-close {position:fixed; top:56px; right:20px; z-index:1; width:28px; height:28px; background:#fff url(../img/btn/btn_pop_close.png) center center no-repeat; background-size:14px 14px; border:2px solid #ccc; border-radius:50%}
@@ -2714,7 +2721,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .layer-pop.pop-alert .pop-header .tit {display:block; font-weight:bold; font-size:16px; color:#333; line-height:50px; text-align:left}
 .layer-pop.pop-alert .pop-header .tit.icon {position:relative; margin-top:20px; padding-left:36px; font-weight:normal; font-size:16px; color:#666; line-height:20px}
 .layer-pop.pop-alert .pop-header .tit.icon:after {display:block; content:""; position:absolute; top:0; left:0; width:26px; height:26px; background:url(../img/ico/icon_point_52x52.png) no-repeat; background-size:26px 26px}
-.layer-pop.pop-alert .pop-content {padding-bottom:20px; border-bottom:1px solid #e1e1e1}
+.layer-pop.pop-alert .pop-content {padding-bottom:20px; border-bottom:1px solid #e1e1e1;}
 
 .layer-pop.pop-alert .pop-content .cont-box01 {padding:15px 12px 0; border-top:1px solid #e1e1e1}
 .layer-pop.pop-alert .pop-content .cont-box01 .txt {font-size:13px; color:#666; letter-spacing:-1px}

@@ -130,9 +130,7 @@
 				</div>
 				<div class="arithmometer-menu type02">
 					<ul>
-                        <!-- S : 180205-->
 						<li class="menu00"><a href="./help_0011.html"><span>전세금반환보증<br>보증한도조회</span></a></li> <!--171024: 추가 -->
-                        <!-- E : 180205-->
 						<li class="menu01"><a href="#none"><span>주택전세자금<br>대출한도조회</span></a></li>
 						<li class="menu02"><a href="#none"><span>주택구입자금<br>계산마법사</span></a></li>
 						<li class="menu03"><a href="#none"><span>오피스텔 구입자금<br>계산마법사</span></a></li>
