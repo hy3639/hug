@@ -131,10 +131,12 @@
 				</div>
 				<div class="call-info-wrap first">
 					<div class="call-info-cont">
-						<dl class="call-info">
+                    <!-- S : 180205 -->
+						<dl class="call-info mgb0">
 							<dt>이용시간</dt>
 							<dd>월~금요일 AM 09:00 ~ PM 06:00</dd>
 						</dl>
+                     <!-- E : 180205 -->
 						<dl class="call-info mgb0">
 							<dt>휴일안내</dt>
 							<dd>토요일, 일요일, 공휴일은 휴무입니다.</dd>

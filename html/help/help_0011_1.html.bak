@@ -327,7 +327,7 @@
     <div class="pop-bg"></div>
 </div>
 
-<!-- layer pop : 보증가능액 -->
+<!-- layer pop : 보증료 -->
 <div class="layer-pop pop-alert pop-guaranty">
     <div class="pop-wrap">
         <div class="pop-header">
@@ -372,7 +372,9 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="txt-type01 pdt0"><span class="mark">※</span> 주택사업자 보증료율</p>
+                 <ul class="list-type01 pdt0">
+                    <li><span class="mark">※</span>주택사업자 보증료율</li>
+                </ul>
                 <div class="tbl-wrap pdt10">
                     <table class="tbl-style02">
                         <caption>구분, 보증료율, 개인, 법인 안내</caption>
