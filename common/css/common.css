@@ -2766,14 +2766,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .layer-pop.olympic .pop-btn-area .close {border-left:1px solid #c9c9c9;}
 /* E: 180105*/
 
-/*S : 180209*/
+/*S : 180222*/
 .layer-pop.pop-native {top:0; height:100%; padding:15px 15px;}
 .layer-pop.pop-native .pop-wrap {height:100%; overflow-y:auto; border-radius:inherit;}
 .layer-pop.pop-native .pop-wrap .pop-close {position:fixed; top:25px; right:25px; border:0; width:25px; height:25px; background:url(../img/btn/btn_close.png) no-repeat 0 0; background-size:25px 25px;}
 .layer-pop.pop-native .pop-wrap .pop-header {border-bottom:0;}
 .layer-pop.pop-native .pop-wrap .pop-header .pop-logo {width:149px; height:23px; padding:10px 0 10px; background:url(../img/img/img_pop_logo.png) no-repeat 10px center; background-size:149px 23px;}
-.layer-pop.pop-native .pop-content .cont-box01 .cont {padding-top:60px; text-align:center;}
-.layer-pop.pop-native .pop-content .cont-box01 .cont.ty02 {padding:23px 0; background-color:#ededed;}
+.layer-pop.pop-native .pop-content .cont-box01 .cont {padding:60px 0 40px; text-align:center;}
+.layer-pop.pop-native .pop-content .cont-box01 .cont.ty02 {padding:20px 0; background-color:#ededed;}
 .layer-pop.pop-native .pop-content .cont-box01 .cont.ty02 .input-row {margin-bottom:9px; padding:0 25px;}
 .layer-pop.pop-native .pop-content .cont-box01 .cont.ty02 .btn-round {margin-left:0;}
 .layer-pop.pop-native .pop-content .cont-box01 .cont.ty03 {padding:20px 0 10px;}
@@ -2793,7 +2793,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8deae2', end
 .layer-pop.pop-native .pop-content .cont-box01 .cont.ty02 .btn-round {width:240px;}
 .layer-pop.pop-native .pop-content .cont-box01 .btn-skip {display:inline-block; position:relative; width:65px; height:25px; margin-top:70px; padding:0 30px 0 8px; border:2px solid #067eb6; background-color:#fff; font-size:13px; color:#067eb6; line-height:21px; font-weight:bold; box-sizing:border-box;}
 .layer-pop.pop-native .pop-content .cont-box01 .btn-skip:before {content:''; display:block; position:absolute; right:9px; top:8px; width:15px; height:7px; background:url(../img/ico/ico_right_arrow.png) no-repeat 0 0; background-size:15px 7px;}
-/*E : 180209*/
+/*E : 180222*/
 
 .onbid-box {}
 .onbid-box .img-wrap {margin-top:10px; text-align:center}
