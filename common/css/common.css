@@ -279,8 +279,9 @@ body {background-color:#fff}
 .main-contents .swiper-slide.bg3 img {width:90%;}
 /*E:171129*/
 
-/*S : 171215_2*/
-.main-contents .swiper-slide img {width: 100%; position:absolute;left:50%;top:50%;-ms-transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);} /* 171219_2*/
+/* S :180313_v2 수정*/
+.main-contents .swiper-slide .img-wp img {width: 100%; position:absolute;left:50%;top:50%;-ms-transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);} /* 171219_2*/
+/* E :180313_v2 수정*/
 /* S : 171219 */
 .main-contents .swiper-slide .img-wp {width:100%;}
 /* E : 171219 */
@@ -291,11 +292,26 @@ body {background-color:#fff}
 */
 /*E : 171215_2*/
 
+/* S :180313_v2 추가 */
+.main-contents .swiper-slide .award-box {overflow:hidden; position:absolute; left:4%; right:4%; top:0; border-radius:10px;}
+.main-contents .swiper-slide .award-box img {width:100%;}
+/* E :180313_v2 추가 */
+
 
 .main-link {position: absolute; bottom:-4%; left:4%; right:4%; z-index: 2;}
-/* S : 171218_2 */
-.main-link ul {overflow: hidden; border-radius: 10px;-webkit-box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.4);-moz-box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.4);box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.4); background-color: #fff;}
-/* E : 171218_2 */
+
+/* S : 180313_v2 삭제
+.main-link .slide-trans {display:none; overflow:hidden; position:relative; border-radius:10px 10px 0 0;}
+.main-link .slide-trans .award-box {display:none;}
+.main-link .slide-trans.first .award-box:first-child {display:block;}
+.main-link .slide-trans.last .award-box:last-child {display:block;}
+.main-link .slide-trans .award-box img {width:100%;}
+*/
+
+/* S : 180313 수정 */
+.main-link ul {overflow: hidden; margin-top:-10px; border-radius: 10px;-webkit-box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.4);-moz-box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.4);box-shadow: 0px 3px 11px 2px rgba(0,0,0,0.4); background-color: #fff;}
+/* E : 180313 수정 */
+
 .main-link li {position:relative; width:33.3%; height:90px; float:left; border-left:1px solid #e5e5e5; box-sizing: border-box;}
 .main-link li:nth-child(1),
 .main-link li:nth-child(2),

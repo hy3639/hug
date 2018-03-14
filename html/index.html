@@ -131,8 +131,44 @@
 			<div class="swiper-container">
 				<!--S :171215_2 -->
 				<div class="swiper-wrapper horizontal">
+					<!-- S :180313_v2 수정 -->
 					<div class="swiper-slide bg1"><div class="img-wp" style="position:relative;"><img src="../common/img/bg/bg_main_txt1.png" alt="사람중심의 상품과 국민행복을 실현합니다."></div></div>
 					<div class="swiper-slide bg2"><div class="img-wp" style="position:relative;"><img src="../common/img/bg/bg_main_txt2.png" alt="고객 모두에 대한 공감으로 상생의 가치를 나눕니다."></div></div>
+					<div class="swiper-slide bg1">
+						<div class="award-box">
+							<img src="../common/img/img/img_award01.png" alt="">
+							<ul class="hide">
+								<li>
+									<p>2017년 국민권익위원회</p>
+									<p>청렴도 평가 '우수' 등급</p>
+								</li>
+								<li>
+									<p>2017년 한국감사인대회</p>
+									<p>내부감사 혁신상 수상</p>
+								</li>
+								<li>
+									<p>2017년 노사문화대상</p>
+									<p>고용노동부 장관상 수상</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="swiper-slide bg2">
+						<div class="award-box">
+							<img src="../common/img/img/img_award02.png" alt="">
+							<ul class="hide">
+								<li>
+									<p>2017년 일·생활 우수기관 선정</p>
+									<p>여성가족부 장관상 수상</p>
+								</li>
+								<li>
+									<p>2017년 웹어워드 코리아</p>
+									<p>공공서비스분야 최우수상 수상</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- E :180313_v2 수정 -->
 					<!-- 171205 : 임시주석처리(나중에오픈)
 					<div class="swiper-slide bg3"><img src="../common/img/bg/bg_main_txt3.png" alt="주택도시금융의 리더로서 끊임없이 변화하고 성장합니다."></div>
 					-->
@@ -140,6 +176,40 @@
 				<!--S :171215_2 -->
 			</div>
 			<div class="main-link">
+				<!-- S :180313_v2 삭제
+				<div class="slide-trans first">
+					<div class="award-box">
+						<img src="../common/img/img/img_award01.png" alt="">
+						<ul class="hide">
+							<li>
+								<p>2017년 국민권익위원회</p>
+								<p>청렴도 평가 '우수' 등급</p>
+							</li>
+							<li>
+								<p>2017년 한국감사인대회</p>
+								<p>내부감사 혁신상 수상</p>
+							</li>
+							<li>
+								<p>2017년 노사문화대상</p>
+								<p>고용노동부 장관상 수상</p>
+							</li>
+						</ul>
+					</div>
+					<div class="award-box">
+						<img src="../common/img/img/img_award02.png" alt="">
+						<ul class="hide">
+							<li>
+								<p>2017년 일·생활 우수기관 선정</p>
+								<p>여성가족부 장관상 수상</p>
+							</li>
+							<li>
+								<p>2017년 웹어워드 코리아</p>
+								<p>공공서비스분야 최우수상 수상</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				-->
 				<ul>
 					<li><a href="#"><span>내아파트<br>공사정보</span></a></li>
 					<li><a href="#"><span>분양정보</span></a></li>
@@ -299,10 +369,11 @@
 
 <script>
 $(window).load(function(){
+	sliderLoad();
+	setTimeout(function(){
 		sliderLoad();
-		setTimeout(function(){
-			sliderLoad();
-		}, 1500);
+		$('.slide-trans').show();// 180313 추가
+	}, 1500);
 });
 
 function sliderLoad(){
@@ -313,29 +384,37 @@ function sliderLoad(){
 		direction: 'vertical',
 		loop: true,
 		noSwipingClass: 'main-visual-slide',
-		 autoplay: '2000'
+		autoplay: '2000'
 	});
 
 
 	$(document).on('click', '.btn-controller .change.btn-pause', function(){
-			$('.main-notice-slide .btn-controller .change.btn-pause').removeClass('btn-pause').addClass('btn-play');
-			 swiper.stopAutoplay();
+		$('.main-notice-slide .btn-controller .change.btn-pause').removeClass('btn-pause').addClass('btn-play');
+		swiper.stopAutoplay();
 	});
 
 	$(document).on('click', '.btn-controller .change.btn-play', function(){
-			$('.main-notice-slide .btn-controller .change.btn-play').removeClass('btn-play').addClass('btn-pause');
-			swiper.startAutoplay();
+		$('.main-notice-slide .btn-controller .change.btn-play').removeClass('btn-play').addClass('btn-pause');
+		swiper.startAutoplay();
 	});
 
 	var swiper2 = new Swiper('.main-contents .swiper-container', {
 		direction: 'horizontal',
-	 	loop: true,
-	 //	autoplay: '4000'
+		loop: true,
+		/* S :180313_v2 삭제
+		onSlideChangeEnd:function(swiper){
+			if($('.slide-trans').hasClass('first')){
+				$('.slide-trans').addClass('last').removeClass('first');
+			}else{
+				$('.slide-trans').addClass('first').removeClass('last');
+			}
+		},
+		*/
+		// autoplay: '4000'
 	});
 }
 
-
-/* 팝업 부분 */
+	/* 팝업 부분 */
 	var winH = $(window).height();
 	var popH = $('.layer-pop .pop-wrap').height();
 
@@ -351,16 +430,16 @@ function sliderLoad(){
 	});
 
 	jQuery(document).ready(function($){
-			fnAcco(".acco-container", ".btn-acco", ".acco-view", 2);
+		fnAcco(".acco-container", ".btn-acco", ".acco-view", 2);
 	});
 
 	/*S : 171122*/
-		$('.layer-pop.olympic').show();
+	$('.layer-pop.olympic').show();
 
-		$('.layer-pop.olympic .close').click(function(){
-			$('.layer-pop.olympic').hide();
-		});
-		/*E : 171122*/
+	$('.layer-pop.olympic .close').click(function(){
+		$('.layer-pop.olympic').hide();
+	});
+	/*E : 171122*/
 
 $(window).load(function(){
 	function resizeMid(){
@@ -371,35 +450,34 @@ $(window).load(function(){
 		var sectionH = $('.section').outerHeight();
 		var linkH = $('.sub-link').outerHeight();
 		var fixH = $('#fix-menu').outerHeight();
-	//	var headTH =$('.top-header').outerHeight();
+		// var headTH =$('.top-header').outerHeight();
 
 		var ContH = winH - headH - fixH;
 		var mainContH = winH - headH - fixH - sectionH - linkH;
 
-		console.log("총높이" + winH);
-		console.log("헤더"+headH);
-		console.log(fixH);
-		console.log(sectionH);
-		console.log(linkH);
-		console.log(mainContH);
-
-
 		$('#container').css('height', ContH+'px');
 		$('.main-contents').css('height', mainContH+'px');
 
-    /*S : 171218_2*/
+		/*S : 171218_2*/
 		var mainlinkH =  $('.main-link').outerHeight();
 		var h = mainContH - mainlinkH;
 
 		$('.img-wp').css('height', h+'px');
 		/*E : 171218_2*/
+
+		/* S :180313_v2 추가 */
+		$('.award-box').each(function(){
+			var mTop = $('.main-link ul').offset().top;
+			var headH = $('#main-header').outerHeight();
+			var boxH = $(this).outerHeight();
+			$(this).css({'top':mTop - (headH + boxH - 20)});
+		});
+		/* E :180313_v2 추가 */
 	}
 	$(window).resize(resizeMid);
 	resizeMid();
 
 });
-
-
 </script>
 </body>
 </html>
