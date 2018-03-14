@@ -136,7 +136,7 @@
 					<div class="swiper-slide bg2"><div class="img-wp" style="position:relative;"><img src="../common/img/bg/bg_main_txt2.png" alt="고객 모두에 대한 공감으로 상생의 가치를 나눕니다."></div></div>
 					<div class="swiper-slide bg1">
 						<div class="award-box">
-							<img src="../common/img/img/img_award01.png" alt="">
+							<div class="img-area"><img src="../common/img/img/img_award01.png" alt=""></div><!-- 180314 수정 div.img-area 추가 -->
 							<ul class="hide">
 								<li>
 									<p>2017년 국민권익위원회</p>
@@ -155,7 +155,7 @@
 					</div>
 					<div class="swiper-slide bg2">
 						<div class="award-box">
-							<img src="../common/img/img/img_award02.png" alt="">
+							<div class="img-area"><img src="../common/img/img/img_award02.png" alt=""></div><!-- 180314 수정 div.img-area 추가 -->
 							<ul class="hide">
 								<li>
 									<p>2017년 일·생활 우수기관 선정</p>
@@ -465,14 +465,14 @@ $(window).load(function(){
 		$('.img-wp').css('height', h+'px');
 		/*E : 171218_2*/
 
-		/* S :180313_v2 추가 */
-		$('.award-box').each(function(){
+		/* S :180314 수정 */
+		$('.award-box .img-area').each(function(){
 			var mTop = $('.main-link ul').offset().top;
 			var headH = $('#main-header').outerHeight();
 			var boxH = $(this).outerHeight();
 			$(this).css({'top':mTop - (headH + boxH - 20)});
 		});
-		/* E :180313_v2 추가 */
+		/* E :180314 수정 */
 	}
 	$(window).resize(resizeMid);
 	resizeMid();

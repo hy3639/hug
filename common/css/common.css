@@ -292,10 +292,11 @@ body {background-color:#fff}
 */
 /*E : 171215_2*/
 
-/* S :180313_v2 추가 */
-.main-contents .swiper-slide .award-box {overflow:hidden; position:absolute; left:4%; right:4%; top:0; border-radius:10px;}
+/* S :180314 수정 */
+.main-contents .swiper-slide .award-box {position:relative; width:100%; height:100%;}
+.main-contents .swiper-slide .award-box .img-area {overflow:hidden; position:absolute; left:4%; right:4%; top:0; border-radius:10px;}
 .main-contents .swiper-slide .award-box img {width:100%;}
-/* E :180313_v2 추가 */
+/* E :180314 수정 */
 
 
 .main-link {position: absolute; bottom:-4%; left:4%; right:4%; z-index: 2;}
