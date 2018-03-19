@@ -481,8 +481,8 @@ function imgY(){
 	$('.award-box .img-area').each(function(){
 		var mTop = $('.main-link ul').offset().top;
 		var boxH = $(this).outerHeight();
-		$(this).css({'top':mTop - (boxH + 37)});
-		console.log(mTop - boxH);
+		$(this).css({'top':mTop - boxH + 14});// 180319 수정
+		console.log(mTop - boxH + 14);
 	});
 }
 </script>
