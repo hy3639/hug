@@ -106,7 +106,7 @@ input[type=password] {
 }
 
 input::-webkit-input-placeholder {
-	color: #333
+	color: #ddd;
 }
 
 select {
@@ -3513,15 +3513,17 @@ input[type=text].inp-type05 {
 	width: 12px;
 	height: 12px;
 	background: url(../img/bg/bg_radio.png) 0 0 no-repeat;
-	background-size: 12px 24px
+	background-size: 12px 36px
 }
 
 .radio-box input[type=radio]:checked+label {
 	color: #0d6fb8
 }
+.radio-box input[type=radio]:disabled+label:after {
+	background-position:0 -24px;
+}
 
-.radio-box input[type=radio]:checked+label:after,.radio-box input[type=radio].on+label:after
-	{
+.radio-box input[type=radio]:checked+label:after,.radio-box input[type=radio].on+label:after {
 	background-position: 0 -12px
 }
 
